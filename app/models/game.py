@@ -23,6 +23,9 @@ class Game(db.Model):
     tags = db.Column(db.String, nullable=False)
     image = db.Column(db.String, nullable=False)
 
+    cart = db.relationship("Cart_Item", back_populates="game", cascade="all, delete-orphan")
+    review = db.relationship("Review", back_populates="game", cascade="all, delete-orphan")
+
 
     def to_dict(self):
         return {
@@ -37,5 +40,5 @@ class Game(db.Model):
             'price': self.price,
             'tags': self.tags,
             'image': self.image,
-            # 'reviews': [review.to_dict() for review in self.review]
+            'reviews': [review.to_dict() for review in self.review]
         }
