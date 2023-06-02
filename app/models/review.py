@@ -15,7 +15,7 @@ class Review(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("users.id")))
     game_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("games.id")))
 
-    owner = db.relationship("User", back_populates="review")
+    user = db.relationship("User", back_populates="review")
     game = db.relationship("Game", back_populates='review')
 
     def to_dict(self):

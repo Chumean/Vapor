@@ -18,35 +18,35 @@ def seed_reviews():
     )
 
     r3 = Review(
-    review='I'm having a blast playing this game. The graphics and world design are stunning, and the combat is intense.',
+    review="I'm having a blast playing this game. The graphics and world design are stunning, and the combat is intense.",
     recommended='Yes',
     user_id=3,
     game_id=3
     )
 
     r4 = Review(
-    review='Unfortunately, this game didn't live up to my expectations. The gameplay felt repetitive and the story was lackluster.',
+    review="Unfortunately, this game didn't live up to my expectations. The gameplay felt repetitive and the story was lackluster.",
     recommended='No',
     user_id=4,
     game_id=4
     )
 
     r5 = Review(
-    review='I highly recommend this game to any RPG fan. The world is immersive and the quests are engaging. It's a must-play.',
+    review="I highly recommend this game to any RPG fan. The world is immersive and the quests are engaging. It's a must-play.",
     recommended='Yes',
     user_id=5,
     game_id=5
     )
 
     r6 = Review(
-    review='I'm disappointed with this game. The controls are clunky and the graphics are outdated. I wouldn't recommend it.',
+    review="I'm disappointed with this game. The controls are clunky and the graphics are outdated. I wouldn't recommend it.",
     recommended='No',
     user_id=6,
     game_id=6
     )
 
     r7 = Review(
-    review='I'm absolutely addicted to this game. The gameplay is smooth and the multiplayer experience is fantastic.',
+    review="I'm absolutely addicted to this game. The gameplay is smooth and the multiplayer experience is fantastic.",
     recommended='Yes',
     user_id=1,
     game_id=7
@@ -60,7 +60,7 @@ def seed_reviews():
     )
 
     r9 = Review(
-    review='I'm impressed with the graphics and attention to detail in this game. It's a visual masterpiece.',
+    review="I'm impressed with the graphics and attention to detail in this game. It's a visual masterpiece.",
     recommended='Yes',
     user_id=3,
     game_id=9
@@ -74,7 +74,7 @@ def seed_reviews():
     )
 
     r11 = Review(
-    review='The combat mechanics in this game are exceptional. It's a challenging and rewarding experience.',
+    review="The combat mechanics in this game are exceptional. It's a challenging and rewarding experience.",
     recommended='Yes',
     user_id=5,
     game_id=11
@@ -88,8 +88,8 @@ def seed_reviews():
     )
 
     r13 = Review(
-        review='Can someone helpe me out? I bought the game but in my library there is no play button'
-        recommended='No'
+        review='Can someone helpe me out? I bought the game but in my library there is no play button',
+        recommended='No',
         user_id=1,
         game_id=1
     )

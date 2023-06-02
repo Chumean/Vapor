@@ -6,6 +6,8 @@ import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 
+import GameDetails from "./components/GameDetails/GameDetails";
+
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,6 +26,7 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
+          <Route exact path='/games/:id' component={GameDetails} />
         </Switch>
       )}
     </>

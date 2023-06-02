@@ -13,6 +13,13 @@ function LoginFormPage() {
 
   if (sessionUser) return <Redirect to="/" />;
 
+  const handleDemoLogin = (e) => {
+    e.preventDefault();
+    setEmail("demo@aa.io");
+    setPassword("password");
+    dispatch(login("demo@aa.io", "password"));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = await dispatch(login(email, password));
@@ -23,7 +30,7 @@ function LoginFormPage() {
 
   return (
     <>
-      <h1>Log In</h1>
+      <h1>SIGN IN</h1>
       <form onSubmit={handleSubmit}>
         <ul>
           {errors.map((error, idx) => (
@@ -48,7 +55,11 @@ function LoginFormPage() {
             required
           />
         </label>
-        <button type="submit">Log In</button>
+        <button type="submit">Sign In</button>
+
+          <a className="demo" href="#" onClick={handleDemoLogin}>
+            Demo User
+          </a>
       </form>
     </>
   );

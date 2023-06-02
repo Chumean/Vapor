@@ -23,6 +23,9 @@ class Game(db.Model):
     tags = db.Column(db.String, nullable=False)
     image = db.Column(db.String, nullable=False)
 
+    user_id = db.Column(db.Integer, ForeignKey('users.id'))
+    user = db.relationship("User", backref='games')
+
     cart = db.relationship("Cart_Item", back_populates="game", cascade="all, delete-orphan")
     review = db.relationship("Review", back_populates="game", cascade="all, delete-orphan")
 
