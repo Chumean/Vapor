@@ -17,7 +17,7 @@ class Game(db.Model):
     developer = db.Column(db.String, nullable=False)
     publisher = db.Column(db.String, nullable=False)
     franchise = db.Column(db.String, nullable=False)
-    release_date = db.Column(db.Date, nullable=False)
+    release_date = db.Column(db.String, nullable=False)
     description = db.Column(db.String, nullable=False)
     price = db.Column(db.Float, nullable=False)
     tags = db.Column(db.String, nullable=False)

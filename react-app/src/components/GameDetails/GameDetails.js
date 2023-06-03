@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { getGameDetails } from "../../store/game";
+import "./GameDetails.css"
+import p5r from "../../assets/p5r.jpg"
 
 const GameDetails = () => {
     const history = useHistory();
@@ -20,13 +22,16 @@ const GameDetails = () => {
     }, [dispatch, gameId])
 
     return (
-        <div>
+        <div className="game-details-page">
             <h1>Game Details</h1>
 
-            <div className="game-block">
-                <div className="game-splashart"></div>
+            <div className="game-block">GAME BLOCK
+                <div className="game-splashart">
+                    <img src={p5r} style={{width: "600px", height: "377px"}} />
+                </div>
                 <div className="game-shortinfo">
-                    <div className="game-small-splash"></div>
+                    <div className="game-small-splash">
+                    </div>
                     <div className="game-small-desc"></div>
                     <div className="game-review-count"></div>
                     <div className="game-developer"></div>

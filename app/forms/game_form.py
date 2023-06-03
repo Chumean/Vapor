@@ -9,7 +9,7 @@ class GameForm(FlaskForm):
     developer = StringField('Developer', validators=[DataRequired()])
     publisher = StringField('Publisher', validators=[DataRequired()])
     franchise = StringField('Franchise', validators=[DataRequired()])
-    release_date = DateField('Release_date', validators=[DataRequired()])
+    release_date = StringField('Release_date', validators=[DataRequired()])
     description = TextAreaField('Description', validators=[DataRequired()])
     price = FloatField('Price', validators=[DataRequired()])
     tags = StringField("Tags", validators=[DataRequired()])

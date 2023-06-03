@@ -1,0 +1,17 @@
+
+div {
+    display: block;
+}
+
+.game-details-page {
+    background-color: #54a5d4;
+}
+
+.game-block{
+    border-radius: 20px;
+    border-color: red;
+    color:white;
+    width: 940px;
+    margin: 0 auto;
+
+}
