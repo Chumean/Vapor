@@ -11,8 +11,9 @@ const GameDetails = () => {
 
     const user = useSelector(state => state.session?.user)
 
+
     const game = useSelector(state => state.game);
-    console.log(game)
+    console.log(game, "GAME")
 
     useEffect(() => {
         dispatch(getGameDetails(gameId));
