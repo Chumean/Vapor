@@ -11,7 +11,7 @@ class Review(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     review = db.Column(db.String(250))
-    recommended = db.Column(db.Boolean, nullable=False)
+    recommended = db.Column(db.Boolean)
     user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("users.id")))
     game_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("games.id")))
 

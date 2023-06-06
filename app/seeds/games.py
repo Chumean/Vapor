@@ -46,7 +46,7 @@ def seed_games():
     genre='MMORPG',
     developer='Pearl Abyss',
     publisher='Pearl Abyss',
-    franchise=None,
+    franchise="Black Desert",
     release_date='Mar 3, 2016',
     description='Embark on a vast open-world adventure in Black Desert and engage in action-packed combat, immersive storylines, and endless exploration.',
     price=29.99,
@@ -158,8 +158,6 @@ def seed_games():
     db.session.add(bayonetta)
     db.session.add(cp2077)
     db.session.commit()
-
-
 
 def undo_games():
     if environment == "production":
