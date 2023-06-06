@@ -24,7 +24,7 @@ export const getGameDetails = (id) => async (dispatch) => {
     const response = await fetch(`/api/games/${id}`);
     if (response.ok) {
       const game = await response.json();
-      dispatch(loadDetails(game));
+      dispatch(loadDetails(game.id));
     }
 };
 
@@ -44,11 +44,11 @@ const initialState = {};
 const gameReducer = (state = initialState, action) => {
     switch(action.type) {
         case LOAD:
-            const newState = {};
+            const newState = {...state};
             action.list.forEach((game) => {
                 newState[game.id] = game;
             });
-            return {...newState};
+            return newState;
         case LOAD_DETAILS:
             return {...state, details: action.id };
         default:
