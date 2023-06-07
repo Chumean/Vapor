@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { getGameDetails } from "../../store/game";
 import "./GameDetails.css";
+import {AiFillAppstore} from 'react-icons/ai'
 
 const GameDetails = () => {
     // const history = useHistory();
@@ -80,12 +81,22 @@ const GameDetails = () => {
             </div>
 
             <div className="game-buy-block">
-                <div className="game-buy-msg"></div>
-                <div className="add2cart-block">
-                    <div className="game-price"></div>
-                    <div className="add2cart-button"></div>
+                <div className="game-buy-msg">
+                    <h1 className="h1-buy">Buy {gameDetails?.title}</h1>
+                    <div className="windows-icon">
+                        <AiFillAppstore />
+                    </div>
                 </div>
             </div>
+
+            <div className="game-purchase-action">
+
+                <div className="price-info-block">
+                    <div className="game-price">$ {gameDetails?.price}</div>
+                    <span className="add-to-cart">Add to Cart</span>
+                </div>
+            </div>
+
 
             <div className="customer-reviews-area">
                 <h2>CUSTOMER REVIEWS</h2>
