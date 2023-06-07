@@ -30,7 +30,7 @@ const updateCartQty = (cartRel) => ({
 const initialState = {};
 
 export const addGameToCart = (cartRel) => async (dispatch) => {
-    console.log(cartRel);
+
     const {gameId, user, qty} = cartRel
 
     const res = await fetch(`/api/users/${user}/cart/${gameId}`, {
@@ -52,7 +52,7 @@ export const addGameToCart = (cartRel) => async (dispatch) => {
 
 export const getCart = (id) => async (dispatch) => {
     const res = await fetch(`/api/users/${id}/cart`)
-    console.log(res.url);
+
 
     if (res.ok) {
         const games = await res.json()
@@ -64,7 +64,7 @@ export const getCart = (id) => async (dispatch) => {
 export const updateQty = (cartRel) => async (dispatch) => {
     const {gameId, user, qty} = cartRel
 
-    console.log("cart to update", cartRel);
+
 
     const res = await fetch(`/api/users/${user}/cart/${gameId}`, {
         method: 'PUT',
@@ -87,13 +87,12 @@ export const deleteFromCart = (userId, gameId) => async (dispatch) => {
     const res = await fetch(`/api/users/${userId}/cart/${gameId}`, {
         method: 'DELETE'
     })
-    console.log('user id is', userId);
-    console.log(res.url);
+
 
     if (res.ok) {
-        console.log('hit');
+
         const cartRel = await res.json()
-        console.log('relId is ', cartRel);
+
         dispatch(deleteCartGame(cartRel.id))
     }
 }
@@ -127,10 +126,10 @@ export default function cartReducer(state = initialState, action) {
             // newState = Object.values(state).filter(rel => rel.id !== action.id)
 
             newState = { ...state }
-            console.log("old state", newState);
+
             delete newState[action.id]
 
-            console.log("new state", newState);
+
             return newState
         default:
             return state;

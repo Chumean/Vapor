@@ -17,7 +17,7 @@ def get_all_games():
     return jsonify({'games': game_dict})
 
 # GET GAME DETAILS
-@games_routes.route('/games/<int:id>')
+@game_routes.route('/<int:id>')
 def get_game_details(id):
     game = Game.query.get(id)
     if not game:

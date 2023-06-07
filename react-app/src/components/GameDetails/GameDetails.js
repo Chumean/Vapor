@@ -6,16 +6,15 @@ import { getGameDetails } from "../../store/game";
 
 
 const GameDetails = () => {
-    const history = useHistory();
+    // const history = useHistory();
     const dispatch = useDispatch();
     const { gameId } = useParams();
 
     const user = useSelector(state => state.session?.user)
 
     const game = useSelector(state => state.game)
-    console.log("GAME", game)
 
-    // console.log("ID", id)
+    console.log('details', game)
 
 
     useEffect(() => {

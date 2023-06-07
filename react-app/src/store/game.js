@@ -9,18 +9,11 @@ const loadGames = (list) => ({
     list
 })
 
-// const loadDetails = (id) => ({
-//     type: LOAD_DETAILS,
-//     id
-// })
 
-const loadDetails = (gameId) => {
-    console.log('Dispatching loadDetails with ID:', gameId);
-    return {
-        type: LOAD_DETAILS,
-        gameId
-    };
-};
+const loadDetails = (gameId) => ({
+    type: LOAD_DETAILS,
+    gameId
+});
 
 
 // THUNKS
@@ -34,12 +27,11 @@ export const getAllGames = () => async (dispatch) => {
 }
 
 export const getGameDetails = (gameId) => async (dispatch) => {
-    console.log("Fetching game details for ID:", gameId)
     const response = await fetch(`/api/games/${gameId}`);
     if (response.ok) {
       const game = await response.json();
       console.log("Received game details:", game)
-      dispatch(loadDetails(game.id));
+      dispatch(loadDetails(game));
     }
 };
 
@@ -57,22 +49,18 @@ export const getGamesByCategory = (category) => async (dispatch) => {
 const initialState = {};
 
 const gameReducer = (state = initialState, action) => {
-    console.log("Action:", action.type)
     switch(action.type) {
         case LOAD:
             const newState = {...state};
             action.list.forEach((game) => {
                 newState[game.id] = game;
             });
-            console.log("LOAD action dispatched:", newState)
             return newState;
         case LOAD_DETAILS:
-            console.log('Game obj:', action.payload);
-            return {...state, details: action.id };
+            return {...state, details: action.gameId };
         default:
             return state;
     }
 }
 
 export default gameReducer
-

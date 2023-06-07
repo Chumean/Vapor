@@ -44,7 +44,7 @@ export const loadReviews = (gameId) => async dispatch => {
 
 // add Review thunk
 export const createReview = (review, game_id) => async dispatch => {
-    console.log(review, "47")
+
     let res = await fetch(`/api/games/${game_id}/reviews`, {
         method: "POST",
         headers: {
@@ -52,11 +52,11 @@ export const createReview = (review, game_id) => async dispatch => {
         },
         body: JSON.stringify(review)
     });
-    console.log("55")
+    
 
     if(res.ok) {
         const newReview = await res.json();
-        console.log(newReview, '58')
+
         dispatch(addReview(newReview));
         return newReview;
     }
