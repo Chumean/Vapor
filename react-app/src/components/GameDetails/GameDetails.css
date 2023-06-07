@@ -1,0 +1,99 @@
+.detail-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-details-title {
+    color: white;
+    font-size: 26px;
+    font-family: 'Motiva Sans' sans-serif;
+    line-height: 32px;
+    text-overflow: ellipsis;
+}
+
+
+.game-shortinfo {
+    display: block;
+    margin-left: 10px;
+}
+
+.game-block {
+    display: flex;
+    background-color: #121b26;
+}
+
+.game-dev {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #67C1f5;
+}
+
+.game-pub {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #67C1f5;
+}
+
+.game-pub:hover {
+    cursor:pointer;
+    color: white;
+}
+
+.game-dev:hover {
+    cursor:pointer;
+    color: white;
+}
+
+.flex-row {
+    display: flex;
+    padding: 9px 0px 13px;
+    align-items: center;
+}
+
+.game-release-date-column {
+    color: #8F98A0;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-small-desc {
+    max-width: 324px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #c6c4df
+}
+
+.game-tag-label-row {
+    color: #556772;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-tagz {
+    display: inline-block;
+    line-height: 19px;
+    background-color: #67C1F533;
+    color: #67C1F5;
+    padding: 0px 7px;
+    margin: 0px 2px 3px 0px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.subtitle-column {
+    color: #556772;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding: 0px 10px 0px 0px;
+}
+
+h2 {
+    color: white;
+}

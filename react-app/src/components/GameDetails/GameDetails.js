@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { getGameDetails } from "../../store/game";
-
+import "./GameDetails.css";
 
 const GameDetails = () => {
     // const history = useHistory();
@@ -14,28 +14,68 @@ const GameDetails = () => {
 
     const game = useSelector(state => state.game)
 
-    console.log('details', game)
+    const gameDetails = game.details
+    console.log("game", game)
+    console.log("gameDetails", gameDetails)
 
+    const gameImage = gameDetails?.image
 
+    // console.log('image', gameImage)
     useEffect(() => {
         dispatch(getGameDetails(gameId));
 
     }, [dispatch, gameId])
 
     return (
-        <div>
-            <h1>Game Details</h1>
+        <div className="detail-page-container">
+
+            {gameDetails && gameDetails?.id ? (
+            <div>
+            <div className="game-details-title">{gameDetails?.title}</div>
 
             <div className="game-block">
-                <div className="game-splashart"></div>
+                <div className="game-splashart">
+                    <img
+                        src={gameDetails && gameDetails?.image}
+                        style={{ width: "600px",  height: "337px"}} />
+                </div>
+
                 <div className="game-shortinfo">
-                    <div className="game-small-splash"></div>
-                    <div className="game-small-desc"></div>
-                    <div className="game-review-count"></div>
-                    <div className="game-developer"></div>
-                    <div className="game-publisher"></div>
-                    <div className="game-tag-label"></div>
-                    <div className="game-tags"></div>
+                    <div className="game-small-splash">
+                    <img
+                        src={gameDetails && gameDetails?.image}
+                        style={{ width: "324px",  height: "151px"}} />
+                    </div>
+                    <div className="game-small-desc">{gameDetails?.description}</div>
+
+                    <div className="game-review-count-row">
+                        <div className="subtitle-column"></div>
+                        <div></div>
+                    </div>
+
+                    <div className="flex-row game-release-date-row">
+                        <div className="subtitle-column">RELEASE DATE:</div>
+                        <div className="game-release-date-column">{gameDetails?.release_date}</div>
+
+                    </div>
+
+                    <div className="flex-row game-developer-row">
+                        <div className="subtitle-column">DEVELOPER:</div>
+                        <div className="game-dev">{gameDetails?.developer}</div>
+                    </div>
+
+                    <div className="flex-row game-publisher-row">
+                        <div className="subtitle-column">PUBLISHER:</div>
+                        <div className="game-pub">{gameDetails?.publisher}</div>
+                    </div>
+
+                    <div className="game-tag-label-row">Popular user-defined tags for this product:
+
+                    </div>
+
+                    <div className="game-tags-row">
+                        <div className="game-tagz">{gameDetails?.tags}</div>
+                    </div>
                 </div>
             </div>
 
@@ -64,6 +104,9 @@ const GameDetails = () => {
                     </div>
                 </div>
             </div>
+
+            </div>
+            ) : ("Page not found")}
         </div>
     )
 }
