@@ -4,23 +4,24 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { getGameDetails } from "../../store/game";
 
+
 const GameDetails = () => {
     const history = useHistory();
     const dispatch = useDispatch();
-    const { id } = useParams();
+    const { gameId } = useParams();
 
     const user = useSelector(state => state.session?.user)
 
     const game = useSelector(state => state.game)
     console.log("GAME", game)
 
-    console.log("ID", id)
+    // console.log("ID", id)
 
 
     useEffect(() => {
-        dispatch(getGameDetails(id));
+        dispatch(getGameDetails(gameId));
 
-    }, [dispatch, id])
+    }, [dispatch, gameId])
 
     return (
         <div>

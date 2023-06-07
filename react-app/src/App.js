@@ -26,7 +26,7 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route exact path='/games/:id' component={GameDetails} />
+          <Route exact path='/games/:gameId' component={GameDetails} />
         </Switch>
       )}
     </>

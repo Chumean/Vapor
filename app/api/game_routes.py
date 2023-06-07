@@ -17,8 +17,8 @@ def get_all_games():
     return jsonify({'games': game_dict})
 
 # GET GAME DETAILS
-@games_routes.route('/<int:id>')
-def get_game_details():
+@games_routes.route('/games/<int:id>')
+def get_game_details(id):
     game = Game.query.get(id)
     if not game:
         return jsonify({'error': 'Game not found'}), 404
@@ -31,7 +31,7 @@ def get_reviews(id):
     return jsonify([review.to_dict() for review in reviews])
 
 # ADD REVIEW
-@game_routes.route('/<int:id>/reviews', methods={"POST"})
+@game_routes.route('/<int:id>/reviews', methods=["POST"])
 @login_required
 def add_review(id):
     form = ReviewForm()
