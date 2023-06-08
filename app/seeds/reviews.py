@@ -90,7 +90,7 @@ def seed_reviews():
     r13 = Review(
         review='Can someone helpe me out? I bought the game but in my library there is no play button',
         recommended=True,
-        user_id=1,
+        user_id=2,
         game_id=1
     )
 

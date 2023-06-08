@@ -1,13 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getGameDetails } from "../../store/game";
 import "./GameDetails.css";
 import {AiFillAppstore} from 'react-icons/ai'
 
 const GameDetails = () => {
-    // const history = useHistory();
     const dispatch = useDispatch();
     const { gameId } = useParams();
 
@@ -16,16 +15,15 @@ const GameDetails = () => {
     const game = useSelector(state => state.game)
 
     const gameDetails = game.details
-    console.log("game", game)
-    console.log("gameDetails", gameDetails)
 
-    const gameImage = gameDetails?.image
 
-    // console.log('image', gameImage)
     useEffect(() => {
         dispatch(getGameDetails(gameId));
 
     }, [dispatch, gameId])
+
+    const reviews = gameDetails?.reviews
+    console.log(reviews)
 
     return (
         <div className="detail-page-container">

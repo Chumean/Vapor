@@ -153,13 +153,16 @@ h2 {
 }
 
 
+
 .price-info-block {
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     height: 100%;
-    padding-right: 40px;
+    padding-right: 15px;
+    position: relative;
+    z-index: 5; /* Ensure the game-purchase-action is on top */
+    top: -21px;
 }
 
 .game-price {
@@ -170,13 +173,16 @@ h2 {
     font-size: 15px;
     font-family: 'Motiva Sans', sans-serif;
     align-items: center;
-    padding-top: 3px;
+    padding-top: 0px;
     padding-left: 12px;
     padding-right: 12px;
     height: 36px;
+    border: 3px solid black;
 }
 
 .add-to-cart {
+    display: flex;
+    border: 3px solid black;
     align-items: center;
     border-radius: 2px;
     background: rgb(117,176,34);
@@ -186,9 +192,20 @@ h2 {
     cursor: pointer;
     font-size: 15px;
     font-family: 'Motiva Sans', sans-serif;
-    padding-top: 3px;
+    padding-top: 0px;
     padding-left: 12px;
     padding-right: 12px;
     height: 36px;
+}
 
+.add-to-cart:hover {
+    color: white;
+    cursor: pointer;
+}
+
+h2 {
+    color: white;
+    font-size: 14px;
+    font-family:'Motiva Sans', sans-serif;
+    padding: 2px 0px 4px;
 }
