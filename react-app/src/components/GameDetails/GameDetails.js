@@ -6,7 +6,8 @@ import { getGameDetails } from "../../store/game";
 import { loadReviews } from "../../store/review";
 import "./GameDetails.css";
 import {AiFillAppstore} from 'react-icons/ai'
-import {FaRegThumbsUp, FaRegThumbsDown} from 'react-icons/fa'
+import {FaRegThumbsUp, FaRegThumbsDown, FaUserSecret} from 'react-icons/fa'
+
 
 const GameDetails = () => {
     const dispatch = useDispatch();
@@ -129,6 +130,10 @@ const GameDetails = () => {
                     <div key={review?.id}>
                         <div className="review-block">
                             <div className="review-leftcol">
+
+                                <div className="review-user-icon">
+                                    <FaUserSecret style={{width: '34px', height: '34px'}} />
+                                </div>
                                 <div className="review-user">
                                     <p>{review?.username}</p>
 
@@ -138,9 +143,10 @@ const GameDetails = () => {
                             <div className="review-rightcol">
                                 {review.recommended ? (
                                     <div className="review-recommended-header">
-                                        
+
                                         <div className="review-vote">
-                                            <FaRegThumbsUp className="thumbs-up-icon" />
+                                            <FaRegThumbsUp className="thumbs-up-icon"
+                                            style={{width: '40px', height:'40px'}} />
                                         </div>
                                         <div className="recommended-text">
                                             Recommended
@@ -150,7 +156,8 @@ const GameDetails = () => {
                                     <div className="review-recommended-header">
 
                                         <div className="review-vote">
-                                            <FaRegThumbsDown className="thumbs-down-icon" />
+                                            <FaRegThumbsDown className="thumbs-down-icon"
+                                            style={{width: '40px', height:'40px'}} />
                                         </div>
                                         <div className="recommended-text">
                                         Not Recommended

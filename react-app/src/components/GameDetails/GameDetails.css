@@ -212,6 +212,9 @@ h2 {
 
 .all-reviews {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .review-block {
@@ -219,6 +222,16 @@ h2 {
     display: flex;
     margin: 0;
     padding: 0;
+    margin-bottom: 20px;
+}
+
+.review-leftcol {
+    flex-basis: 33.33%;
+    display: flex;
+}
+
+.review-rightcol {
+    flex-basis: 66.67%;
 }
 
 .review-content {
@@ -231,8 +244,37 @@ h2 {
     overflow: hidden;
 }
 
+.review-recommended-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #121a24;
+    padding: 8px 0;
+}
+
 .review-user {
     color: #C1DBF4;
     font-size: 13px;
     font-family: 'Motiva Sans', sans-serif;
+    padding: 0 10px;
+}
+
+.review-user-icon {
+    color: white;
+    padding: 5px 10px;
+}
+
+.recommended-text {
+    font-size: 16px;
+    font-family: 'Motiva Sans', sans-serif;
+    padding: 3px 0px 0px;
+    color: #D6D7D8;
+}
+
+.thumbs-down-icon {
+    color: #e06263
+}
+
+.thumbs-up-icon {
+    color: #60b5e7;
 }
