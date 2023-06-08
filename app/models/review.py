@@ -24,5 +24,6 @@ class Review(db.Model):
             'review': self.review,
             'recommended': self.recommended,
             'user_id': self.user_id,
-            'game_id': self.game_id
+            'game_id': self.game_id,
+            'username': self.user.username
         }

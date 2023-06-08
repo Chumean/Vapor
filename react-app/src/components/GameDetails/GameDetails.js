@@ -3,27 +3,47 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getGameDetails } from "../../store/game";
+import { loadReviews } from "../../store/review";
 import "./GameDetails.css";
 import {AiFillAppstore} from 'react-icons/ai'
+import {FaRegThumbsUp, FaRegThumbsDown} from 'react-icons/fa'
 
 const GameDetails = () => {
     const dispatch = useDispatch();
     const { gameId } = useParams();
 
-    const user = useSelector(state => state.session?.user)
+    const user = useSelector(state => state?.session?.user)
 
-    const game = useSelector(state => state.game)
+    console.log('user', user?.username)
 
-    const gameDetails = game.details
+    const game = useSelector(state => state?.game)
 
+    const gameDetails = game?.details
 
+    const reviews = useSelector(state => state.reviews)
+
+    const filteredReviews = Object.values(reviews).filter((review) => review?.game_id === gameDetails?.id)
+
+    console.log('filter reviews', filteredReviews)
+
+    const userId = useSelector(state => state.session.user?.id)
+
+    // console.log('reviews', reviews)
+
+    const hasReviewed = filteredReviews.some((review) => review.user_id === userId)
+
+    // console.log("has REV", hasReviewed)
     useEffect(() => {
         dispatch(getGameDetails(gameId));
-
+        dispatch(loadReviews(gameId))
     }, [dispatch, gameId])
 
-    const reviews = gameDetails?.reviews
-    console.log(reviews)
+    // const reviews = gameDetails?.reviews
+    // console.log('reviews', reviews)
+
+    // console.log('42', filteredReviews[0].recommended)
+
+    // console.log(reviews)
 
     return (
         <div className="detail-page-container">
@@ -98,19 +118,53 @@ const GameDetails = () => {
 
             <div className="customer-reviews-area">
                 <h2>CUSTOMER REVIEWS</h2>
+
                 <div className="Review-count-block"></div>
+
+
                 <div className="all-reviews">
-                    <div className="review-block">
-                        <div className="review-rightcol">
-                            <div className="review-recommended-header">
-                                <div className="review-vote"></div>
-                                <div className="recommended-text"></div>
-                                <div className="hours-on-record"></div>
+                {filteredReviews &&
+                filteredReviews.map((review) => (
+
+                    <div key={review?.id}>
+                        <div className="review-block">
+                            <div className="review-leftcol">
+                                <div className="review-user">
+                                    <p>{review?.username}</p>
+
+                                </div>
                             </div>
 
-                            <div className="review-content"></div>
+                            <div className="review-rightcol">
+                                {review.recommended ? (
+                                    <div className="review-recommended-header">
+                                        
+                                        <div className="review-vote">
+                                            <FaRegThumbsUp className="thumbs-up-icon" />
+                                        </div>
+                                        <div className="recommended-text">
+                                            Recommended
+                                        </div>
+                                    </div>
+                                    ) : (
+                                    <div className="review-recommended-header">
+
+                                        <div className="review-vote">
+                                            <FaRegThumbsDown className="thumbs-down-icon" />
+                                        </div>
+                                        <div className="recommended-text">
+                                        Not Recommended
+                                        </div>
+                                    </div>
+                                    )}
+
+                                <div className="review-content">
+                                    <p>{review?.review}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    ))}
                 </div>
             </div>
 

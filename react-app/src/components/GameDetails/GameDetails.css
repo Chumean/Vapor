@@ -209,3 +209,30 @@ h2 {
     font-family:'Motiva Sans', sans-serif;
     padding: 2px 0px 4px;
 }
+
+.all-reviews {
+    list-style-type: none;
+}
+
+.review-block {
+    background-color: #16202d ;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.review-content {
+    color: #ACB2B8;
+    font-size: 13px;
+    font-family: 'Motiva Sans', sans-serif;
+    font-weight: normal;
+    line-height: 17px;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+.review-user {
+    color: #C1DBF4;
+    font-size: 13px;
+    font-family: 'Motiva Sans', sans-serif;
+}
