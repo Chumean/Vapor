@@ -7,7 +7,7 @@ import { loadReviews } from "../../store/review";
 import "./GameDetails.css";
 import {AiFillAppstore} from 'react-icons/ai'
 import {FaRegThumbsUp, FaRegThumbsDown, FaUserSecret} from 'react-icons/fa'
-
+import logo from "../../assets/logo.png";
 
 const GameDetails = () => {
     const dispatch = useDispatch();
@@ -148,8 +148,13 @@ const GameDetails = () => {
                                             <FaRegThumbsUp className="thumbs-up-icon"
                                             style={{width: '40px', height:'40px'}} />
                                         </div>
+
                                         <div className="recommended-text">
                                             Recommended
+                                        </div>
+
+                                        <div className="small-logo">
+                                            <img src={logo} style={{width: '19px', height: '19px'}} />
                                         </div>
                                     </div>
                                     ) : (
@@ -159,8 +164,13 @@ const GameDetails = () => {
                                             <FaRegThumbsDown className="thumbs-down-icon"
                                             style={{width: '40px', height:'40px'}} />
                                         </div>
+
                                         <div className="recommended-text">
                                         Not Recommended
+                                        </div>
+
+                                        <div className="small-logo">
+                                            <img src={logo} style={{width: '19px', height: '19px'}} />
                                         </div>
                                     </div>
                                     )}

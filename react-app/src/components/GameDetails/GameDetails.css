@@ -278,3 +278,8 @@ h2 {
 .thumbs-up-icon {
     color: #60b5e7;
 }
+
+.small-logo {
+    margin-left: auto;
+    padding-right: 10px;
+}
