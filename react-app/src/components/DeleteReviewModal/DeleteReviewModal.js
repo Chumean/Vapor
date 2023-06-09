@@ -18,18 +18,26 @@ const DeleteReviewModal = ({ id, gameId }) => {
 
   return (
     <div className="confirm-delete-container">
-      <div className="confirm-delete-text">Delete Review?</div>
-      <div className="confirm-delete-message">
-        Are you sure you want to delete this review? This cannot be undone.
-      </div>
 
-      <div className="review-button-container">
-        <button className="review-choices" onClick={removeReview}>
-          Ok
-        </button>
-        <button className="review-choices" onClick={closeModal}>
-          Cancel
-        </button>
+        <div className="top-modal-bar"></div>
+        <div className="confirm-delete-text">Delete Review?</div>
+
+      <div className="confirm-delete-section">
+
+        <div className="confirm-delete-message">
+            Are you sure you want to delete this review? This cannot be undone.
+        </div>
+
+        <div className="review-button-container">
+            <span className="review-ok" onClick={removeReview}>
+            OK
+            </span>
+
+            <span className="review-cancel" onClick={closeModal}>
+            Cancel
+            </span>
+        </div>
+
       </div>
     </div>
   );

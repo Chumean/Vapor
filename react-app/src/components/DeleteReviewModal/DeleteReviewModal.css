@@ -1,0 +1,76 @@
+.confirm-delete-container {
+    background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+}
+
+.confirm-delete-text {
+    color: white;
+    font-size: 22px;
+    font-family: 'Motiva Sans', sans-serif;
+    padding: 32px 32px 0px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: unset;
+    text-transform: unset;
+}
+
+.confirm-delete-message {
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    color: #ACB2B8;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.confirm-delete-section {
+    width: 100%;
+    overflow: auto;
+    word-wrap: break-word;
+    padding: 32px;
+    font-size: 14px;
+    color: #acb2b8;
+    position: relative;
+}
+
+.review-ok {
+    border-radius: 2px;
+    background: rgb(117,176,34);
+    background: linear-gradient(90deg, rgba(117,176,34,1) 30%, rgba(89,139,27,1) 64%);
+    color: #D2EFA9;
+    font-size: 15px;
+    font-family: 'Motiva Sans', sans-serif;
+    font-weight: normal;
+    padding: 5px 15px;
+    cursor: pointer;
+    line-height: 30px;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.review-ok:hover {
+    color: white;
+    background: linear-gradient( to right, #75b022 5%, #588a1b 95%);
+}
+
+.review-cancel {
+    border-radius: 2px;
+    font-size: 15px;
+    font-family: 'Motiva Sans', sans-serif;
+    font-weight: normal;
+    padding: 5px 15px;
+    color: #DFE3E6;
+    line-height: 30px;
+    background: linear-gradient( to right, #32363f 5%, #32363f 95%);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.review-cancel:hover {
+    color: white;
+    background: gray;
+}
+
+.top-modal-bar {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #00ccff, #3366ff);
+}

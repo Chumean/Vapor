@@ -111,6 +111,11 @@ background: linear-gradient(90deg, rgba(58,69,81,1) 21%, rgba(73,86,100,1) 48%, 
     text-shadow: 1px 1px 2px rbga(0, 0, 0, .6667);
     color: white;
 }
+
 .rec-span-down svg {
     vertical-align: middle;
+}
+
+.confirm-delete-message {
+    margin-bottom: 10px;
 }

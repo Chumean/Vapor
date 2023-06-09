@@ -321,7 +321,7 @@ h2 {
     line-height: 20px;
     border-radius: 2px;
     display: block;
-    background: transparent;
+    /* background: transparent; */
     background-color: #4a677b;
     margin-right: 10px;
     cursor: pointer;
