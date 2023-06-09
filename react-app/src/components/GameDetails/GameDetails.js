@@ -17,12 +17,10 @@ const GameDetails = () => {
     const { gameId } = useParams();
     const {setModalContent} = useModal();
     const [showModal, setShowModal] = useState(false);
-    const [showDeleteModal, setShowDeleteModal] = useState(false);
-    const [reviewToDelete, setReviewToDelete] = useState(null);
 
     const user = useSelector(state => state?.session?.user)
 
-    console.log('user', user?.username)
+    // console.log('user', user?.username)
 
     const game = useSelector(state => state?.game)
 
@@ -32,11 +30,13 @@ const GameDetails = () => {
 
     const filteredReviews = Object.values(reviews).filter((review) => review?.game_id === gameDetails?.id)
 
-    console.log('filter reviews', filteredReviews)
+    // console.log('filter reviews', filteredReviews)
 
     const userId = useSelector(state => state.session.user?.id)
 
-    // console.log('reviews', reviews)
+    console.log("USER ID", userId)
+
+    console.log('reviews', reviews)
 
     const hasReviewed = filteredReviews.some((review) => review.user_id === userId)
 
@@ -51,17 +51,12 @@ const GameDetails = () => {
     }, [dispatch, gameId])
 
 
-    const handleDeleteReview = async (reviewId) => {
-        setReviewToDelete(reviewId)
-        setModalContent(
-            <DeleteReviewModal id={reviewId} gameId={gameDetails?.id} />
-        );
-        setShowDeleteModal(true);
-    }
+
+
 
     return (
         <div className="detail-page-container">
-
+            {/* GAME ART AND SMALL INFO */}
             {gameDetails && gameDetails?.id ? (
             <div>
             <div className="game-details-title">{gameDetails?.title}</div>
@@ -112,16 +107,16 @@ const GameDetails = () => {
                 </div>
             </div>
 
-            {user && hasReviewed && (
+            {/* REVIEW MODAL START */}
+
+            {user && hasReviewed && filteredReviews.length > 0 && (
 
                 <div className="has-reviewed-area">
                 <div className="has-reviewed-msg">You have reviewed this game.</div>
-                <div className="has-reviewed-options">
+                {/* <div className="has-reviewed-options">
                     <span className="has-reviewed-span">Edit review</span>
-                    <span className="has-reviewed-span"
-                        onClick={() => handleDeleteReview(reviewToDelete)}
-                    >Delete review</span>
-                </div>
+                    <span className="has-reviewed-span">Delete review</span>
+                </div> */}
                 <div className="has-reviewed-desc">
                     You can edit this review, change your rating, or delete it if you wish.
                 </div>
@@ -133,6 +128,10 @@ const GameDetails = () => {
                     <AddReview gameId={gameDetails?.id} />
                 </div>
             )}
+
+            {/* REVIEW MODAL END */}
+
+            {/* GAME BUY CART START */}
 
             <div className="game-buy-block">
                 <div className="game-buy-msg">
@@ -151,6 +150,9 @@ const GameDetails = () => {
                 </div>
             </div>
 
+            {/* GAME BUY CART END */}
+
+            {/* REVIEWS START */}
 
             <div className="customer-reviews-area">
                 <h2>CUSTOMER REVIEWS</h2>
@@ -173,6 +175,17 @@ const GameDetails = () => {
                                     <p>{review?.username}</p>
 
                                 </div>
+                                {user && reviews && user.id === review.user_id ? (
+
+                                    <div className="has-reviewed-options">
+                                <span className="has-reviewed-span">Edit review</span>
+                                <span className="has-reviewed-span">Delete review</span>
+                                </div>
+                                ) : (
+                                    <br />
+                                )}
+
+
                             </div>
 
                             <div className="review-rightcol">
@@ -219,6 +232,8 @@ const GameDetails = () => {
                     ))}
                 </div>
             </div>
+
+            {/* REVIEW END */}
 
             </div>
             ) : ("Page not found")}

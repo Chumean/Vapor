@@ -97,7 +97,7 @@ export const deleteReview = (reviewId) => async dispatch => {
 const initialState = {}
 const reviewReducer = (state = initialState, action) => {
     console.log("CURRENT STATE", state);
-    console.log("ACTION", action);
+    // console.log("ACTION", action);
     switch(action.type) {
         case LOAD_REVIEWS:
             const loadState = {};
