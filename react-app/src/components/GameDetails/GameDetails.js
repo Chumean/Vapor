@@ -9,10 +9,16 @@ import {AiFillAppstore} from 'react-icons/ai'
 import {FaRegThumbsUp, FaRegThumbsDown, FaUserSecret} from 'react-icons/fa'
 import logo from "../../assets/logo.png";
 import AddReview from "../AddReview/AddReview";
+import DeleteReviewModal from "../DeleteReviewModal/DeleteReviewModal";
+import { useModal } from "../../context/Modal";
 
 const GameDetails = () => {
     const dispatch = useDispatch();
     const { gameId } = useParams();
+    const {setModalContent} = useModal();
+    const [showModal, setShowModal] = useState(false);
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [reviewToDelete, setReviewToDelete] = useState(null);
 
     const user = useSelector(state => state?.session?.user)
 
@@ -34,18 +40,24 @@ const GameDetails = () => {
 
     const hasReviewed = filteredReviews.some((review) => review.user_id === userId)
 
+    const openModal = () => {
+        setShowModal(true);
+      };
+
     // console.log("has REV", hasReviewed)
     useEffect(() => {
         dispatch(getGameDetails(gameId));
         dispatch(loadReviews(gameId))
     }, [dispatch, gameId])
 
-    // const reviews = gameDetails?.reviews
-    // console.log('reviews', reviews)
 
-    // console.log('42', filteredReviews[0].recommended)
-
-    // console.log(reviews)
+    const handleDeleteReview = async (reviewId) => {
+        setReviewToDelete(reviewId)
+        setModalContent(
+            <DeleteReviewModal id={reviewId} gameId={gameDetails?.id} />
+        );
+        setShowDeleteModal(true);
+    }
 
     return (
         <div className="detail-page-container">
@@ -100,10 +112,27 @@ const GameDetails = () => {
                 </div>
             </div>
 
+            {user && hasReviewed && (
 
-            <div className="post-review-block">
-                <AddReview gameId={gameDetails?.id} />
+                <div className="has-reviewed-area">
+                <div className="has-reviewed-msg">You have reviewed this game.</div>
+                <div className="has-reviewed-options">
+                    <span className="has-reviewed-span">Edit review</span>
+                    <span className="has-reviewed-span"
+                        onClick={() => handleDeleteReview(reviewToDelete)}
+                    >Delete review</span>
+                </div>
+                <div className="has-reviewed-desc">
+                    You can edit this review, change your rating, or delete it if you wish.
+                </div>
             </div>
+            )}
+
+            {user && !hasReviewed && (
+                <div className="post-review-block">
+                    <AddReview gameId={gameDetails?.id} />
+                </div>
+            )}
 
             <div className="game-buy-block">
                 <div className="game-buy-msg">
