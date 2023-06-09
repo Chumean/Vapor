@@ -7,6 +7,7 @@ import "./CartPage.css";
 
 const Cart = () => {
     const dispatch = useDispatch();
+    const [save, setSave] = useState("hidden")
 
     const user = useSelector(state => state.session?.user?.id)
     const sessionUser = useSelector(state => state.session?.user)
@@ -66,7 +67,7 @@ const Cart = () => {
                         </div>
                         <div className="qty">Qty: {game?.quantity}</div>
                         <div className="edit-section">
-                            <button id={game.id} className={display + " update-button"} onClick={() => handleEdit(game, save)}>Edit</button>
+                            <button id={game.id} className="update-qty" onClick={() => handleEdit(game, save)}>Edit</button>
                             <button id={game.id} className="update-button delete" onClick={onDelete}>Delete</button>
                         </div>
                     </div >
@@ -78,14 +79,13 @@ const Cart = () => {
     }
 
     return (
-        <div>
+        <div className="cart-page-content">
             <div className="cart-page-banner">
-
-            </div>
-
-                <div className="title-container">
-                    <h1>YOUR SHOPPING CART </h1>
+                    
+                <div className="cart-title-container">
+                    <h2 className="h2-cart-title">YOUR SHOPPING CART </h2>
                 </div>
+            </div>
                 {sessionUser && user ? (<div className="cart-container-item-list">
                     {cartContent()}
                 </div>) : (<h1>Please Log in to View Your Cart</h1>)}

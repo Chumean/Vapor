@@ -1,0 +1,31 @@
+.cart-page-banner {
+    background: rgb(27,40,56);
+    background: linear-gradient(90deg, rgba(27,40,56,1) 0%, rgba(34,62,91,1) 50%, rgba(27,40,56,1) 100%);
+}
+
+.cart-page-content {
+
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 940px;
+    height: 1189px;
+    margin-left: 473px;
+    margin-right: 473px;
+}
+
+.cart-title-container {
+    background: rgb(27,40,56);
+background: linear-gradient(90deg, rgba(27,40,56,1) 0%, rgba(34,62,91,1) 50%, rgba(27,40,56,1) 100%);
+}
+
+.h2-cart-title {
+    color: white;
+    font-size: 34px;
+    font-family: "Motiva Sans", sans-serif;
+    margin: -4px 0px 0px;
+    padding: 2px 0px 0px;
+    font-weight: 300;
+    text-shadow: 1px 1px 0 rgba( 0, 0, 0, 0.4 );
+    letter-spacing: 0.03em;
+}

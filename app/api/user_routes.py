@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from flask_login import login_required
-from app.models import User
+from app.models import User, Cart_Item
 from app.forms.cart_form import CartForm
 
 user_routes = Blueprint('users', __name__)
@@ -32,7 +32,7 @@ def cart(id):
     cartRel_query = Cart_Item.query.filter(Cart_Item.user_id == id)
 
     cartRels = cartRel_query.all()
-  
+
     cartGames = []
     if (len(cartRels) > 0):
         for rel in cartRels:

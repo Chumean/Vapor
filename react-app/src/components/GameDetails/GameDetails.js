@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { getGameDetails } from "../../store/game";
 import { loadReviews } from "../../store/review";
 import "./GameDetails.css";
@@ -12,16 +12,17 @@ import AddReview from "../AddReview/AddReview";
 import DeleteReviewModal from "../DeleteReviewModal/DeleteReviewModal";
 import EditReviewModal from "../EditReviewModal/EditReviewModal";
 import { useModal } from "../../context/Modal";
+import { addGameToCart } from "../../store/cart";
 
 const GameDetails = () => {
     const dispatch = useDispatch();
     const { gameId } = useParams();
     const {setModalContent} = useModal();
     const [showModal, setShowModal] = useState(false);
+    const history = useHistory();
+
 
     const user = useSelector(state => state?.session?.user)
-
-    // console.log('user', user?.username)
 
     const game = useSelector(state => state?.game)
 
@@ -51,6 +52,17 @@ const GameDetails = () => {
         openModal();
     }
 
+    const handleAddToCart = () => {
+        if( user && gameDetails) {
+            const cartRel = {
+                gameId: gameDetails?.id,
+                user: user.id,
+                qty: 1
+            }
+            dispatch(addGameToCart(cartRel))
+            history.push('/cart')
+        }
+    }
 
 
 
@@ -146,7 +158,10 @@ const GameDetails = () => {
 
                 <div className="price-info-block">
                     <div className="game-price">$ {gameDetails?.price}</div>
-                    <span className="add-to-cart">Add to Cart</span>
+                    <span className="add-to-cart"
+                        onClick={handleAddToCart}>
+                        Add to Cart
+                    </span>
                 </div>
             </div>
 
