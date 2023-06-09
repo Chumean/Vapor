@@ -8,6 +8,7 @@ import "./GameDetails.css";
 import {AiFillAppstore} from 'react-icons/ai'
 import {FaRegThumbsUp, FaRegThumbsDown, FaUserSecret} from 'react-icons/fa'
 import logo from "../../assets/logo.png";
+import AddReview from "../AddReview/AddReview";
 
 const GameDetails = () => {
     const dispatch = useDispatch();
@@ -97,6 +98,11 @@ const GameDetails = () => {
                         <div className="game-tagz">{gameDetails?.tags}</div>
                     </div>
                 </div>
+            </div>
+
+
+            <div className="post-review-block">
+                <AddReview gameId={gameDetails?.id} />
             </div>
 
             <div className="game-buy-block">

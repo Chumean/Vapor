@@ -1,18 +1,25 @@
 import {React , useState} from "react";
-import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { createReview } from "../../store/review";
 import { getGameDetails } from "../../store/game";
+import {FaRegThumbsUp, FaRegThumbsDown} from 'react-icons/fa'
+import "./AddReview.css";
 
 const AddReview =({gameId}) => {
     const dispatch = useDispatch();
-    const sessionUser = useSelector((state) => state.session.user);
-    const { gameId } = useParams();
+    const sessionUser = useSelector((state) => state?.session?.user);
+    const currentGame = useSelector(state => state?.game?.details)
+
+    const currentTitle = currentGame?.title
+
+    console.log(currentTitle)
     const [review, setReview] = useState('');
     const [recommended, setRecommended] = useState(true)
 
     const handleSubmit = async(e) => {
         e.preventDefault();
+
+        console.log("SHOULD BE gameID", gameId)
 
         const newReviewInput = {
             user_id: sessionUser.id,
@@ -22,33 +29,52 @@ const AddReview =({gameId}) => {
         };
 
         await dispatch(createReview(newReviewInput, gameId));
-        await dispatch(getGameDetails(gameId));
+        // await dispatch(getGameDetails(gameId));
     }
 
 
     return (
         <div className="review-panel">
             <form onSubmit={handleSubmit}>
-                <h1>Write a review for game name</h1>
-                <p>Please describe what you liked or disliked about this game and whether you recommend it to others.</p>
-                <p>Please remember to be polite and follow the Rules and Guidelines.</p>
+                <h1 className="review-h1">Write a review for {currentTitle}</h1>
+                <p className="review-describe">Please describe what you liked or disliked about this game and whether you recommend it to others.</p>
+                <p className="review-describe">Please remember to be polite and follow the Rules and Guidelines.</p>
 
                 <div className="review-input">
                     <textarea
                     value={review}
                     onChange={(e) => setReview(e.target.value)}
                     className="review-textarea"
+                    style={{width: "764px", height:"132px"}}
                     >
                     </textarea>
                 </div>
 
                 <div className="review-controls">
-                    <p>Do you recommend this game?</p>
-                    <span>Yes</span>
-                    <span>No</span>
-                    <button className="review-button" type="submit">
+                    <p className="recommend-p">Do you recommend this game?</p>
+
+                    <div className="recommend-options">
+                        <span
+                            className='rec-span-up'
+                            onClick={() => setRecommended(true)}
+                            >
+                            Yes
+                            <FaRegThumbsUp  className="rec-icon"/>
+                        </span>
+
+                        <span
+                            className='rec-span-down'
+                            onClick={() => setRecommended(false)}
+                            >
+                            No
+                            <FaRegThumbsDown className="rec-icon" />
+                        </span>
+                    </div>
+
+                    <span className="post-review-span" onClick={handleSubmit}>
                         Post review
-                    </button>
+                    </span>
+
 
                 </div>
 
@@ -57,3 +83,5 @@ const AddReview =({gameId}) => {
         </div>
     )
 }
+
+export default AddReview;
