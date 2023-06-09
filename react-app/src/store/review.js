@@ -44,7 +44,7 @@ export const loadReviews = (gameId) => async dispatch => {
 
 // add Review thunk
 export const createReview = (review, gameId) => async dispatch => {
-    console.log("CREATING REVIEW THUNK", review)
+
     let res = await fetch(`/api/games/${gameId}/reviews`, {
         method: "POST",
         headers: {
@@ -56,7 +56,6 @@ export const createReview = (review, gameId) => async dispatch => {
 
     if(res.ok) {
         const newReview = await res.json();
-        console.log('NEW REVIEW', newReview)
 
         dispatch(addReview(newReview));
         return newReview;
@@ -64,17 +63,31 @@ export const createReview = (review, gameId) => async dispatch => {
 }
 
 // edit Review thunk
-export const updateReview = (review) => async dispatch => {
-    const res = await fetch(`/api/games/${review.gameId}/reviews`, {
+export const updateReview = (gameId, data) => async dispatch => {
+    console.log("DATA", data)
+    const { review, recommended, user_id, game_id } = data;
+    console.log("gameId", gameId);
+    console.log("review", review);
+    console.log("recommended", recommended);
+    console.log("user_id", user_id);
+    console.log("game_id", game_id);
+
+    const res = await fetch(`/api/games/${gameId}/reviews`, {
         method: "PUT",
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(review)
+        body: JSON.stringify({
+            review,
+            recommended,
+            user_id,
+            game_id
+        })
     });
 
     if(res.ok) {
         const updatedReview = await res.json();
+        console.log("updatedReview", updatedReview)
         dispatch(editReview(updatedReview));
         return updatedReview;
     }
@@ -96,8 +109,6 @@ export const deleteReview = (reviewId) => async dispatch => {
 // STATE
 const initialState = {}
 const reviewReducer = (state = initialState, action) => {
-    console.log("CURRENT STATE", state);
-    // console.log("ACTION", action);
     switch(action.type) {
         case LOAD_REVIEWS:
             const loadState = {};
@@ -108,8 +119,8 @@ const reviewReducer = (state = initialState, action) => {
             return {...state, [action.review.id]: action.review}
 
         case EDIT_REVIEW:
-            const updateRev = action.review.updateReview;
-            return {...state, [updateRev.id]: updateRev};
+            const updatedReview = action.review;
+            return {...state, [updatedReview.id]: updatedReview};
 
         case REMOVE_REVIEW:
             const deleteState = {...state};

@@ -30,7 +30,7 @@ export const getGameDetails = (gameId) => async (dispatch) => {
     const response = await fetch(`/api/games/${gameId}`);
     if (response.ok) {
       const game = await response.json();
-    //   console.log("Received game details:", game)
+   
       dispatch(loadDetails(game));
     }
 };

@@ -33,4 +33,9 @@ function App() {
   );
 }
 
+// Include path ="/" componenet = Home
+// Include /category/:category
+// Include /games/:gameId/reviews/:reviewId
+// Include /cart/
+
 export default App;

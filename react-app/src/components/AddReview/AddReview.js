@@ -12,7 +12,6 @@ const AddReview =({gameId}) => {
 
     const currentTitle = currentGame?.title
 
-    console.log(currentTitle)
     const [review, setReview] = useState('');
     const [recommended, setRecommended] = useState(true);
     const [error, setError] = useState('');

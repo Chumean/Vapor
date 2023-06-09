@@ -10,6 +10,7 @@ import {FaRegThumbsUp, FaRegThumbsDown, FaUserSecret} from 'react-icons/fa'
 import logo from "../../assets/logo.png";
 import AddReview from "../AddReview/AddReview";
 import DeleteReviewModal from "../DeleteReviewModal/DeleteReviewModal";
+import EditReviewModal from "../EditReviewModal/EditReviewModal";
 import { useModal } from "../../context/Modal";
 
 const GameDetails = () => {
@@ -30,13 +31,7 @@ const GameDetails = () => {
 
     const filteredReviews = Object.values(reviews).filter((review) => review?.game_id === gameDetails?.id)
 
-    // console.log('filter reviews', filteredReviews)
-
     const userId = useSelector(state => state.session.user?.id)
-
-    console.log("USER ID", userId)
-
-    console.log('reviews', reviews)
 
     const hasReviewed = filteredReviews.some((review) => review.user_id === userId)
 
@@ -44,7 +39,7 @@ const GameDetails = () => {
         setShowModal(true);
       };
 
-    // console.log("has REV", hasReviewed)
+
     useEffect(() => {
         dispatch(getGameDetails(gameId));
         dispatch(loadReviews(gameId))
@@ -183,11 +178,17 @@ const GameDetails = () => {
                                 {user && reviews && user.id === review.user_id ? (
 
                                     <div className="has-reviewed-options">
-                                <span className="has-reviewed-span">Edit review</span>
                                 <span className="has-reviewed-span"
-                                id={review?.id}
-                                onClick={() => handleDeleteReview(review?.id, gameDetails?.id)}
-                                >Delete review</span>
+                                    id={review?.id}
+                                    onClick={() => setModalContent(<EditReviewModal id={review?.id} gameId={gameDetails?.id} />)}
+                                    >Edit review
+                                </span>
+
+                                <span className="has-reviewed-span"
+                                    id={review?.id}
+                                    onClick={() => handleDeleteReview(review?.id, gameDetails?.id)}
+                                    >Delete review
+                                </span>
                                 </div>
                                 ) : (
                                     <br />

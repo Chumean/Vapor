@@ -53,3 +53,28 @@ def add_review(id):
     db.session.commit()
 
     return new_review.to_dict();
+
+
+# EDIT REVIEW
+@game_routes.route('/<int:id>/reviews', methods=["PUT"])
+@login_required
+def edit_review(id):
+    form = ReviewForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+
+    if form.validate_on_submit():
+        review_id = form.review_id.data
+
+        review = Review.query.get(review_id)
+
+        if not review or review.user_id != current_user.id:
+            return jsonify({'error': 'Review not found or unauthorized'}, 404)
+
+        review.review = form.review.data
+        review.recommended = form.recommended.data
+
+        db.session.commit()
+
+        return review.to_dict()
+
+    return jsonify({'message': 'Edit error'})
