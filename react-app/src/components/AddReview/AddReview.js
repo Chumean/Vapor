@@ -14,12 +14,16 @@ const AddReview =({gameId}) => {
 
     console.log(currentTitle)
     const [review, setReview] = useState('');
-    const [recommended, setRecommended] = useState(true)
+    const [recommended, setRecommended] = useState(true);
+    const [error, setError] = useState('');
 
     const handleSubmit = async(e) => {
         e.preventDefault();
 
-        console.log("SHOULD BE gameID", gameId)
+        if (review.trim().length === 0) {
+            setError("Please provide at least 1 character to review.");
+            return;
+        }
 
         const newReviewInput = {
             user_id: sessionUser.id,
@@ -29,7 +33,9 @@ const AddReview =({gameId}) => {
         };
 
         await dispatch(createReview(newReviewInput, gameId));
-        // await dispatch(getGameDetails(gameId));
+        setReview('');
+        setRecommended(true);
+        setError('')
     }
 
 
@@ -77,7 +83,7 @@ const AddReview =({gameId}) => {
 
 
                 </div>
-
+                {error && <p className="error-message">{error}</p>}
             </form>
 
         </div>

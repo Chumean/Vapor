@@ -23,7 +23,7 @@ def delete_review(id):
     return review.to_dict()
 
 # EDIT REVIEW
-@review_routes.route('/<int:id>,', methods=["PUT"])
+@review_routes.route('/<int:id>', methods=["PUT"])
 @login_required
 def edit_review(id):
 
