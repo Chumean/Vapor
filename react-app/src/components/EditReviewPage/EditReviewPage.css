@@ -1,0 +1,88 @@
+.edit-review-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.edit-profile-header {
+    color: #969696;
+    font-size: 14px;
+    font-family: "Motiva Sans", sans-serif;
+    background-color: #3A3E4780;
+    margin: 0px 16px;
+    background-position: center top;
+    height: 102px;
+    max-width: 978px;
+    position: relative;
+    background: rbga(58, 62, 71, 0.5);
+}
+
+.review-page-content {
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    display: block;
+    text-align: left;
+    width: 950px;
+    max-width: 1000px;
+    padding: 0 16px;
+    position: relative;
+    background: linear-gradient(180deg, var(--gpStoreDarkGrey) 0%, var(--gpStoreDarkerGrey) 80%);
+}
+
+.review-left-cont {
+    background-color: red;
+}
+
+.review-right-cont {
+    background-color: green;
+}
+
+
+.edit-review-block {
+    background-color: #16202d ;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.edit-review-leftcol {
+    flex-basis: 33.33%;
+    display: flex;
+}
+
+.edit-review-rightcol {
+    flex-basis: 66.67%;
+}
+
+.edit-review-content {
+    color: #ACB2B8;
+    font-size: 13px;
+    font-family: 'Motiva Sans', sans-serif;
+    font-weight: normal;
+    line-height: 17px;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+.edit-review-recommended-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #121a24;
+    padding: 8px 0;
+}
+
+.edit-review-user {
+    color: #C1DBF4;
+    font-size: 13px;
+    font-family: 'Motiva Sans', sans-serif;
+    padding: 0 10px;
+}
+
+.edit-review-user-icon {
+    color: white;
+    padding: 5px 10px;
+}
