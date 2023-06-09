@@ -318,9 +318,9 @@ h2 {
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0px 10px;
-    line-height: 20px;
+    line-height: 100px;
     border-radius: 2px;
-    display: block;
+    /* display: inline-block; */
     /* background: transparent; */
     background-color: #4a677b;
     margin-right: 10px;

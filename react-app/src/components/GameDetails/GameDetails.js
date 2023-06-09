@@ -51,6 +51,11 @@ const GameDetails = () => {
     }, [dispatch, gameId])
 
 
+    const handleDeleteReview = async (reviewId) => {
+        setModalContent(<DeleteReviewModal id={reviewId} game_id={gameDetails?.id} />)
+        openModal();
+    }
+
 
 
 
@@ -179,7 +184,10 @@ const GameDetails = () => {
 
                                     <div className="has-reviewed-options">
                                 <span className="has-reviewed-span">Edit review</span>
-                                <span className="has-reviewed-span">Delete review</span>
+                                <span className="has-reviewed-span"
+                                id={review?.id}
+                                onClick={() => handleDeleteReview(review?.id, gameDetails?.id)}
+                                >Delete review</span>
                                 </div>
                                 ) : (
                                     <br />
