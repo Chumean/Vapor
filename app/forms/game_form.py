@@ -11,6 +11,7 @@ class GameForm(FlaskForm):
     franchise = StringField('Franchise', validators=[DataRequired()])
     release_date = DateField('Release_date', validators=[DataRequired()])
     description = TextAreaField('Description', validators=[DataRequired()])
+    owner_id = IntegerField("Owner_id")
     price = FloatField('Price', validators=[DataRequired()])
     tags = StringField("Tags", validators=[DataRequired()])
     image = StringField("Image", validators=[DataRequired()])

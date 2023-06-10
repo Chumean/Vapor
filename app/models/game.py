@@ -22,6 +22,7 @@ class Game(db.Model):
     price = db.Column(db.Float, nullable=False)
     tags = db.Column(db.String, nullable=False)
     image = db.Column(db.String, nullable=False)
+    owner_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=True)
 
     owner = db.relationship("User", secondary=add_prefix_for_prod("cart_items"), back_populates="game")
     cart = db.relationship("Cart_Item", back_populates="game", cascade="all, delete-orphan")
@@ -41,5 +42,6 @@ class Game(db.Model):
             'price': self.price,
             'tags': self.tags,
             'image': self.image,
-            'reviews': [review.to_dict() for review in self.review]
+            'reviews': [review.to_dict() for review in self.review],
+            'owner_id': self.owner_id
         }
