@@ -10,6 +10,7 @@ const Cart = () => {
     const [save, setSave] = useState("hidden")
 
     const user = useSelector(state => state.session?.user?.id)
+
     const sessionUser = useSelector(state => state.session?.user)
 
     useEffect(() => {
@@ -20,6 +21,9 @@ const Cart = () => {
     const cart = useSelector(state => state.cart)
 
     const cartArr = Object.values(cart)
+
+    console.log(cart, "CART")
+    console.log(cartArr, "CART ARR")
 
 
     const onDelete = (e) => {
@@ -43,29 +47,30 @@ const Cart = () => {
                         <div className="game-info">
                             <NavLink
                                 key={game?.id}
-                                to={`/games/${game?.id}`}
+                                to={`/games/${game?.game?.id}`}
                                 style={{ textDecoration: "none" }}
                                 className="game-link"
                             >
                                 <div className="game-img">
                                     <img
                                         src={
-                                            game && game?.image
+                                            game && game?.game?.image
                                         }
                                         style={{width: "120px", height: "45px"}}
                                     />
                                 </div>
                                 <div className="game-text">
                                     <div className="cart">
-                                        {game?.title}
+                                        {game?.game?.title}
                                     </div>
                                     <div className="price">
-                                        $ {game?.price.toFixed(2)}
+                                        $ {game?.game?.price}
                                     </div>
                                 </div>
                             </NavLink>
                         </div>
                         <div className="qty">Qty: {game?.quantity}</div>
+
                         <div className="edit-section">
                             <button id={game.id} className="update-qty" onClick={() => handleEdit(game, save)}>Edit</button>
                             <button id={game.id} className="update-button delete" onClick={onDelete}>Delete</button>
@@ -81,7 +86,7 @@ const Cart = () => {
     return (
         <div className="cart-page-content">
             <div className="cart-page-banner">
-                    
+
                 <div className="cart-title-container">
                     <h2 className="h2-cart-title">YOUR SHOPPING CART </h2>
                 </div>

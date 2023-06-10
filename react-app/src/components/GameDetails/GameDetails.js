@@ -21,7 +21,6 @@ const GameDetails = () => {
     const [showModal, setShowModal] = useState(false);
     const history = useHistory();
 
-
     const user = useSelector(state => state?.session?.user)
 
     const game = useSelector(state => state?.game)

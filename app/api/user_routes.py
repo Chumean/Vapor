@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from flask_login import login_required
-from app.models import User, Cart_Item
+from app.models import User, Cart_Item, db
 from app.forms.cart_form import CartForm
 
 user_routes = Blueprint('users', __name__)
