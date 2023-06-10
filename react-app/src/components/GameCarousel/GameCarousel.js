@@ -35,10 +35,10 @@ const GameCarousel = () => {
       {Object.values(games).map((game) => (
         <div key={game.id} className="slide-container">
           <div className="img-slide">
+            <a href={`/games/${game?.id}`}>
             <img src={game.image} alt={game.title} />
+            </a>
           </div>
-
-
         </div>
       ))}
     </Slider>

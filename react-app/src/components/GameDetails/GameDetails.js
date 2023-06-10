@@ -13,6 +13,7 @@ import DeleteReviewModal from "../DeleteReviewModal/DeleteReviewModal";
 import EditReviewModal from "../EditReviewModal/EditReviewModal";
 import { useModal } from "../../context/Modal";
 import { addGameToCart } from "../../store/cart";
+import Categories from "../Categories/Categories";
 
 const GameDetails = () => {
     const dispatch = useDispatch();
@@ -67,6 +68,8 @@ const GameDetails = () => {
 
 
     return (
+        <div>
+            <Categories />
         <div className="detail-page-container">
             {/* GAME ART AND SMALL INFO */}
             {gameDetails && gameDetails?.id ? (
@@ -262,6 +265,7 @@ const GameDetails = () => {
             </div>
             ) : ("Page not found")}
         </div>
+    </div>
     )
 }
 
