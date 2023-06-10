@@ -84,6 +84,13 @@
     font-family: 'Motiva Sans', sans-serif;
 }
 
+.checkout-buttons {
+    margin-bottom: 5px;
+}
+
+.estimated-total-box {
+    margin-bottom: 5px;
+}
 
 .checkout-content {
     background-color: #16202d;
@@ -122,6 +129,7 @@
     font-size: 13px;
     font-family: "Motiva Sans", sans-serif;
     font-weight: 300;
+    margin-bottom: 5px;
 }
 
 .purchase-myself,
@@ -149,4 +157,9 @@
 .purchase-gift:hover,
 .purchase-myself:hover {
     color: white;
+}
+
+.remove-game:hover {
+    color:white;
+    cursor: pointer;
 }

@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCart, deleteFromCart } from "../../store/cart";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import {AiFillAppstore} from 'react-icons/ai'
 import "./CartPage.css";
 
 // IF DUPLICATE, JUST HISTORY PUSH TO CART WITHOUT CHANGING QTY
@@ -27,14 +26,14 @@ const Cart = () => {
     console.log(cartArr, "CART ARR")
 
 
-    const onDelete = (e) => {
-        e.preventDefault();
-        dispatch(deleteFromCart(user))
+    const onDelete = (userId, gameId) => {
+        dispatch(deleteFromCart(userId, gameId));
     }
 
-    const handleEdit = (game, save) => {
-
-    }
+    const totalPrice = cartArr.reduce(
+        (total, game) => total + (game?.game?.price || 0),
+        0
+    );
 
     // removed isLoaded on return (cartArr && cartArr?.map)
     const cartContent = () => {
@@ -85,8 +84,9 @@ const Cart = () => {
                                         </div>
 
                                         <div className="remove-game"
-                                        onClick={onDelete}
-                                        >Remove</div>
+                                            onClick={() => onDelete(user, game?.game?.id)}
+                                            >Remove
+                                        </div>
                                     </div>
                         </div>
 
@@ -121,10 +121,7 @@ const Cart = () => {
                     <div className="cart-total-area">
 
                         <div className="estimated-total-box">
-
-                            <div className="est-total-text">Estimated total</div>
-                            <div className="est-total-price">$price</div>
-
+                            <div className="est-total-price">Estimated total: $ {totalPrice}</div>
                         </div>
                     </div>
 
