@@ -35,15 +35,17 @@ function Navigation({ isLoaded }){
 			</li>
 		  </ul>
 		</nav>
-		<div className="header-right">
+
+		<div className="global-action-menu">
 		  <div className="install-login">
-			<button className="install-btn">Install Steam</button>
-			<a href="#" className="login-link">Login</a>
+			<div className="install-div"> <FaDownload /> Install Steam</div>
 		  </div>
-		  <div className="language">
-			<p className="language-text">Language</p>
+			<a href="#" className="login-link">Login</a>
+		  <div className="language-text">
+			Language
 		  </div>
 		</div>
+
 	  </header>
 
 	);
