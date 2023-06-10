@@ -44,6 +44,8 @@ def upgrade():
     sa.Column('tags', sa.String(), nullable=False),
     sa.Column('price', sa.Float(), nullable=False),
     sa.Column('image', sa.String(), nullable=False),
+    sa.Column('owner_id', sa.Integer(), nullable=True),
+    sa.ForeignKeyConstraint(['owner_id'], ['users.id'],),
     # sa.Column('user_id', sa.Integer(), nullable=False),
     # sa.ForeignKeyConstraint(['user_id'], ['users.id']),
     sa.PrimaryKeyConstraint('id'),
