@@ -1,10 +1,26 @@
+.cart-item {
+    background-color: #16202d;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    height: 77px;
+    min-height: 77px;
+    padding: 0 2.5%;
+    font-size: 13px;
+    line-height: 16px;
+}
+
 .cart-page-banner {
     background: rgb(27,40,56);
     background: linear-gradient(90deg, rgba(27,40,56,1) 0%, rgba(34,62,91,1) 50%, rgba(27,40,56,1) 100%);
 }
 
-.cart-page-content {
+.cart-game-info {
+    display: flex;
+    align-items: center;
+}
 
+.cart-page-content {
     display: block;
     align-items: center;
     justify-content: center;
@@ -16,8 +32,15 @@
 
 .cart-title-container {
     background: rgb(27,40,56);
-background: linear-gradient(90deg, rgba(27,40,56,1) 0%, rgba(34,62,91,1) 50%, rgba(27,40,56,1) 100%);
+    background: linear-gradient(90deg, rgba(27,40,56,1) 0%, rgba(34,62,91,1) 50%, rgba(27,40,56,1) 100%);
 }
+
+.game-img {
+    object-fit: cover;
+    position: relative;
+    top: 14px;
+}
+
 
 .h2-cart-title {
     color: white;
@@ -28,4 +51,31 @@ background: linear-gradient(90deg, rgba(27,40,56,1) 0%, rgba(34,62,91,1) 50%, rg
     font-weight: 300;
     text-shadow: 1px 1px 0 rgba( 0, 0, 0, 0.4 );
     letter-spacing: 0.03em;
+}
+
+.cart-container-item-list {
+
+    margin-bottom: 10px;
+}
+
+.cart-game-title {
+    color: #C7D5E0;
+    font-size: 13px;
+    font-family: 'Motiva Sans', sans-serif;
+}
+
+.price {
+    color: #C7D5E0;
+    font-size: 13px;
+    font-family: 'Motiva Sans', sans-serif;
+}
+
+.price-container {
+    margin-left: auto;
+}
+
+.remove-game {
+    color: #56707F;
+    font-size: 11px;
+    font-family: 'Motiva Sans', sans-serif;
 }

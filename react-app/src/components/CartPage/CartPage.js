@@ -2,9 +2,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCart, deleteFromCart } from "../../store/cart";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import {AiFillAppstore} from 'react-icons/ai'
 import "./CartPage.css";
 
-
+// IF DUPLICATE, JUST HISTORY PUSH TO CART WITHOUT CHANGING QTY
 const Cart = () => {
     const dispatch = useDispatch();
     const [save, setSave] = useState("hidden")
@@ -43,38 +44,60 @@ const Cart = () => {
             return (cartArr && cartArr?.map(game => {
 
                 return (
-                    <div className="cart-game" key={game?.id}>
-                        <div className="game-info">
+                    <div className="cart-item" key={game?.id}>
+                        <div className="cart-game-info">
                             <NavLink
                                 key={game?.id}
                                 to={`/games/${game?.game?.id}`}
                                 style={{ textDecoration: "none" }}
                                 className="game-link"
                             >
-                                <div className="game-img">
+
+                                <div className="game-img-container">
                                     <img
                                         src={
                                             game && game?.game?.image
                                         }
                                         style={{width: "120px", height: "45px"}}
+                                        className="game-img"
                                     />
                                 </div>
-                                <div className="game-text">
-                                    <div className="cart">
-                                        {game?.game?.title}
-                                    </div>
-                                    <div className="price">
-                                        $ {game?.game?.price}
-                                    </div>
-                                </div>
                             </NavLink>
-                        </div>
-                        <div className="qty">Qty: {game?.quantity}</div>
 
-                        <div className="edit-section">
-                            <button id={game.id} className="update-qty" onClick={() => handleEdit(game, save)}>Edit</button>
-                            <button id={game.id} className="update-button delete" onClick={onDelete}>Delete</button>
+                            <a
+                                href={`/games/${game?.game?.id}`}
+                                style={{ textDecoration: "none" }}
+                                className="game-link"
+                                key={game?.id}
+                            >
+
+                                <div className="cart-game-title">
+                                        {game?.game?.title}
+                                </div>
+                            </a>
+
+                            <div className="platform-icon">
+                                <AiFillAppstore />
+                            </div>
+
+                                    <div className="price-container">
+
+                                        <div className="price">
+                                            $ {game?.game?.price}
+                                        </div>
+
+                                        <div className="remove-game"
+                                        onClick={onDelete}
+                                        >Remove</div>
+                                    </div>
                         </div>
+
+                        {/* <div className="qty">Qty: {game?.quantity}</div> */}
+
+                        {/* <div className="edit-section">
+                            <button id={game.id} className="update-qty" onClick={() => handleEdit(game, save)}>Edit</button>
+
+                        </div> */}
                     </div >
                 )
             }))
@@ -91,16 +114,18 @@ const Cart = () => {
                     <h2 className="h2-cart-title">YOUR SHOPPING CART </h2>
                 </div>
             </div>
+
                 {sessionUser && user ? (<div className="cart-container-item-list">
                     {cartContent()}
                 </div>) : (<h1>Please Log in to View Your Cart</h1>)}
 
                 <div className="checkout-content">
                     <div className="cart-total-area">
+
                         <div className="estimated-total-box">
                             <div className="est-total-text">
 
-                                <div className="est-total-price">price</div>
+                                <div className="est-total-price">$</div>
                                 Estimated total
                             </div>
                         </div>
