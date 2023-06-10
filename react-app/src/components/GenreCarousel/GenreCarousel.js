@@ -16,8 +16,8 @@ const GenreCarousel = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         autoplay: false,
         autoplaySpeed: 3000,
         prevArrow: <AiOutlineLeft className="slick-prev" />,
@@ -28,17 +28,31 @@ const GenreCarousel = () => {
         dispatch(getAllGames())
       }, [dispatch])
 
+
+      const genres = [
+        { name: 'RPG', bg: '#b3850d' },
+        { name: 'Action', bg: '#860204' },
+        { name: 'Hack and Slash', bg: '#800080' },
+        { name: 'Roguelike', bg: '#010189' },
+        { name: 'Fighting', bg: '#f08080' },
+        { name: 'MMORPG', bg: '#4169e1' },
+        { name: 'Platformer', bg: '#32cd32' },
+        { name: 'Battle Royale', bg: '#ff4500' },
+        { name: 'FPS', bg: '#1e90ff' },
+        { name: 'Sandbox', bg: '#ffd700' },
+      ];
+
+
       return (
         <div className='genre-caro-cont'>
-             <Slider {...settings} className="game-carousel-slider">
-                {Object.values(games).map((game) => (
-            <div key={game.id} className="slide-container">
-            <div className="img-slide">
-            <a href={`/games/${game?.id}`}>
-            <img src={game.image} alt={game.title} />
-            </a>
-          </div>
-        </div>
+             <Slider {...settings} className="genre-carousel-slider">
+                {genres.map((genre, index) => (
+                <div key={index} className="genre-slide-container">
+                <div className="genre-slide">
+                    <div className='genre-slide-bg' style={{ backgroundColor: genre.bg}}></div>
+                    <div className='genre-title'>{genre.name}</div>
+                </div>
+            </div>
       ))}
     </Slider>
 
@@ -47,3 +61,6 @@ const GenreCarousel = () => {
 }
 
 export default GenreCarousel;
+// Genres
+// RPG, Action, Hack and Slash, Roguelike, Fighting, MMORPG Platformer, Battle Royale,
+// FPS Sandbox

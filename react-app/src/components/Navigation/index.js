@@ -25,14 +25,20 @@ function Navigation({ isLoaded }){
 	return (
 
 		<header className="header">
+
 		<div className="logo">
-		  <img src={logo} alt="Vaporlogo" className="logo-img" />
-		  <p className='vapor-text'>VAPOR</p>
+			<NavLink exact to="/" className="logo-link">
+
+		  		<img src={logo} alt="Vaporlogo" className="logo-img" />
+		  		<p className='vapor-text'>VAPOR</p>
+			</NavLink>
+
 		</div>
+
 		<nav className="header-nav">
 		  <ul className="nav-list">
 			<li className="nav-item">
-			  <a href="#" className="nav-link">STORE</a>
+			  <NavLink exact to="/" className="nav-link">STORE</NavLink>
 			</li>
 			<li className="nav-item">
 			  <a href="#" className="nav-link">COMMUNITY</a>

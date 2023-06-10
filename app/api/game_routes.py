@@ -92,7 +92,7 @@ def add_review(id):
 
 #     return jsonify({'message': 'Edit error'})
 
-@game_routes.route('/reviews/<int:id>', methods=["PUT"])
+@game_routes.route('<int:id>/reviews', methods=["PUT"])
 @login_required
 def edit_review(id):
 
@@ -108,12 +108,12 @@ def edit_review(id):
         return jsonify({'error': Unauthorized}),401
 
     if form.validate_on_submit():
-        review = form.review.data
+        edited_review = form.review.data
         recommended = form.recommended.data
         user_id = form.user_id.data
         game_id = form.game_id.data
 
-        review.review = review
+        review.review = edited_review
         review.recommended = recommended
         review.user_id = user_id
         review.game_id = game_id

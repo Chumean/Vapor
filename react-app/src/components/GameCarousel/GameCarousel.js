@@ -7,7 +7,7 @@ import { getAllGames } from "../../store/game";
 import "./GameCarousel.css";
 import { AiOutlineLeft, AiOutlineRight} from 'react-icons/ai'
 
-const GameCarousel = () => {
+const GameCarousel = ({gameLimit}) => {
   const dispatch = useDispatch();
   const games = useSelector(state => state?.game)
 
@@ -29,10 +29,14 @@ const GameCarousel = () => {
     dispatch(getAllGames())
   }, [dispatch])
 
+  const randomGames = Object.values(games).sort(() => Math.random() - 0.5)
+
+  const limitedGames = randomGames.slice(0, gameLimit);
+
   return (
     <div className="carousel-container">
     <Slider {...settings} className="game-carousel-slider">
-      {Object.values(games).map((game) => (
+      {limitedGames.map((game) => (
         <div key={game.id} className="slide-container">
           <div className="img-slide">
             <a href={`/games/${game?.id}`}>

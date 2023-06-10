@@ -17,7 +17,7 @@ def seed_games():
 
     nier = Game(
         title='NieR: Automata',
-        genre='Action RPG',
+        genre='Action',
         developer='PlatinumGames',
         publisher='Square Enix',
         franchise='NieR',
@@ -82,7 +82,7 @@ def seed_games():
 
     dd = Game(
     title='Darkest Dungeon',
-    genre='Roguelike, RPG',
+    genre='Roguelike',
     developer='Red Hook Studios',
     publisher='Red Hook Studios',
     franchise='Darkest Dungeon',
@@ -95,7 +95,7 @@ def seed_games():
 
     hades = Game(
     title='Hades',
-    genre='Action, Roguelike',
+    genre='Roguelike',
     developer='Supergiant Games',
     publisher='Supergiant Games',
     franchise="Hades",
@@ -108,7 +108,7 @@ def seed_games():
 
     dmc5 = Game(
     title='Devil May Cry 5',
-    genre='Action, Hack and Slash',
+    genre='Hack and Slash',
     developer='Capcom',
     publisher='Capcom',
     franchise='Devil May Cry',
@@ -121,7 +121,7 @@ def seed_games():
 
     bayonetta = Game(
     title='Bayonetta',
-    genre='Action, Hack and Slash',
+    genre='Hack and Slash',
     developer='PlatinumGames',
     publisher='Sega',
     franchise='Bayonetta',
@@ -134,7 +134,7 @@ def seed_games():
 
     cp2077 = Game(
     title='Cyberpunk 2077',
-    genre='Action, RPG',
+    genre='RPG',
     developer='CD Projekt Red',
     publisher='CD Projekt',
     franchise='Cyberpunk 2077',
@@ -143,6 +143,137 @@ def seed_games():
     price=59.99,
     tags='Cyberpunk, Open World',
     image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1685590565/download_xsdag0.jpg'
+    )
+
+    Witcher = Game(
+    title='The Witcher 3: Wild Hunt',
+    genre='RPG',
+    developer='CD Projekt Red',
+    publisher='CD Projekt',
+    franchise='The Witcher',
+    release_date='May 19, 2015',
+    description='Embark on an epic journey as Geralt of Rivia in the open-world fantasy RPG, The Witcher 3: Wild Hunt.',
+    price=29.99,
+    tags='Fantasy, Adventure',
+    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429223/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f_rcxrtm.jpg'
+)
+
+    rdr2 = Game(
+    title='Red Dead Redemption 2',
+    genre='Action-Adventure',
+    developer='Rockstar Games',
+    publisher='Rockstar Games',
+    franchise='Red Dead',
+    release_date='Oct 26, 2018',
+    description='Experience the vast and immersive world of the Wild West in Red Dead Redemption 2.',
+    price=59.99,
+    tags='Western, Open World',
+    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429247/RDR2476298253_Epic_Games_Wishlist_RDR2_2560x1440_V01-2560x1440-2a9ebe1f7ee202102555be202d5632ec_eb1orn.jpg'
+)
+
+    botw = Game(
+    title='The Legend of Zelda: Breath of the Wild',
+    genre='Action-Adventure',
+    developer='Nintendo',
+    publisher='Nintendo',
+    franchise='The Legend of Zelda',
+    release_date='Mar 3, 2017',
+    description='Embark on a grand adventure in the kingdom of Hyrule in The Legend of Zelda: Breath of the Wild.',
+    price=59.99,
+    tags='Fantasy, Exploration',
+    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429279/BOTW-Share_icon_oobjeb.jpg'
+)
+
+
+    gta5 = Game(
+    title='Grand Theft Auto V',
+    genre='Action-Adventure',
+    developer='Rockstar North',
+    publisher='Rockstar Games',
+    franchise='Grand Theft Auto',
+    release_date='Sep 17, 2013',
+    description='Enter the sprawling open world of Los Santos in Grand Theft Auto V and engage in various criminal activities.',
+    price=29.99,
+    tags='Open World, Crime',
+    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429323/gta-5-vr-mod_wvkquo.jpg'
+)
+
+    minecraft = Game(
+    title='Minecraft',
+    genre='Sandbox',
+    developer='Mojang Studios',
+    publisher='Mojang Studios',
+    franchise="Minecraft",
+    release_date='Nov 18, 2011',
+    description='Unleash your creativity and survive in the blocky world of Minecraft.',
+    price=26.95,
+    tags='Open World, Building',
+    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429358/Minecraft_PC_Bundle_XboxClub_1920x1080_y0kwyw.webp'
+)
+
+    skyrim = Game(
+    title='The Elder Scrolls V: Skyrim',
+    genre='RPG',
+    developer='Bethesda Game Studios',
+    publisher='Bethesda Softworks',
+    franchise='The Elder Scrolls',
+    release_date='Nov 11, 2011',
+    description='Embark on an epic adventure in the vast and immersive world of Skyrim.',
+    price=39.99,
+    tags='Fantasy, Open World',
+    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429422/hero_jdmvel.avif'
+)
+
+    ow = Game(
+    title='Overwatch',
+    genre='FPS',
+    developer='Blizzard Entertainment',
+    publisher='Blizzard Entertainment',
+    franchise="Overwatch",
+    release_date='May 24, 2016',
+    description='Join the team-based multiplayer mayhem in Overwatch and showcase your skills.',
+    price=19.99,
+    tags='Multiplayer, FPS',
+    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429471/overwatchmain_vt28ld.webp'
+)
+
+    fortnite = Game(
+    title='Fortnite',
+    genre='Battle Royale',
+    developer='Epic Games',
+    publisher='Epic Games',
+    franchise="Fortnite",
+    release_date='Jul 25, 2017',
+    description='Jump into the battle royale phenomenon and compete against players worldwide in Fortnite.',
+    price=0.01,
+    tags='Multiplayer, Free-to-play',
+    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429557/fortnite-home-page-battle-pass-promo-slide-desktop-1920x1080-8d9444dcb067_zuhamq.jpg'
+)
+
+    mario = Game(
+    title='Super Mario Odyssey',
+    genre='Platformer',
+    developer='Nintendo',
+    publisher='Nintendo',
+    franchise='Super Mario',
+    release_date='Oct 27, 2017',
+    description='Join Mario on a globe-trotting adventure to rescue Princess Peach in Super Mario Odyssey.',
+    price=59.99,
+    tags='Platform, Adventure',
+    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429523/c42553b4fd0312c31e70ec7468c6c9bccd739f340152925b9600631f2d29f8b5_majmso.avif'
+    )
+
+    cod = Game(
+    title='Call of Duty: Modern Warfare',
+    genre='First-Person Shooter',
+    developer='Infinity Ward',
+    publisher='Activision',
+    franchise='Call of Duty',
+    release_date='Oct 25, 2019',
+    description='Engage in intense multiplayer combat and a gripping single-player campaign in Call of Duty: Modern Warfare.',
+    price=59.99,
+    tags='Multiplayer, FPS',
+    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429645/maxresdefault_vbpumu.jpg'
     )
 
 
