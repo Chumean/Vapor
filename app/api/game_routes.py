@@ -14,7 +14,7 @@ def get_all_games():
     for game in games:
         game_dict = game.to_dict()
         game_list.append(game_dict)
-    return jsonify({'games': game_dict})
+    return jsonify({'games': game_list})
 
 @game_routes.route('/category')
 def get_games_by_category(category):
@@ -23,7 +23,7 @@ def get_games_by_category(category):
     for game in games:
         game_dict = game.to_dict()
         game_list.append(game_dict)
-    return jsonify({'games': game_dict})
+    return jsonify({'games': game_list})
 
 # GET GAME DETAILS
 @game_routes.route('/<int:id>')

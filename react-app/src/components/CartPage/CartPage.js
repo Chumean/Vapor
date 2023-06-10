@@ -114,7 +114,7 @@ const Cart = () => {
             <div className="cart-page-banner">
 
                 <div className="cart-title-container">
-                    <h2 className="h2-cart-title">YOUR SHOPPING CART </h2>
+                    <h2 className="h-cart-title">YOUR SHOPPING CART </h2>
                 </div>
             </div>
 

@@ -1,0 +1,20 @@
+.home-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* height: 100vh; */
+  }
+
+
+.home-page-content-title {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 490px;
+    font-family: "Motiva Sans", Sans-serif;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 0.03rem;
+    font-weight: normal;
+    padding-top: 2px;
+}
