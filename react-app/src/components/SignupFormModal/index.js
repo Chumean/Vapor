@@ -30,53 +30,69 @@ function SignupFormModal() {
 	};
 
 	return (
-		<>
-			<h1>Sign Up</h1>
+		<div className="sign-up-container">
+			<div className="sign-up-title">
+				<h1>Sign Up</h1>
+			</div>
+
 			<form onSubmit={handleSubmit}>
 				<ul>
 					{errors.map((error, idx) => (
 						<li key={idx}>{error}</li>
 					))}
 				</ul>
-				<label>
+
+				<div className="sign-up-inputs-container">
+				<label className="sign-up-inputs">
 					Email
 					<input
 						type="text"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 						required
+						className="sign-up-form-input"
 					/>
 				</label>
-				<label>
+
+				<label className="sign-up-inputs">
 					Username
 					<input
 						type="text"
 						value={username}
 						onChange={(e) => setUsername(e.target.value)}
 						required
+						className="sign-up-form-input"
 					/>
 				</label>
-				<label>
+
+				<label className="sign-up-inputs">
 					Password
 					<input
 						type="password"
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
 						required
+						className="sign-up-form-input"
 					/>
 				</label>
-				<label>
+
+				<label className="sign-up-inputs">
 					Confirm Password
 					<input
 						type="password"
 						value={confirmPassword}
 						onChange={(e) => setConfirmPassword(e.target.value)}
 						required
+						className="sign-up-form-input"
 					/>
 				</label>
-				<button type="submit">Sign Up</button>
+				<div className="sign-up-form-button-container">
+					<button className="sign-up-form-button" type="submit">Sign Up</button>
+				</div>
+
+				</div>
 			</form>
-		</>
+		</div>
 	);
 }
 

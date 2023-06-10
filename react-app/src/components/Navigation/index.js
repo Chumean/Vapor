@@ -5,10 +5,22 @@ import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import { FaDownload } from 'react-icons/fa'
 import logo from "../../assets/logo.png"
-import {FaUserSecret} from 'react-icons/fa'
+import LoginFormModal from '../LoginFormModal';
+import { useModal } from '../../context/Modal';
+
+
 
 function Navigation({ isLoaded }){
+	const  { setModalContent } = useModal();
+	const {closeModal} = useModal();
+
 	const sessionUser = useSelector(state => state.session.user);
+
+	const handleLoginClick = (e) => {
+		e.preventDefault();
+		setModalContent(<LoginFormModal />)
+		closeModal();
+	}
 
 	return (
 
@@ -45,7 +57,7 @@ function Navigation({ isLoaded }){
 		  </div>
 			<span className='session-username'>{sessionUser?.username}</span>
 		  <div className="session-user-icon">
-				<FaUserSecret
+				<ProfileButton
 					style={{width: "34px", height: "34px"}}
 					/>
 		  </div>
@@ -59,7 +71,9 @@ function Navigation({ isLoaded }){
 		  <div className="install-login">
 			<div className="install-div"> <FaDownload /> Install Steam</div>
 		  </div>
-			<a href="#" className="login-link">Login</a>
+			<p className="login-link"
+			onClick={handleLoginClick}
+			>Login</p>
 		  <div className="language-text">
 			Language
 		  </div>

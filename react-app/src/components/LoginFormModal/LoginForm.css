@@ -1,0 +1,101 @@
+.log-in-container {
+    /* margin: 20px; */
+    height: 300px;
+    padding: 20px;
+    padding-bottom: 20px;
+
+}
+
+#login-modal-content {
+    background-color: #181A21;
+}
+
+.login-form-modal {
+    background-color: #181A21;
+}
+
+
+.login-form-title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 0.55em;
+    text-transform: uppercase;
+ }
+
+ .log-in-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+ }
+
+ .login-email {
+    width: 280px;
+    height: 30px;
+    border-radius: 5%;
+ }
+
+ .email-and-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+    color: #1999ff;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    user-select: none;
+ }
+ .login-password {
+    width: 280px;
+    height: 30px;
+    border-radius: 5%
+ }
+
+ .password-and-input {
+    display: flex;
+    flex-direction: column;
+    color: #afafaf;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .02rem;
+    user-select: none;
+ }
+
+ .login-form-button-container {
+    margin-top: 20px;
+    display:flex;
+    justify-content: center;
+ }
+
+.login-form-button {
+    border:none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: inherit;
+    padding: 5px 80px 5px 80px;
+    background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+    color: white;
+ }
+
+ .login-form-button:hover {
+    background: linear-gradient(90deg, #06BFFF 0%, #a7bde9 100%);
+    color: white;
+    cursor: pointer;
+ }
+
+ .demo {
+    color:#1999ff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+ }
+
+ .demo:hover {
+    text-decoration: underline;
+ }

@@ -98,7 +98,8 @@ align-items: center;
 }
 
 .login-link:hover {
-color: #fff;
+  color: #fff;
+  cursor: pointer;
 }
 
 .language-text {
@@ -156,5 +157,15 @@ body {
 .session-user-icon {
   color: white;
   position: relative;
-  top: 7px;
+  top: 10px;
+}
+
+.profile-dropdown ul {
+
+  z-index: 999;
+}
+
+.log-but {
+  color: green;
+  background-color: red;
 }

@@ -4,6 +4,8 @@ import { logout } from "../../store/session";
 import OpenModalButton from "../OpenModalButton";
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
+import {FaUserSecret} from 'react-icons/fa'
+import "./Navigation.css";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -40,7 +42,10 @@ function ProfileButton({ user }) {
   return (
     <>
       <button onClick={openMenu}>
-        <i className="fas fa-user-circle" />
+        <FaUserSecret
+          style={{width: "34px", height: "34px"}}
+        />
+        {/* <i className="fas fa-user-circle" /> */}
       </button>
       <ul className={ulClassName} ref={ulRef}>
         {user ? (
@@ -57,12 +62,14 @@ function ProfileButton({ user }) {
               buttonText="Log In"
               onItemClick={closeMenu}
               modalComponent={<LoginFormModal />}
+              className="log-but"
             />
 
             <OpenModalButton
               buttonText="Sign Up"
               onItemClick={closeMenu}
               modalComponent={<SignupFormModal />}
+              className='log-but'
             />
           </>
         )}
