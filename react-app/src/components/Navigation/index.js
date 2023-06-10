@@ -10,7 +10,7 @@ function Navigation({ isLoaded }){
 	const sessionUser = useSelector(state => state.session.user);
 
 	return (
-		
+
 		<header className="header">
 		<div className="logo">
 		  <img src={logo} alt="Vaporlogo" className="logo-img" />
@@ -23,6 +23,9 @@ function Navigation({ isLoaded }){
 			</li>
 			<li className="nav-item">
 			  <a href="#" className="nav-link">COMMUNITY</a>
+			</li>
+			<li className='nav-item'>
+					<a href="#" className='nav-link'>{sessionUser?.username && sessionUser?.username.toUpperCase()}</a>
 			</li>
 			<li className="nav-item">
 			  <a href="#" className="nav-link">ABOUT</a>
