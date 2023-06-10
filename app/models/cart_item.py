@@ -16,8 +16,8 @@ class Cart_Item(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod("users.id")), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
 
-    game = db.relationship("Game", back_populates='cart')
-    user = db.relationship("User", back_populates='cart')
+    game = db.relationship("Game", back_populates='cart_items')
+    user = db.relationship("User", back_populates='cart_items')
 
     def to_dict(self):
         return {

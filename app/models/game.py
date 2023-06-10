@@ -23,6 +23,7 @@ class Game(db.Model):
     tags = db.Column(db.String, nullable=False)
     image = db.Column(db.String, nullable=False)
 
+    owner = db.relationship("User", secondary=add_prefix_for_prod("cart_items"), back_populates="game")
     cart = db.relationship("Cart_Item", back_populates="game", cascade="all, delete-orphan")
     review = db.relationship("Review", back_populates="game", cascade="all, delete-orphan")
 
