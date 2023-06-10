@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { getCart, deleteFromCart, emptyUserCart } from "../../store/cart";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./CartPage.css";
 
 // IF DUPLICATE, JUST HISTORY PUSH TO CART WITHOUT CHANGING QTY
 const Cart = () => {
+    const history = useHistory();
     const dispatch = useDispatch();
     const [save, setSave] = useState("hidden")
 
@@ -139,7 +140,10 @@ const Cart = () => {
                 </div>
 
                 <div className="cont-shop-div">
-                    <span className="cont-shopping">Continue Shopping</span>
+                    <span className="cont-shopping"
+                        onClick={() => history.push("/")}
+                        >Continue Shopping
+                    </span>
                 </div>
 
                 <div className="empty-all"
