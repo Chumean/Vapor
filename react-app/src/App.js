@@ -6,6 +6,8 @@ import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 
+
+import HomePage from "./components/HomePage/HomePage";
 import GameDetails from "./components/GameDetails/GameDetails";
 import EditReviewPage from "./components/EditReviewPage/EditReviewPage";
 import Cart from "./components/CartPage/CartPage";
@@ -29,6 +31,7 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
+          <Route exact path="/" component={HomePage} />
           <Route exact path='/games/:gameId' component={GameDetails} />
           <Route exact path='/games/:gameId/reviews/:reviewId' component={EditReviewPage} />
           <Route exact path="/cart" component={Cart} />

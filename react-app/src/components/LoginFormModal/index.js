@@ -23,7 +23,7 @@ function LoginFormModal() {
 
   return (
     <>
-      <h1>Log In</h1>
+      <h1>SIGN IN</h1>
       <form onSubmit={handleSubmit}>
         <ul>
           {errors.map((error, idx) => (
@@ -31,7 +31,7 @@ function LoginFormModal() {
           ))}
         </ul>
         <label>
-          Email
+          SIGN IN WITH EMAIL
           <input
             type="text"
             value={email}
@@ -40,7 +40,7 @@ function LoginFormModal() {
           />
         </label>
         <label>
-          Password
+          PASSWORD
           <input
             type="password"
             value={password}
@@ -48,7 +48,7 @@ function LoginFormModal() {
             required
           />
         </label>
-        <button type="submit">Log In</button>
+        <button type="submit">Sign in</button>
       </form>
     </>
   );
