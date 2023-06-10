@@ -33,9 +33,11 @@
  }
 
  .login-email {
+    color: white;
     width: 280px;
     height: 30px;
     border-radius: 5%;
+    background-color: #32353c
  }
 
  .email-and-input {
@@ -47,11 +49,14 @@
     font-size: 12px;
     text-transform: uppercase;
     user-select: none;
+    border: 1px solid #32353c
  }
  .login-password {
+    color: white;
     width: 280px;
     height: 30px;
-    border-radius: 5%
+    border-radius: 5%;
+    background-color: #32353c
  }
 
  .password-and-input {
@@ -62,6 +67,7 @@
     text-transform: uppercase;
     letter-spacing: .02rem;
     user-select: none;
+    border: 1px solid #32353c
  }
 
  .login-form-button-container {

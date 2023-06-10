@@ -30,6 +30,7 @@ function SignupFormModal() {
 	};
 
 	return (
+		<div className="signup-form-modal">
 		<div className="sign-up-container">
 			<div className="sign-up-title">
 				<h1>Sign Up</h1>
@@ -93,6 +94,7 @@ function SignupFormModal() {
 				</div>
 			</form>
 		</div>
+	</div>
 	);
 }
 
