@@ -16,6 +16,15 @@ def get_all_games():
         game_list.append(game_dict)
     return jsonify({'games': game_dict})
 
+@game_routes.route('/category')
+def get_games_by_category(category):
+    games = Game.query.filter(Game.genre == category)
+    game_list = []
+    for game in games:
+        game_dict = game.to_dict()
+        game_list.append(game_dict)
+    return jsonify({'games': game_dict})
+
 # GET GAME DETAILS
 @game_routes.route('/<int:id>')
 def get_game_details(id):
