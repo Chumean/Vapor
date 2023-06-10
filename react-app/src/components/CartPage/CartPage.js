@@ -64,6 +64,7 @@ const Cart = () => {
                                 </div>
                             </NavLink>
 
+
                             <a
                                 href={`/games/${game?.game?.id}`}
                                 style={{ textDecoration: "none" }}
@@ -76,9 +77,6 @@ const Cart = () => {
                                 </div>
                             </a>
 
-                            <div className="platform-icon">
-                                <AiFillAppstore />
-                            </div>
 
                                     <div className="price-container">
 
@@ -123,13 +121,20 @@ const Cart = () => {
                     <div className="cart-total-area">
 
                         <div className="estimated-total-box">
-                            <div className="est-total-text">
 
-                                <div className="est-total-price">$</div>
-                                Estimated total
-                            </div>
+                            <div className="est-total-text">Estimated total</div>
+                            <div className="est-total-price">$price</div>
+
                         </div>
                     </div>
+
+                    <div className="buy-gift">Is this a purchase for yourself or is it a gift? Select one to continue to checkout.</div>
+
+                    <div className="checkout-buttons">
+                        <span className="purchase-myself">Purchase for myself</span>
+                        <span className="purchase-gift">Purchase as a gift</span>
+                    </div>
+
                 </div>
         </div>
     )
