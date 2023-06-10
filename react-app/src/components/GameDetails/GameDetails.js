@@ -25,6 +25,7 @@ const GameDetails = () => {
 
     const user = useSelector(state => state?.session?.user)
 
+    console.log(user, "USER")
     const game = useSelector(state => state?.game)
 
     const gameDetails = game?.details

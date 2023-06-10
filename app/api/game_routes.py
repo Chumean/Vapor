@@ -65,29 +65,61 @@ def add_review(id):
 
 
 # EDIT REVIEW
-@game_routes.route('/<int:id>/reviews', methods=["PUT"])
+# @game_routes.route('/<int:id>/reviews', methods=["PUT"])
+# @login_required
+# def edit_review(id):
+
+#     review = Review.query.get(id)
+
+#     form = ReviewForm()
+#     form['csrf_token'].data = request.cookies['csrf_token']
+
+#     if form.validate_on_submit():
+#         review_id = form.review_id.data
+
+#         if not review or review.user_id != current_user.id:
+#             return jsonify({'error': 'Review not found or unauthorized'}, 404)
+
+#         review = form.review.data
+#         recommended = form.recommended.data
+
+#         review.review = review
+#         review.recommended = recommended
+
+#         db.session.commit()
+
+#         return jsonify(review.to_dict())
+
+#     return jsonify({'message': 'Edit error'})
+
+@game_routes.route('/reviews/<int:id>', methods=["PUT"])
 @login_required
 def edit_review(id):
-
-    review = Review.query.get(id)
 
     form = ReviewForm()
     form['csrf_token'].data = request.cookies['csrf_token']
 
+    review = Review.query.get(id)
+
+    if not review:
+        return jsonify({'error': 'Review not found'}), 404
+
+    if review.user_id != current_user.id:
+        return jsonify({'error': Unauthorized}),401
+
     if form.validate_on_submit():
-        review_id = form.review_id.data
-
-        if not review or review.user_id != current_user.id:
-            return jsonify({'error': 'Review not found or unauthorized'}, 404)
-
         review = form.review.data
         recommended = form.recommended.data
+        user_id = form.user_id.data
+        game_id = form.game_id.data
 
         review.review = review
         review.recommended = recommended
+        review.user_id = user_id
+        review.game_id = game_id
 
         db.session.commit()
 
-        return review.to_dict()
+        return jsonify(review.to_dict())
 
-    return jsonify({'message': 'Edit error'})
+    return jsonify({'error': 'Invalid form data'}, 400)
