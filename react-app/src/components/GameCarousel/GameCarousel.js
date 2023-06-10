@@ -21,6 +21,8 @@ const GameCarousel = () => {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
+    prevArrow: <AiOutlineLeft className="slick-prev" />,
+    nextArrow: <AiOutlineRight className="slick-next" />,
   };
 
   useEffect(() => {

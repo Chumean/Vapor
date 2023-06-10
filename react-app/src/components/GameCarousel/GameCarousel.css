@@ -1,7 +1,7 @@
-.game-carousel-slider .slick-prev,
+/* .game-carousel-slider .slick-prev,
 .game-carousel-slider .slick-next {
 
-}
+} */
 
 .game-carousel-slider img {
     width: 100%;
@@ -55,10 +55,10 @@
     border: 0;
   }
 
-  .slick-dots li button:hover {
+  /* .slick-dots li button:hover {
     background-color: white;
     cursor: pointer;
-  }
+  } */
 
   .slick-dots li.slick-active button {
     background-color: #798a9c; /* Set the active dot color */
@@ -67,3 +67,37 @@
   .slick-dots li button::before {
     content: none !important;
   }
+
+
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 108px;
+  background: linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+  background-color: #142132;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background: linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+    background-color: #2e6f9e;
+    color: white;
+}
+
+.slick-prev {
+  left: -46px;
+}
+
+.slick-next {
+  right: -45px;
+}
