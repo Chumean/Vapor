@@ -5,6 +5,7 @@ import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import { FaDownload } from 'react-icons/fa'
 import logo from "../../assets/logo.png"
+import {FaUserSecret} from 'react-icons/fa'
 
 function Navigation({ isLoaded }){
 	const sessionUser = useSelector(state => state.session.user);
@@ -36,7 +37,25 @@ function Navigation({ isLoaded }){
 		  </ul>
 		</nav>
 
-		<div className="global-action-menu">
+		{sessionUser && (
+
+			<div className="global-action-menu">
+		  <div className="session-install-login">
+			<div className="session-install-div"> <FaDownload /> Install Steam</div>
+		  </div>
+			<span className='session-username'>{sessionUser?.username}</span>
+		  <div className="session-user-icon">
+				<FaUserSecret
+					style={{width: "34px", height: "34px"}}
+					/>
+		  </div>
+		</div>
+		)}
+
+
+		{!sessionUser && (
+
+			<div className="global-action-menu">
 		  <div className="install-login">
 			<div className="install-div"> <FaDownload /> Install Steam</div>
 		  </div>
@@ -45,6 +64,7 @@ function Navigation({ isLoaded }){
 			Language
 		  </div>
 		</div>
+		)}
 
 	  </header>
 
