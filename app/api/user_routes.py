@@ -81,3 +81,16 @@ def deleteFromCart(userId, gameId):
     db.session.commit()
 
     return cartRel_query.to_dict()
+
+
+@user_routes.route('<int:userId>/cart', methods=["DELETE"])
+def emptyCart(userId):
+    cartRel_query = Cart_Item.query.filter(Cart_Item.user_id == userId)
+    cartRels = cartRel_query.all()
+
+    for rel in cartRels:
+        db.session.delete(rel)
+
+    db.session.commit()
+
+    return {}

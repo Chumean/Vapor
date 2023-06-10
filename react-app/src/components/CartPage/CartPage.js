@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { getCart, deleteFromCart } from "../../store/cart";
+import { getCart, deleteFromCart, emptyUserCart } from "../../store/cart";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./CartPage.css";
@@ -28,6 +28,10 @@ const Cart = () => {
 
     const onDelete = (userId, gameId) => {
         dispatch(deleteFromCart(userId, gameId));
+    }
+
+    const onEmptyCart = (userId) => {
+        dispatch(emptyUserCart(userId));
     }
 
     const totalPrice = cartArr.reduce(
@@ -80,7 +84,7 @@ const Cart = () => {
                                     <div className="price-container">
 
                                         <div className="price">
-                                            $ {game?.game?.price}
+                                            $ {game?.game?.price?.toFixed(2)}
                                         </div>
 
                                         <div className="remove-game"
@@ -101,7 +105,7 @@ const Cart = () => {
             }))
         }
 
-        return (<li>Your shopping cart is empty</li>)
+
     }
 
     return (
@@ -132,6 +136,15 @@ const Cart = () => {
                         <span className="purchase-gift">Purchase as a gift</span>
                     </div>
 
+                </div>
+
+                <div className="cont-shop-div">
+                    <span className="cont-shopping">Continue Shopping</span>
+                </div>
+
+                <div className="empty-all"
+                    onClick={() => onEmptyCart(user)}
+                    >Remove all items
                 </div>
         </div>
     )

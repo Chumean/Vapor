@@ -7,6 +7,8 @@ const UPDATE_CART = 'user/UPDATE_CART'
 
 const DELETE_CART = 'user/DELETE_CART'
 
+const EMPTY_CART = 'user/EMPTY_CART'
+
 const addCartGame = (cartRel) => ({
     type: ADD_CART,
     cartRel
@@ -26,6 +28,12 @@ const updateCartQty = (cartRel) => ({
     type: UPDATE_CART,
     cartRel
 })
+
+const emptyCart = () => ({
+    type: EMPTY_CART
+})
+
+
 
 const initialState = {};
 
@@ -97,6 +105,16 @@ export const deleteFromCart = (userId, gameId) => async (dispatch) => {
     }
 }
 
+export const emptyUserCart = (userId) => async (dispatch) => {
+    const res = await fetch(`/api/users/${userId}/cart`, {
+        method: 'DELETE'
+    })
+
+    if (res.ok) {
+        await res.json();
+        dispatch(emptyCart());
+    }
+}
 
 
 export default function cartReducer(state = initialState, action) {
@@ -130,7 +148,11 @@ export default function cartReducer(state = initialState, action) {
             delete newState[action.id]
 
 
+
             return newState
+
+        case EMPTY_CART:
+            return {};
         default:
             return state;
     }

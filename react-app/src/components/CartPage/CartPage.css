@@ -100,6 +100,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 
@@ -162,4 +163,36 @@
 .remove-game:hover {
     color:white;
     cursor: pointer;
+}
+
+
+.cont-shopping {
+    background-color: #2a475e;
+    color: #67C1F5;
+    font-size: 15px;
+    font-family: 'Motiva Sans' , sans-serif;
+    padding: 0px 15px;
+    line-height: 30px;
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.cont-shopping:hover {
+    color: white;
+    background-color: #67C1F5;
+}
+
+.empty-all {
+    color: #56707F;
+    font-size: 11px;
+    font-family: 'Motiva Sans', sans-serif;
+    cursor: pointer;
+}
+
+
+.empty-all:hover {
+    cursor: pointer;
+    color: #67C1F5;
 }
