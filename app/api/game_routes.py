@@ -105,7 +105,7 @@ def edit_review(id):
         return jsonify({'error': 'Review not found'}), 404
 
     if review.user_id != current_user.id:
-        return jsonify({'error': Unauthorized}),401
+        return jsonify({'error': "unauthorized"}),401
 
     if form.validate_on_submit():
         edited_review = form.review.data
