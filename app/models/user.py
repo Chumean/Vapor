@@ -17,7 +17,6 @@ class User(db.Model, UserMixin):
     game = db.relationship("Game", secondary=add_prefix_for_prod("cart_items"), back_populates="owner", cascade="all")
     cart = db.relationship("Cart_Item", back_populates="user", cascade="all, delete-orphan")
     review = db.relationship("Review", back_populates="user", cascade="all, delete-orphan" )
-    games = db.relationship("Game", secondary=library, backref('games', lazy='dynamic'))
 
     @property
     def password(self):

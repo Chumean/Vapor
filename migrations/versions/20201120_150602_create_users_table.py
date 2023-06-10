@@ -75,11 +75,11 @@ def upgrade():
 
     op.create_table('cart_items',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('game_id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('game_id', sa.Integer(), nullable=False),
     sa.Column('quantity', sa.Integer(), nullable=False),
-    sa.ForeignKeyConstraint(['user_id'], ['users.id'], name='fk_cart_items_user_id'),
-    sa.ForeignKeyConstraint(['game_id'], ['games.id'], name='fk_cart_items_game_id'),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'],),
+    sa.ForeignKeyConstraint(['game_id'], ['games.id'],),
     sa.PrimaryKeyConstraint('id')
     )
 
