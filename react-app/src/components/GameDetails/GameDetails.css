@@ -212,6 +212,8 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .review-block {
@@ -220,6 +222,7 @@ h2 {
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
+    max-width: 934px;
 }
 
 .review-leftcol {
@@ -229,17 +232,19 @@ h2 {
 
 .review-rightcol {
     flex-basis: 66.67%;
+    overflow-x: hidden;
 }
 
 .review-content {
+    max-height: 500px;
     color: #ACB2B8;
     font-size: 13px;
     font-family: 'Motiva Sans', sans-serif;
     font-weight: normal;
     line-height: 17px;
-    overflow-wrap: break-word;
-    overflow: hidden;
+
 }
+
 
 .review-recommended-header {
     display: flex;
@@ -307,7 +312,7 @@ h2 {
 
 .has-reviewed-options {
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
 }
 
 .has-reviewed-span {
@@ -322,6 +327,7 @@ h2 {
     background-color: #4a677b;
     margin-right: 10px;
     cursor: pointer;
+    line-height: 3;
 }
 
 .has-reviewed-span:hover {
