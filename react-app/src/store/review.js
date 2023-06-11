@@ -1,7 +1,6 @@
 // ACTION TYPES
 const LOAD_REVIEWS = 'review/LOAD_REVIEWS'
 const ADD_REVIEW = 'review/ADD_REVIEW'
-const EDIT_REVIEW = 'review/EDIT_REVIEW'
 const REMOVE_REVIEW = 'review/REMOVE_REVIEW'
 
 // ACTION CREATORS
@@ -18,11 +17,6 @@ export const addReview = (review) => ({
     review
 })
 
-// Edit Review Action
-export const editReview = (review) => ({
-    type: EDIT_REVIEW,
-    review
-})
 
 // Remove Review Action
 export const removeReview = (reviewId) => ({
@@ -63,35 +57,10 @@ export const createReview = (review, gameId) => async dispatch => {
 }
 
 // edit Review thunk
-export const updateReview = (gameId, data) => async dispatch => {
-    console.log("DATA", data)
-    const { review, recommended, user_id, game_id } = data;
-    console.log("gameId", gameId);
-    console.log("review", review);
-    console.log("recommended", recommended);
-    console.log("user_id", user_id);
-    console.log("game_id", game_id);
-
-    const res = await fetch(`/api/games/${gameId}/reviews`, {
-        method: "PUT",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            review,
-            recommended,
-            user_id,
-            game_id
-        })
-    });
-
-    if(res.ok) {
-        const updatedReview = await res.json();
-        console.log("updatedReview", updatedReview)
-        dispatch(editReview(updatedReview));
-        return updatedReview;
-    }
+export const updateReview = (review, gameId) => async (dispatch) => {
+    const {review, recommended, user_id, game_id } = data;
 }
+
 
 // delete Review thunk
 export const deleteReview = (reviewId) => async dispatch => {
@@ -118,9 +87,6 @@ const reviewReducer = (state = initialState, action) => {
         case ADD_REVIEW:
             return {...state, [action.review.id]: action.review}
 
-        case EDIT_REVIEW:
-            const updatedReview = action.review;
-            return {...state, [updatedReview.id]: updatedReview};
 
         case REMOVE_REVIEW:
             const deleteState = {...state};

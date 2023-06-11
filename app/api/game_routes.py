@@ -92,14 +92,17 @@ def add_review(id):
 
 #     return jsonify({'message': 'Edit error'})
 
-@game_routes.route('<int:id>/reviews', methods=["PUT"])
+@game_routes.route('<int:gameId>/reviews/<int:id>', methods=["PUT"])
 @login_required
-def edit_review(id):
+def edit_review(gameId, id):
 
     form = ReviewForm()
     form['csrf_token'].data = request.cookies['csrf_token']
 
     review = Review.query.get(id)
+
+    review.game_id = gameId
+    print('************** REVIEW? &************', review)
 
     if not review:
         return jsonify({'error': 'Review not found'}), 404
