@@ -19,7 +19,7 @@ const GameCarousel = ({gameLimit}) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     prevArrow: <AiOutlineLeft className="slick-prev" />,
     nextArrow: <AiOutlineRight className="slick-next" />,
