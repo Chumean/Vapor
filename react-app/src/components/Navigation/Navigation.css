@@ -1,5 +1,12 @@
 .profile-dropdown {
   position: absolute;
+  background-color: #171a21;
+
+}
+.profile-dropdown li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
 }
 
 .hidden {
@@ -102,6 +109,8 @@ align-items: center;
   cursor: pointer;
 }
 
+
+
 .language-text {
   color: #a6a9ad;
   font-size: 11px;
@@ -163,4 +172,14 @@ body {
 .profile-dropdown ul {
 
   z-index: 999;
+}
+
+.logout-button {
+  background-color: #1999ff;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  color: white;
+  cursor: pointer;
 }

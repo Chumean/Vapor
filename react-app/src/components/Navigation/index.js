@@ -12,15 +12,14 @@ import { useModal } from '../../context/Modal';
 
 function Navigation({ isLoaded }){
 	const  { setModalContent } = useModal();
-	const {closeModal} = useModal();
 
 	const sessionUser = useSelector(state => state.session.user);
 
-	const handleLoginClick = (e) => {
-		e.preventDefault();
+	const handleLoginClick = () => {
 		setModalContent(<LoginFormModal />)
-		closeModal();
+
 	}
+
 
 	return (
 
@@ -50,7 +49,7 @@ function Navigation({ isLoaded }){
 			  <a href="#" className="nav-link">ABOUT</a>
 			</li>
 			<li className="nav-item">
-			  <a href="#" className="nav-link">SUPPORT</a>
+			  <NavLink exact to="/cart" className="nav-link">CART</NavLink>
 			</li>
 		  </ul>
 		</nav>
@@ -63,7 +62,8 @@ function Navigation({ isLoaded }){
 		  </div>
 			<span className='session-username'>{sessionUser?.username}</span>
 		  <div className="session-user-icon">
-				<ProfileButton
+
+				<ProfileButton user={sessionUser}
 					style={{width: "34px", height: "34px"}}
 					/>
 		  </div>
@@ -71,20 +71,22 @@ function Navigation({ isLoaded }){
 		)}
 
 
+
 		{!sessionUser && (
 
-			<div className="global-action-menu">
-		  <div className="install-login">
-			<div className="install-div"> <FaDownload /> Install Steam</div>
-		  </div>
+				<div className="global-action-menu">
+		  	<div className="install-login">
+				<div className="install-div"> <FaDownload /> Install Steam</div>
+		  	</div>
 			<p className="login-link"
-			onClick={handleLoginClick}
-			>Login</p>
-		  <div className="language-text">
-			Language
-		  </div>
-		</div>
+				onClick={handleLoginClick}
+				>Login</p>
+		  	<div className="language-text">
+				Language
+		  		</div>
+			</div>
 		)}
+
 
 	  </header>
 
