@@ -18,3 +18,62 @@
     font-weight: normal;
     padding-top: 2px;
 }
+
+
+
+.fighter-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.fgame-image {
+  width: 229px;
+  height: 106px;
+}
+
+.fgame-cardz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fgame-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 229px;
+  margin: 10px;
+}
+
+.fgame-image {
+  width: 229px;
+  height: 106px;
+}
+
+.fgame-title {
+  background: rgb(48,80,108);
+  background: linear-gradient(90deg, rgba(48,80,108,1) 20%, rgba(54,93,123,1) 33%, rgba(64,121,153,1) 100%);
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.fgame-price {
+  background: rgb(48,80,108);
+  background: linear-gradient(90deg, rgba(48,80,108,1) 20%, rgba(54,93,123,1) 33%, rgba(64,121,153,1) 100%);
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.fighter-text {
+  font-size: 14px;
+  font-family: 'Motiva Sans', sans-serif;
+  color: white;
+}

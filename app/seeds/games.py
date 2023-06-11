@@ -77,7 +77,7 @@ def seed_games():
     description='Experience the latest installment in the Melty Blood series with Melty Blood: Type Lumina, featuring fast-paced combat, intricate mechanics, and a diverse roster of characters.',
     price=49.99,
     tags='Anime Fighter',
-    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1685590390/capsule_616x353_nxqqtx.jpg'
+    image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1686451631/ba3344f015a771b537396f323a035e8f29c13835a517c6ecf01992f91a8a81e9_vre4tt.avif'
     )
 
     dd = Game(
@@ -145,7 +145,8 @@ def seed_games():
     image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1685590565/download_xsdag0.jpg'
     )
 
-    Witcher = Game(
+
+    witcher = Game(
     title='The Witcher 3: Wild Hunt',
     genre='RPG',
     developer='CD Projekt Red',
@@ -288,6 +289,16 @@ def seed_games():
     db.session.add(dmc5)
     db.session.add(bayonetta)
     db.session.add(cp2077)
+    db.session.add(witcher)
+    db.session.add(rdr2)
+    db.session.add(botw)
+    db.session.add(gta5)
+    db.session.add(minecraft)
+    db.session.add(skyrim)
+    db.session.add(ow)
+    db.session.add(fortnite)
+    db.session.add(mario)
+    db.session.add(cod)
     db.session.commit()
 
 def undo_games():

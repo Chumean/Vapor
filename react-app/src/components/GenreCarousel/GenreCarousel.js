@@ -6,6 +6,7 @@ import { AiOutlineLeft, AiOutlineRight} from 'react-icons/ai'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { getAllGames } from '../../store/game';
+import "./GenreCarousel.css"
 
 const GenreCarousel = () => {
     const dispatch = useDispatch();
