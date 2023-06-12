@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 
 const AllGamesPage = () => {
     // const history = useHistory();
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const games = useSelector(state => state.game)
 
@@ -24,7 +24,9 @@ const AllGamesPage = () => {
     const fps = Object.values(games).filter((game) => game.genre === "FPS")
 
 
-    console.log(Object.values(games).map((game) => game.genre));
+    useEffect(() => {
+        dispatch(getAllGames());
+      }, [dispatch]);
 
     return (
         <div>

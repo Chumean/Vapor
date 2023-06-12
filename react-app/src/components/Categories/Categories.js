@@ -18,7 +18,7 @@ const Categories = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredGames, setFilteredGames] = useState([])
 
-    // console.log(games)
+
 
     useEffect(() =>{
         dispatch(getAllGames())

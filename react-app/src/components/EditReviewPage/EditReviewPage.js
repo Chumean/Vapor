@@ -29,7 +29,7 @@ const EditReviewPage = () => {
 
     const filteredReviews = Object.values(reviews).filter((review) => review?.game_id === gameDetails?.id && review.user_id === userId)
 
-    console.log(reviews)
+
 
     useEffect(() => {
         dispatch(getGameDetails(gameId))
@@ -59,7 +59,7 @@ const EditReviewPage = () => {
         }
     }
 
-    console.log("GAME ID", gameId)
+
     return (
         <div className="edit-review-page">
             <div className="edit-profile-header">TEST</div>

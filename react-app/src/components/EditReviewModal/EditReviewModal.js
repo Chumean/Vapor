@@ -31,7 +31,7 @@ const EditReviewModal = ({gameId, reviewId}) => {
             game_id: gameId,
         };
 
-        console.log("REVIEW ID?", reviewId)
+
 
         await dispatch(updateReview(gameId, reviewId, updatedReview));
         await dispatch(getGameDetails(gameId));

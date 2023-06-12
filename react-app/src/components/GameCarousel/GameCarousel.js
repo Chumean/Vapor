@@ -11,7 +11,7 @@ const GameCarousel = ({gameLimit}) => {
   const dispatch = useDispatch();
   const games = useSelector(state => state?.game)
 
-  console.log("GAMES?", games)
+
 
   const settings = {
     dots: true,

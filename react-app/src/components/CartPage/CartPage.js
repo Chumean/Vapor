@@ -23,8 +23,7 @@ const Cart = () => {
 
     const cartArr = Object.values(cart)
 
-    console.log(cart, "CART")
-    console.log(cartArr, "CART ARR")
+
 
 
     const onDelete = (userId, gameId) => {
@@ -42,8 +41,7 @@ const Cart = () => {
 
     // removed isLoaded on return (cartArr && cartArr?.map)
     const cartContent = () => {
-        // console.log("length is ", cartArr.length);
-        // console.log(cartArr);
+
         if (cartArr.length > 0) {
             return (cartArr && cartArr?.map(game => {
 
