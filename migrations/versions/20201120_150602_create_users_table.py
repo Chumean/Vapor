@@ -53,7 +53,7 @@ def upgrade():
 
     op.create_table('reviews',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('recommended', sa.Boolean(), nullable=False),
+    sa.Column('recommended', sa.String(), nullable=False),
     sa.Column('review', sa.String(), nullable=True),
     sa.Column('game_id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
@@ -62,16 +62,6 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
 
-
-    # op.create_table('library',
-    # sa.Column('id', sa.Integer(), nullable=False),
-    # sa.Column('user_id', sa.Integer(), nullable=False),
-    # sa.Column('game_id', sa.Integer(), nullable=False),
-    # sa.Column('favorites', sa.Boolean(), nullable=False),
-    # sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
-    # sa.ForeignKeyConstraint(['game_id'], ['games.id'], ),
-    # sa.PrimaryKeyConstraint('id')
-    # )
 
     op.create_table('cart_items',
     sa.Column('id', sa.Integer(), nullable=False),
