@@ -216,7 +216,7 @@ const GameDetails = () => {
                             </div>
 
                             <div className="review-rightcol">
-                                {review.recommended ? (
+                                {review.recommended === "Yes" ? (
                                     <div className="review-recommended-header">
 
                                         <div className="review-vote">

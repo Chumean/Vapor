@@ -11,7 +11,7 @@ const EditReviewModal = ({gameId, reviewId}) => {
     const {closeModal} = useModal();
 
     const [review, setReview] = useState('');
-    const [recommended, setRecommended] = useState(true);
+    const [recommended, setRecommended] = useState('');
     const [error, setError] = useState('');
 
     const currentGame = useSelector(state => state?.game?.details)
@@ -63,7 +63,7 @@ const EditReviewModal = ({gameId, reviewId}) => {
                     <div className="recommend-options">
                         <span
                             className='rec-span-up'
-                            onClick={() => setRecommended(true)}
+                            onClick={() => setRecommended("Yes")}
                             >
                             Yes
                             <FaRegThumbsUp  className="rec-icon"/>
@@ -71,7 +71,7 @@ const EditReviewModal = ({gameId, reviewId}) => {
 
                         <span
                             className='rec-span-down'
-                            onClick={() => setRecommended(false)}
+                            onClick={() => setRecommended("No")}
                             >
                             No
                             <FaRegThumbsDown className="rec-icon" />
