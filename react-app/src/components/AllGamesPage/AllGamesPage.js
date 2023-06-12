@@ -125,7 +125,7 @@ const AllGamesPage = () => {
 
 
             <div className="rpg-row">
-                <p className="rpg-text">RPG</p>
+                <p className="rpg-text">Roguelike</p>
                     <div className="rpg-cardz">
                     {rogue.map((game) => (
 
