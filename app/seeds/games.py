@@ -43,7 +43,7 @@ def seed_games():
 
     bdo = Game(
     title='Black Desert',
-    genre='MMORPG',
+    genre='RPG',
     developer='Pearl Abyss',
     publisher='Pearl Abyss',
     franchise="Black Desert",
@@ -161,7 +161,7 @@ def seed_games():
 
     rdr2 = Game(
     title='Red Dead Redemption 2',
-    genre='Action-Adventure',
+    genre='Adventure',
     developer='Rockstar Games',
     publisher='Rockstar Games',
     franchise='Red Dead',
@@ -174,7 +174,7 @@ def seed_games():
 
     botw = Game(
     title='The Legend of Zelda: Breath of the Wild',
-    genre='Action-Adventure',
+    genre='Adventure',
     developer='Nintendo',
     publisher='Nintendo',
     franchise='The Legend of Zelda',
@@ -188,7 +188,7 @@ def seed_games():
 
     gta5 = Game(
     title='Grand Theft Auto V',
-    genre='Action-Adventure',
+    genre='Adventure',
     developer='Rockstar North',
     publisher='Rockstar Games',
     franchise='Grand Theft Auto',
@@ -266,7 +266,7 @@ def seed_games():
 
     cod = Game(
     title='Call of Duty: Modern Warfare',
-    genre='First-Person Shooter',
+    genre='FPS',
     developer='Infinity Ward',
     publisher='Activision',
     franchise='Call of Duty',

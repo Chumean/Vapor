@@ -37,7 +37,7 @@ function Navigation({ isLoaded }){
 		<nav className="header-nav">
 		  <ul className="nav-list">
 			<li className="nav-item">
-			  <NavLink exact to="/" className="nav-link">STORE</NavLink>
+			  <NavLink exact to="/games" className="nav-link">STORE</NavLink>
 			</li>
 			<li className="nav-item">
 			  <a href="#" className="nav-link">COMMUNITY</a>

@@ -12,6 +12,7 @@ import GameDetails from "./components/GameDetails/GameDetails";
 import EditReviewPage from "./components/EditReviewPage/EditReviewPage";
 import Cart from "./components/CartPage/CartPage";
 import NotFound from "./components/PageNotFound";
+import AllGamesPage from "./components/AllGamesPage/AllGamesPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/games" component={AllGamesPage} />
           <Route exact path='/games/:gameId' component={GameDetails} />
           <Route exact path='/games/:gameId/reviews/:reviewId' component={EditReviewPage} />
           <Route exact path="/cart" component={Cart} />
