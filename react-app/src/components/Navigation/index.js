@@ -7,7 +7,7 @@ import { FaDownload } from 'react-icons/fa'
 import logo from "../../assets/logo.png"
 import LoginFormModal from '../LoginFormModal';
 import { useModal } from '../../context/Modal';
-
+import SignupFormModal from '../SignupFormModal';
 
 
 function Navigation({ isLoaded }){
@@ -18,6 +18,10 @@ function Navigation({ isLoaded }){
 	const handleLoginClick = () => {
 		setModalContent(<LoginFormModal />)
 
+	}
+
+	const handleSign = () => {
+		setModalContent(<SignupFormModal />)
 	}
 
 
@@ -76,7 +80,8 @@ function Navigation({ isLoaded }){
 
 				<div className="global-action-menu">
 		  	<div className="install-login">
-				<div className="install-div"> <FaDownload /> Install Steam</div>
+				<div className="install-div"
+				 onClick={handleSign}> <FaDownload /> Install Steam</div>
 		  	</div>
 			<p className="login-link"
 				onClick={handleLoginClick}
