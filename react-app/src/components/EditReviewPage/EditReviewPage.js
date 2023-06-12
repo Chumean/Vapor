@@ -14,7 +14,7 @@ const EditReviewPage = () => {
     const history = useHistory();
     const {reviewId} = useParams();
     const [review, setReview] = useState('');
-    const [recommended, setRecommended] = useState(true);
+    const [recommended, setRecommended] = useState('');
     const [errors, setErrors] = useState('');
 
     const user = useSelector(state => state?.session?.user)
