@@ -25,7 +25,6 @@ const GameDetails = () => {
 
     const user = useSelector(state => state?.session?.user)
 
-    console.log(user, "USER")
     const game = useSelector(state => state?.game)
 
     const gameDetails = game?.details
@@ -199,7 +198,7 @@ const GameDetails = () => {
                                     <div className="has-reviewed-options">
                                 <span className="has-reviewed-span"
                                     id={review?.id}
-                                    onClick={() => setModalContent(<EditReviewModal id={review?.id} gameId={gameDetails?.id} />)}
+                                    onClick={() => setModalContent(<EditReviewModal gameId={gameId} reviewId={review.id} />)}
                                     >Edit review
                                 </span>
 

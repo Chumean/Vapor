@@ -57,9 +57,29 @@ export const createReview = (review, gameId) => async dispatch => {
 }
 
 // edit Review thunk
-export const updateReview = (review, gameId) => async (dispatch) => {
-    const {review, recommended, user_id, game_id } = data;
+export const updateReview = (gameId, reviewId, editedReview) => async dispatch => {
+    const {review, recommended, user_id, game_id } = editedReview;
+
+    const res = await fetch(`/api/games/${gameId}/reviews/${reviewId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json"},
+        body: JSON.stringify({
+            review,
+            recommended,
+            user_id,
+            game_id
+        })
+    });
+
+    if (res.ok) {
+        const edited = await res.json();
+        dispatch(addReview(edited))
+        return edited;
+    }
 }
+
+
+
 
 
 // delete Review thunk

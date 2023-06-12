@@ -92,17 +92,20 @@ def add_review(id):
 
 #     return jsonify({'message': 'Edit error'})
 
-@game_routes.route('<int:gameId>/reviews/<int:id>', methods=["PUT"])
+@game_routes.route('<int:gameId>/reviews/<int:reviewId>', methods=["PUT"])
 @login_required
-def edit_review(gameId, id):
+def edit_review(gameId, reviewId):
+
+    review = Review.query.filter_by(game_id=gameId, id=reviewId).first()
 
     form = ReviewForm()
     form['csrf_token'].data = request.cookies['csrf_token']
 
-    review = Review.query.get(id)
-
-    review.game_id = gameId
-    print('************** REVIEW? &************', review)
+    review = Review.query.get(reviewId)
+    print('************** REVIEW? ************')
+    print('Review ID:', review.id)
+    print('Game ID:', review.game_id)
+    print('User ID:', review.user_id)
 
     if not review:
         return jsonify({'error': 'Review not found'}), 404
@@ -111,16 +114,10 @@ def edit_review(gameId, id):
     #     return jsonify({'error': "unauthorized"}),401
 
     if form.validate_on_submit():
-        edited_review = form.review.data
-        recommended = form.recommended.data
-        user_id = form.user_id.data
-        game_id = form.game_id.data
-
-        review.review = edited_review
-        review.recommended = recommended
-        review.user_id = user_id
-        review.game_id = game_id
-
+        review.review = form.review.data
+        review.recommended = form.recommended.data
+        review.user_id = form.user_id.data
+        review.game_id = form.game_id.data
         db.session.commit()
 
         return jsonify(review.to_dict())

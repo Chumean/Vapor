@@ -6,37 +6,34 @@ import { getGameDetails } from "../../store/game";
 import {FaRegThumbsUp, FaRegThumbsDown} from 'react-icons/fa'
 import "./EditReviewModal.css";
 
-const EditReviewModal = ({gameId}) => {
+const EditReviewModal = ({gameId, reviewId}) => {
     const dispatch = useDispatch();
     const {closeModal} = useModal();
 
     const [review, setReview] = useState('');
     const [recommended, setRecommended] = useState(true);
     const [error, setError] = useState('');
+
     const currentGame = useSelector(state => state?.game?.details)
     const currentTitle = currentGame?.title
 
     const user = useSelector(state => state?.session?.user)
-
-    const userId = user.id
+    const userId = user?.id
 
 
     const handleChange = async (e) => {
         e.preventDefault();
 
-        // if(review.value.trim().length === 0) {
-        //     setError("Please provide at least 1 character to update the review.");
-        //     return;
-        // }
-
         const updatedReview = {
+            review,
+            recommended,
             user_id: userId,
             game_id: gameId,
-            review: review,
-            recommended: recommended
         };
 
-        await dispatch(updateReview(gameId, updatedReview));
+        console.log("REVIEW ID?", reviewId)
+
+        await dispatch(updateReview(gameId, reviewId, updatedReview));
         await dispatch(getGameDetails(gameId));
 
         closeModal();
