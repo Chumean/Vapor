@@ -78,7 +78,7 @@ const EditReviewModal = ({gameId, reviewId}) => {
                         </span>
                     </div>
 
-                    <span className="post-review-span" onClick={handleChange}>
+                    <span className="edit-post-review-span" onClick={handleChange}>
                         Post review
                     </span>
 

@@ -55,51 +55,6 @@ const AllGamesPage = () => {
                 </div>
 
 
-            <div className="rpg-row">
-                <p className="rpg-text">RPG</p>
-                    <div className="rpg-cardz">
-                    {actionG.map((game) => (
-
-                        <NavLink
-                        key={game.id}
-                        to={`/games/${game.id}`}
-                        className="rpggame-card"
-                            >
-                    <img
-                    src={game.image}
-                    alt={game.title}
-                        className="rpggame-image"
-                            />
-                        <div className="rpggame-title">{game.title}</div>
-                        <div className="rpggame-price">{game.price}</div>
-                    </NavLink>
-                    ))}
-            </div>
-                </div>
-
-
-            <div className="rpg-row">
-                <p className="rpg-text">Platformer</p>
-                    <div className="rpg-cardz">
-                    {platformer.map((game) => (
-
-                        <NavLink
-                        key={game.id}
-                        to={`/games/${game.id}`}
-                        className="rpggame-card"
-                            >
-                    <img
-                    src={game.image}
-                    alt={game.title}
-                        className="rpggame-image"
-                            />
-                        <div className="rpggame-title">{game.title}</div>
-                        <div className="rpggame-price">{game.price}</div>
-                    </NavLink>
-                    ))}
-            </div>
-                </div>
-
 
             <div className="rpg-row">
                 <p className="rpg-text">Hack and Slash</p>
@@ -170,27 +125,6 @@ const AllGamesPage = () => {
                 </div>
 
 
-            <div className="rpg-row">
-                <p className="rpg-text">Sandbox</p>
-                    <div className="rpg-cardz">
-                    {sandbox.map((game) => (
-
-                        <NavLink
-                        key={game.id}
-                        to={`/games/${game.id}`}
-                        className="rpggame-card"
-                            >
-                    <img
-                    src={game.image}
-                    alt={game.title}
-                        className="rpggame-image"
-                            />
-                        <div className="rpggame-title">{game.title}</div>
-                        <div className="rpggame-price">{game.price}</div>
-                    </NavLink>
-                    ))}
-            </div>
-                </div>
 
 
             <div className="rpg-row">

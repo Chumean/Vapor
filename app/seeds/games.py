@@ -17,7 +17,7 @@ def seed_games():
 
     nier = Game(
         title='NieR: Automata',
-        genre='Action',
+        genre='Hack and Slash',
         developer='PlatinumGames',
         publisher='Square Enix',
         franchise='NieR',
@@ -173,7 +173,7 @@ def seed_games():
 )
 
     botw = Game(
-    title='The Legend of Zelda: Breath of the Wild',
+    title='Lonk from Pennsylvania',
     genre='Adventure',
     developer='Nintendo',
     publisher='Nintendo',
@@ -201,7 +201,7 @@ def seed_games():
 
     minecraft = Game(
     title='Minecraft',
-    genre='Sandbox',
+    genre='Adventure',
     developer='Mojang Studios',
     publisher='Mojang Studios',
     franchise="Minecraft",
@@ -253,7 +253,7 @@ def seed_games():
 
     mario = Game(
     title='Super Mario Odyssey',
-    genre='Platformer',
+    genre='Adventure',
     developer='Nintendo',
     publisher='Nintendo',
     franchise='Super Mario',
