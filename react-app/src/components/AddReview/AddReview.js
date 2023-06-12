@@ -4,7 +4,6 @@ import { createReview } from "../../store/review";
 import { getGameDetails } from "../../store/game";
 import {FaRegThumbsUp, FaRegThumbsDown} from 'react-icons/fa'
 import "./AddReview.css";
-import { useEffect } from "react";
 
 const AddReview =({gameId}) => {
     const dispatch = useDispatch();
@@ -16,15 +15,6 @@ const AddReview =({gameId}) => {
     const [review, setReview] = useState('');
     const [recommended, setRecommended] = useState('');
     const [error, setError] = useState('');
-
-    useEffect(() => {
-        () => {
-            setReview('');
-            setRecommended('');
-            setError('')
-        }
-    }, [])
-
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -42,7 +32,9 @@ const AddReview =({gameId}) => {
         };
 
         await dispatch(createReview(newReviewInput, gameId));
-
+        setReview('');
+        setRecommended('');
+        setError('')
     }
 
 
