@@ -11,8 +11,8 @@ class User(db.Model, UserMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(40), nullable=False, unique=True)
-    email = db.Column(db.String(255), nullable=False, unique=True)
-    hashed_password = db.Column(db.String(255), nullable=False)
+    email = db.Column(db.String(), nullable=False, unique=True)
+    hashed_password = db.Column(db.String(), nullable=False)
 
     game = db.relationship("Game", secondary=add_prefix_for_prod("cart_items"), back_populates="owner", cascade="all")
     cart = db.relationship("Cart_Item", back_populates="user", cascade="all, delete-orphan")
