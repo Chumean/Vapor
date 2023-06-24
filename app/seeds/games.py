@@ -25,7 +25,7 @@ def seed_games():
         description='Experience the critically acclaimed action RPG, NieR: Automata, and uncover the truth behind a dystopian world.',
         price=39.99,
         tags='Sci-Fi',
-        image='https://catwithmonocle.com/wp-content/uploads/2020/01/featured-nier-automata-cover-art.jpg'
+        image='https://res.cloudinary.com/dsu4khzr3/image/upload/v1687565350/featured-nier-automata-cover-art_woknln.jpg'
     )
 
     ggst = Game(
