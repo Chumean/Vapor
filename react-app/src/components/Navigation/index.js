@@ -40,18 +40,22 @@ function Navigation({ isLoaded }){
 
 		<nav className="header-nav">
 		  <ul className="nav-list">
+
 			<li className="nav-item">
 			  <NavLink exact to="/games" className="nav-link">STORE</NavLink>
 			</li>
 			<li className="nav-item">
-			  <a href="#" className="nav-link">COMMUNITY</a>
+			  <a className="nav-link">COMMUNITY</a>
 			</li>
+
 			<li className='nav-item'>
-					<a href="#" className='nav-link'>{sessionUser?.username && sessionUser?.username.toUpperCase()}</a>
+				<a className='nav-link'>{sessionUser?.username && sessionUser?.username.toUpperCase()}</a>
 			</li>
+
 			<li className="nav-item">
-			  <a href="#" className="nav-link">ABOUT</a>
+			  <a  className="nav-link">ABOUT</a>
 			</li>
+
 			<li className="nav-item">
 			  <NavLink exact to="/cart" className="nav-link">CART</NavLink>
 			</li>
