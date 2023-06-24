@@ -1,4 +1,4 @@
-# Flask React Project
+<!-- # Flask React Project
 ******* DEV BRANCH ******
 This is the starter for the Flask React project.
 
@@ -145,4 +145,66 @@ successfully deployed your Flask application to Render! You can find the URL for
 your site just below the name of the Web Service at the top of the page.
 
 [Render.com]: https://render.com/
-[Dashboard]: https://dashboard.render.com/
+[Dashboard]: https://dashboard.render.com/ -->
+
+
+## Capstone-Vapor
+
+# Technologies
+
+## Frontend:
+
+## Backend:
+
+# Hosting / Deployment:
+- Render
+
+# Link to Live Site:
+
+# Project Notes:
+
+# Sample Screenshots:
+
+## Landing Page
+![](https://res.cloudinary.com/dsu4khzr3/image/upload/v1686618230/f260649dea0f786bf11576bad29ea589_dlnxej.jpg)
+
+## Games
+![](https://res.cloudinary.com/dsu4khzr3/image/upload/v1687565390/e0d6852b51e9759db6041ab653a71f2c_dukwik.png)
+## Game Details
+![](https://res.cloudinary.com/dsu4khzr3/image/upload/v1686618245/0532422fa4f6c99819be6405f728f9a7_z0muka.png)
+## Cart Page
+![](https://res.cloudinary.com/dsu4khzr3/image/upload/v1686618268/53b3fe6598f4d7a070cb0970ea5e222f_b1jmpm.png)
+
+
+# Schema:
+
+# Backend Routes:
+
+# Frontend Routes:
+
+# Feature List:
+
+# Redux State:
+
+# User Stories:
+
+## Component List:
+
+-HomePage
+
+-Navigation
+-LoginFormModal
+-SignupFormModal
+
+-AllGamesPage
+-GameCarousel
+
+-Categories
+-GameCard
+-GameDetails
+
+-AddReview
+-DeleteReviewModal
+-EditReviewModal
+
+-CartPage
