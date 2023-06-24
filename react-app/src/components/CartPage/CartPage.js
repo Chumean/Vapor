@@ -118,7 +118,7 @@ const Cart = () => {
 
                 {sessionUser && user ? (<div className="cart-container-item-list">
                     {cartContent()}
-                </div>) : (<h1>Please Log in to View Your Cart</h1>)}
+                </div>) : (<h1 className="please-log">Please Log in to View Your Cart</h1>)}
 
                 <div className="checkout-content">
                     <div className="cart-total-area">
