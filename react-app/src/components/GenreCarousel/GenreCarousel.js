@@ -25,9 +25,9 @@ const GenreCarousel = () => {
         nextArrow: <AiOutlineRight className="slick-next" />,
       };
 
-      useEffect(() => {
-        dispatch(getAllGames())
-      }, [dispatch])
+      // useEffect(() => {
+      //   dispatch(getAllGames())
+      // }, [dispatch])
 
 
       const genres = [

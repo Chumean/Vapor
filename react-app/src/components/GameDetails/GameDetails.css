@@ -121,7 +121,7 @@
     background: linear-gradient( -60deg, rgba(226,244,255,0.3) 5%,rgba(84, 107, 115, 0.3) 95%);
     padding: 16px;
     padding-bottom: 26px;
-    z-index: 1;
+    /* z-index: 1; */
     border-radius: 4px;
 }
 
@@ -158,7 +158,7 @@
     height: 100%;
     padding-right: 15px;
     position: relative;
-    z-index: 2; /* Ensure the game-purchase-action is on top */
+    /* z-index: 2; */
     top: -21px;
 }
 

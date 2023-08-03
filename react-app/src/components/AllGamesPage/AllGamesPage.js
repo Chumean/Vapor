@@ -24,9 +24,9 @@ const AllGamesPage = () => {
     const fps = Object.values(games).filter((game) => game.genre === "FPS")
 
 
-    useEffect(() => {
-        dispatch(getAllGames());
-      }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch(getAllGames());
+    //   }, [dispatch]);
 
     return (
         <div>

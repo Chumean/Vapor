@@ -34,16 +34,10 @@ const HomePage = () => {
                     <div className="fgame-cardz">
                     {fightingGames.map((game) => (
 
-                        <NavLink
-                        key={game.id}
-                        to={`/games/${game.id}`}
-                        className="fgame-card"
-                            >
-                    <img
-                    src={game.image}
-                    alt={game.title}
-                        className="fgame-image"
-                            />
+                        <NavLink key={game.id} to={`/games/${game.id}`} className="fgame-card">
+
+                        <img src={game.image} alt={game.title} className="fgame-image" />
+
                         <div className="fgame-title">{game.title}</div>
                         <div className="fgame-price">{game.price}</div>
                     </NavLink>
