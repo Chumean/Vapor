@@ -30,7 +30,7 @@ export const getGameDetails = (gameId) => async (dispatch) => {
     const response = await fetch(`/api/games/${gameId}`);
     if (response.ok) {
       const game = await response.json();
-   
+
       dispatch(loadDetails(game));
     }
 };
@@ -57,7 +57,11 @@ const gameReducer = (state = initialState, action) => {
             });
             return newState;
         case LOAD_DETAILS:
-            return {...state, details: action.gameId };
+            const game = state[action.gameId];
+            if(game) {
+                return { ...state, details: game};
+            }
+            // return {...state, details: action.gameId };
         default:
             return state;
     }

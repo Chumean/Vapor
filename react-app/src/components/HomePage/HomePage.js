@@ -16,7 +16,17 @@ const HomePage = () => {
     const dispatch = useDispatch();
     const games = useSelector(state => state?.game)
 
+    useEffect(() => {
+        console.log("INITAL GAME STATE", games)
+    }, [])
+
     const fightingGames = Object.values(games).filter((game) => game.genre === "Fighting")
+
+    console.log("FIGHTERS", fightingGames)
+
+    const dupes = fightingGames.filter((game, index, self) => self.findIndex((g) => g.id === game.id) !== index)
+
+    // console.log("DUPES", dupes)
 
     return(
         <div className="home-page-container">
