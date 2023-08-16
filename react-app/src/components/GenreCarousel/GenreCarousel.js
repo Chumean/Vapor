@@ -21,12 +21,12 @@ const GenreCarousel = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 3000,
         prevArrow: <AiOutlineLeft className="slick-prev" />,
         nextArrow: <AiOutlineRight className="slick-next" />,
-        spacing: -20
+        // spacing: 10
       };
 
       // useEffect(() => {
@@ -45,16 +45,16 @@ const GenreCarousel = () => {
 
       return (
         <div className='genre-caro-cont'>
-             <Slider {...settings} className="genre-carousel-slider">
+             <Slider {...settings} className="genre-carousel-slide">
                 {genres.map((genre) => (
                 <div key={genre.key} className="genre-slide-container">
-                <div className="genre-slide">
-                <Link to={genre.url} className='genre-slide-bg'>
+                  <div className="genre-slide">
+                    <Link to={genre.url} className='genre-slide-bg'>
                                 <img src={genre.image} alt={genre.name} />
-                            </Link>
+                    </Link>
 
                     <div className='genre-title'>{genre.key}</div>
-                </div>
+                  </div>
             </div>
       ))}
     </Slider>
