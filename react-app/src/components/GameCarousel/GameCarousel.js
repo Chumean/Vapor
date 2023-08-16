@@ -1,17 +1,15 @@
-import {React, useEffect} from "react";
-import { useSelector, useDispatch } from "react-redux";
+import {React} from "react";
+import { useSelector} from "react-redux";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { getAllGames } from "../../store/game";
+
 import "./GameCarousel.css";
 import { AiOutlineLeft, AiOutlineRight} from 'react-icons/ai'
 
 const GameCarousel = ({gameLimit}) => {
-  const dispatch = useDispatch();
+
   const games = useSelector(state => state?.game)
-
-
 
   const settings = {
     dots: true,
@@ -25,9 +23,6 @@ const GameCarousel = ({gameLimit}) => {
     nextArrow: <AiOutlineRight className="slick-next" />,
   };
 
-  // useEffect(() => {
-  //   dispatch(getAllGames())
-  // }, [dispatch])
 
   const randomGames = Object.values(games).sort(() => Math.random() - 0.5)
 
