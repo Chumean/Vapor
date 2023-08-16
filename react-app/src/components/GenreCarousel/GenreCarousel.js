@@ -1,19 +1,13 @@
 
 import {React} from 'react';
-import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import { AiOutlineLeft, AiOutlineRight} from 'react-icons/ai'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { getAllGames } from '../../store/game';
 import "./GenreCarousel.css"
 import {Link} from 'react-router-dom';
 
 const GenreCarousel = () => {
-    const games = useSelector(state => state.game)
-
-
-
 
 
     const settings = {
@@ -22,8 +16,8 @@ const GenreCarousel = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 3000,
+        autoplay: true,
+        autoplaySpeed: 5000,
         prevArrow: <AiOutlineLeft className="slick-prev" />,
         nextArrow: <AiOutlineRight className="slick-next" />,
         // spacing: 10
