@@ -56,17 +56,6 @@ const HomePage = () => {
                     </div>
                 </div> */}
 
-                {/* <div>
-                    <ul>
-                        {fightingGames.map(listing => (
-                            <CarouselCard
-                            key={listing.id}
-                            title={listing.title}
-                            image={listing.image}
-                            />
-                        ))}
-                    </ul>
-                </div> */}
 
 
             </div>

@@ -11,6 +11,9 @@ import "./GenreCarousel.css"
 const GenreCarousel = () => {
     const dispatch = useDispatch();
     const games = useSelector(state => state.game)
+    console.log("GAMES", games)
+
+    const rpg = Object.values(games).filter(game => game.title === "Persona 5 Royal")
 
 
     const settings = {
@@ -31,16 +34,11 @@ const GenreCarousel = () => {
 
 
       const genres = [
-        { name: 'RPG', bg: '#b3850d' },
-        { name: 'Action', bg: '#860204' },
-        { name: 'Hack and Slash', bg: '#800080' },
-        { name: 'Roguelike', bg: '#010189' },
-        { name: 'Fighting', bg: '#f08080' },
-        { name: 'MMORPG', bg: '#4169e1' },
-        { name: 'Platformer', bg: '#32cd32' },
-        { name: 'Battle Royale', bg: '#ff4500' },
-        { name: 'FPS', bg: '#1e90ff' },
-        { name: 'Sandbox', bg: '#ffd700' },
+        { name: 'RPG' },
+        { name: 'Hack and Slash' },
+        { name: 'Roguelike' },
+        { name: 'Fighting' },
+        { name: 'FPS'},
       ];
 
 
@@ -50,7 +48,7 @@ const GenreCarousel = () => {
                 {genres.map((genre, index) => (
                 <div key={index} className="genre-slide-container">
                 <div className="genre-slide">
-                    <div className='genre-slide-bg' style={{ backgroundColor: genre.bg}}></div>
+
                     <div className='genre-title'>{genre.name}</div>
                 </div>
             </div>

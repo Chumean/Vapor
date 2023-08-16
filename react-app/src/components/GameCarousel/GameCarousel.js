@@ -25,9 +25,9 @@ const GameCarousel = ({gameLimit}) => {
     nextArrow: <AiOutlineRight className="slick-next" />,
   };
 
-  useEffect(() => {
-    dispatch(getAllGames())
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(getAllGames())
+  // }, [dispatch])
 
   const randomGames = Object.values(games).sort(() => Math.random() - 0.5)
 
