@@ -13,7 +13,7 @@ const GenreCarousel = () => {
     const games = useSelector(state => state.game)
     console.log("GAMES", games)
 
-    const rpg = Object.values(games).filter(game => game.title === "Persona 5 Royal")
+
 
 
     const settings = {
@@ -34,20 +34,21 @@ const GenreCarousel = () => {
 
 
       const genres = [
-        { name: 'RPG' },
-        { name: 'Hack and Slash' },
-        { name: 'Roguelike' },
-        { name: 'Fighting' },
-        { name: 'FPS'},
+        { key: 'rpg', url: 'https://res.cloudinary.com/dsu4khzr3/image/upload/v1685589376/656e8c37-8260-4bfc-82d0-e16650dd147c_pz6oed.jpg' },
+        { key: 'hack', url: 'https://res.cloudinary.com/dsu4khzr3/image/upload/v1687565350/featured-nier-automata-cover-art_woknln.jpg'},
+        { key: 'rogue', url: 'https://res.cloudinary.com/dsu4khzr3/image/upload/v1685590492/header_atue4i.jpg'},
+        { key: 'fighting', url: 'https://res.cloudinary.com/dsu4khzr3/image/upload/v1685590390/capsule_616x353_nxqqtx.jpg' },
+        { key: 'fps', url: 'https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429471/overwatchmain_vt28ld.webp'},
       ];
 
 
       return (
         <div className='genre-caro-cont'>
              <Slider {...settings} className="genre-carousel-slider">
-                {genres.map((genre, index) => (
-                <div key={index} className="genre-slide-container">
+                {genres.map((genre) => (
+                <div key={genre.key} className="genre-slide-container">
                 <div className="genre-slide">
+
 
                     <div className='genre-title'>{genre.name}</div>
                 </div>
