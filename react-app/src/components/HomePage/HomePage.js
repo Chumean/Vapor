@@ -10,7 +10,7 @@ import { getAllGames } from "../../store/game";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-
+import CarouselCard from "../CarouselCard/CarouselCard";
 
 const HomePage = () => {
     const dispatch = useDispatch();
@@ -18,7 +18,8 @@ const HomePage = () => {
 
     useEffect(() => {
         console.log("INITAL GAME STATE", games)
-    }, [])
+        dispatch(getAllGames())
+    }, [dispatch])
 
     const fightingGames = Object.values(games).filter((game) => game.genre === "Fighting")
 
@@ -39,7 +40,7 @@ const HomePage = () => {
                     <GenreCarousel />
                 </div>
 
-                <div className="fighter-row">
+                {/* <div className="fighter-row">
                 <p className="fighter-text">FIGHTERS</p>
                     <div className="fgame-cardz">
                     {fightingGames.map((game) => (
@@ -52,8 +53,22 @@ const HomePage = () => {
                         <div className="fgame-price">{game.price}</div>
                     </NavLink>
                     ))}
-            </div>
-                </div>
+                    </div>
+                </div> */}
+
+                {/* <div>
+                    <ul>
+                        {fightingGames.map(listing => (
+                            <CarouselCard
+                            key={listing.id}
+                            title={listing.title}
+                            image={listing.image}
+                            />
+                        ))}
+                    </ul>
+                </div> */}
+
+
             </div>
         </div>
     )

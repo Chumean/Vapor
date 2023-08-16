@@ -7,7 +7,7 @@ const FightRow = () => {
     const dispatch = useDispatch();
     const games = useSelector(state => state.game)
 
-    const fightingGames = Object.values(games).filter((game) => game.eenre === "Fighting");
+    const fightingGames = Object.values(games).filter((game) => game.genre === "Fighting");
 
 
     useEffect(() => {

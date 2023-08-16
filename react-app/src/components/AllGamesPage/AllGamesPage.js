@@ -15,12 +15,9 @@ const AllGamesPage = () => {
 
 
     const rpg = Object.values(games).filter((game) => game.genre === "RPG")
-    const actionG = Object.values(games).filter((game) => game.genre === "Action")
-    const platformer = Object.values(games).filter((game) => game.genre === "Platformer")
     const hacknslash = Object.values(games).filter((game) => game.genre === "Hack and Slash")
     const rogue = Object.values(games).filter((game) => game.genre === "Roguelike")
     const adventure = Object.values(games).filter((game) => game.genre === "Adventure")
-    const sandbox = Object.values(games).filter((game) => game.genre === "Sandbox")
     const fps = Object.values(games).filter((game) => game.genre === "FPS")
 
 
@@ -150,6 +147,8 @@ const AllGamesPage = () => {
                     ))}
             </div>
                 </div>
+
+
 
 
         </div>
