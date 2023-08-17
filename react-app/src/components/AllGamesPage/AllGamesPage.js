@@ -13,17 +13,74 @@ const AllGamesPage = () => {
 
     const games = useSelector(state => state.game)
 
-
-    const rpg = Object.values(games).filter((game) => game.genre === "RPG")
-    const hacknslash = Object.values(games).filter((game) => game.genre === "Hack and Slash")
-    const rogue = Object.values(games).filter((game) => game.genre === "Roguelike")
-    const adventure = Object.values(games).filter((game) => game.genre === "Adventure")
-    const fps = Object.values(games).filter((game) => game.genre === "FPS")
+    console.log("GAMES", games)
 
 
-    // useEffect(() => {
-    //     dispatch(getAllGames());
-    //   }, [dispatch]);
+    // loop over the keys of games (let x of games) / let x in games
+    // if x , (x as a key), isNumber(x)
+    // push games[x] to the array of genre
+    // separate arrays for each genre
+    // if (x.isNumber(x)) {
+    // case games[x].genre
+    // case 'rpg':
+    // rpg.push(games[x])
+    // break
+    //}
+
+    const rpg = [];
+    const hacknslash = [];
+    const rogue = [];
+    const adventure = [];
+    const fps = [];
+    const fighter = [];
+
+
+    const genreFilter = () => {
+        for(let gameKey in games) {
+
+            if(!isNaN(gameKey)) {
+                const game = games[gameKey];
+                switch(game.genre) {
+                    case "RPG":
+                        rpg.push(game);
+                        break;
+                    case "Hack and Slash":
+                        hacknslash.push(game);
+                        break;
+                    case "Roguelike":
+                        rogue.push(game);
+                        break;
+                    case "Adventure":
+                        adventure.push(game);
+                        break;
+                    case "FPS":
+                        fps.push(game);
+                        break;
+                    case "Fighting":
+                        fighter.push(game);
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+
+        }
+    }
+
+    console.log(genreFilter())
+
+
+    // const rpg = Object.values(games).filter((game) => game.genre === "RPG")
+    // const hacknslash = Object.values(games).filter((game) => game.genre === "Hack and Slash")
+    // const rogue = Object.values(games).filter((game) => game.genre === "Roguelike")
+    // const adventure = Object.values(games).filter((game) => game.genre === "Adventure")
+    // const fps = Object.values(games).filter((game) => game.genre === "FPS")
+
+
+    useEffect(() => {
+        dispatch(getAllGames());
+      }, [dispatch]);
 
     return (
         <div>
@@ -147,6 +204,29 @@ const AllGamesPage = () => {
                     ))}
             </div>
                 </div>
+
+                <div className="rpg-row">
+                <p className="rpg-text">Fighters</p>
+                    <div className="rpg-cardz">
+                    {fighter.map((game) => (
+
+                        <NavLink
+                        key={game.id}
+                        to={`/games/${game.id}`}
+                        className="rpggame-card"
+                            >
+                    <img
+                    src={game.image}
+                    alt={game.title}
+                        className="rpggame-image"
+                            />
+                        <div className="rpggame-title">{game.title}</div>
+                        <div className="rpggame-price">{game.price}</div>
+                    </NavLink>
+                    ))}
+            </div>
+                </div>
+
 
 
 

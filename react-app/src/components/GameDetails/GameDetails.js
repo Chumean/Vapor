@@ -27,11 +27,9 @@ const GameDetails = () => {
 
     const game = useSelector(state => state?.game)
 
-    console.log("GAME", game)
 
     const gameDetails = game?.details
 
-    console.log("DETES", gameDetails)
     const reviews = useSelector(state => state.reviews)
 
     const filteredReviews = Object.values(reviews).filter((review) => review?.game_id === gameDetails?.id)
