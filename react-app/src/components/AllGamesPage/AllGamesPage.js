@@ -1,31 +1,16 @@
 
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, React } from "react";
-import { useHistory } from "react-router-dom";
 import { getAllGames } from "../../store/game";
 import Categories from "../Categories/Categories";
 import "./AllGamesPage.css"
 import { NavLink } from "react-router-dom";
 
 const AllGamesPage = () => {
-    // const history = useHistory();
+
     const dispatch = useDispatch();
 
     const games = useSelector(state => state.game)
-
-    console.log("GAMES", games)
-
-
-    // loop over the keys of games (let x of games) / let x in games
-    // if x , (x as a key), isNumber(x)
-    // push games[x] to the array of genre
-    // separate arrays for each genre
-    // if (x.isNumber(x)) {
-    // case games[x].genre
-    // case 'rpg':
-    // rpg.push(games[x])
-    // break
-    //}
 
     const rpg = [];
     const hacknslash = [];
@@ -68,15 +53,7 @@ const AllGamesPage = () => {
         }
     }
 
-    console.log(genreFilter())
-
-
-    // const rpg = Object.values(games).filter((game) => game.genre === "RPG")
-    // const hacknslash = Object.values(games).filter((game) => game.genre === "Hack and Slash")
-    // const rogue = Object.values(games).filter((game) => game.genre === "Roguelike")
-    // const adventure = Object.values(games).filter((game) => game.genre === "Adventure")
-    // const fps = Object.values(games).filter((game) => game.genre === "FPS")
-
+    genreFilter()
 
     useEffect(() => {
         dispatch(getAllGames());
