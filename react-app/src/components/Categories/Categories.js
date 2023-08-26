@@ -5,6 +5,7 @@ import { getAllGames } from '../../store/game'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 // div gradient mx-[2.5rem] pl-4 pr-2 mt-8 flex items-center justify-between py-[0.1rem]
 // background: rgb(58,99,144);
@@ -55,27 +56,27 @@ const Categories = () => {
         <div className='cat-bar'>
             <ul className='cat-row'>
                 <li>
-                    <p>Your Store</p>
+                    <Link exact to="/notfound" className="cat-li">Your Store</Link>
                 </li>
 
                 <li>
-                    <p>New & Noteworthy</p>
+                    <Link exact to="/notfound" className="cat-li">New & Noteworthy</Link>
                 </li>
 
                 <li>
-                    <p>Categories</p>
+                    <Link exact to="/notfound" className="cat-li">Categories</Link>
                 </li>
 
                 <li>
-                    <p>Points Shop</p>
+                    <Link exact to="/notfound" className="cat-li">Points Shop</Link>
                 </li>
 
                 <li>
-                    <p>News</p>
+                    <Link exact to="/notfound" className="cat-li">News</Link>
                 </li>
 
                 <li>
-                    <p>Labs</p>
+                    <Link exact to="/notfound" className="cat-li">Labs</Link>
                 </li>
             </ul>
 
