@@ -17,14 +17,26 @@ const HomePage = () => {
     const games = useSelector(state => state?.game)
 
     useEffect(() => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> daf9bb43be65d737c9497e7062f965c42e239b03
         dispatch(getAllGames())
     }, [dispatch])
 
     const fightingGames = Object.values(games).filter((game) => game.genre === "Fighting")
 
+<<<<<<< HEAD
     const dupes = fightingGames.filter((game, index, self) => self.findIndex((g) => g.id === game.id) !== index)
 
+=======
+
+
+    const dupes = fightingGames.filter((game, index, self) => self.findIndex((g) => g.id === game.id) !== index)
+
+
+
+>>>>>>> daf9bb43be65d737c9497e7062f965c42e239b03
     return(
         <div className="home-page-container">
             <div className="home-page-content">
@@ -35,24 +47,6 @@ const HomePage = () => {
                 <div>
                     <GenreCarousel />
                 </div>
-
-                {/* <div className="fighter-row">
-                <p className="fighter-text">FIGHTERS</p>
-                    <div className="fgame-cardz">
-                    {fightingGames.map((game) => (
-
-                        <NavLink key={game.id} to={`/games/${game.id}`} className="fgame-card">
-
-                        <img src={game.image} alt={game.title} className="fgame-image" />
-
-                        <div className="fgame-title">{game.title}</div>
-                        <div className="fgame-price">{game.price}</div>
-                    </NavLink>
-                    ))}
-                    </div>
-                </div> */}
-
-
 
             </div>
         </div>
