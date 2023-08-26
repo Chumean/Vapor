@@ -1,8 +1,8 @@
 export default function NotFound() {
     return (
         <div>
-            <h2>The page you are trying to visit is not valid</h2>
-            <h3>Please go back to the homepage</h3>
+            <h2>UNDER CONSTRUCTION</h2>
+            <h2>Please go back to the homepage</h2>
         </div>
     )
 }

@@ -45,7 +45,7 @@ function Navigation({ isLoaded }){
 			  <NavLink exact to="/games" className="nav-link">STORE</NavLink>
 			</li>
 			<li className="nav-item">
-			  <a className="nav-link">COMMUNITY</a>
+			  <NavLink exact to="/notfound" className="nav-link">COMMUNITY</NavLink>
 			</li>
 
 			<li className='nav-item'>
@@ -53,7 +53,7 @@ function Navigation({ isLoaded }){
 			</li>
 
 			<li className="nav-item">
-			  <a  className="nav-link">ABOUT</a>
+				<NavLink exact to="/notfound" className="nav-link">ABOUT</NavLink>
 			</li>
 
 			<li className="nav-item">

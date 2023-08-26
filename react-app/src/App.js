@@ -37,7 +37,7 @@ function App() {
           <Route exact path='/games/:gameId' component={GameDetails} />
           <Route exact path='/games/:gameId/reviews/:reviewId' component={EditReviewPage} />
           <Route exact path="/cart" component={Cart} />
-          <Route path="/not_found" component={NotFound} />
+          <Route path="/notfound" component={NotFound} />
           <Route component={NotFound} />
         </Switch>
       )}
