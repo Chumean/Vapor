@@ -102,10 +102,10 @@ def edit_review(gameId, reviewId):
     form['csrf_token'].data = request.cookies['csrf_token']
 
     review = Review.query.get(reviewId)
-    print('************** REVIEW? ************')
-    print('Review ID:', review.id)
-    print('Game ID:', review.game_id)
-    print('User ID:', review.user_id)
+    # print('************** REVIEW? ************')
+    # print('Review ID:', review.id)
+    # print('Game ID:', review.game_id)
+    # print('User ID:', review.user_id)
 
     if not review:
         return jsonify({'error': 'Review not found'}), 404
