@@ -6,12 +6,12 @@ import { getGameDetails } from "../../store/game";
 import {FaRegThumbsUp, FaRegThumbsDown} from 'react-icons/fa'
 import "./EditReviewModal.css";
 
-const EditReviewModal = ({gameId, reviewId}) => {
+const EditReviewModal = ({gameId, reviewId, existingRev, existingRec, updateRevText }) => {
     const dispatch = useDispatch();
     const {closeModal} = useModal();
 
-    const [review, setReview] = useState('');
-    const [recommended, setRecommended] = useState('');
+    const [review, setReview] = useState(existingRev);
+    const [recommended, setRecommended] = useState(existingRec);
     const [error, setError] = useState('');
 
     const currentGame = useSelector(state => state?.game?.details)
@@ -35,6 +35,8 @@ const EditReviewModal = ({gameId, reviewId}) => {
 
         await dispatch(updateReview(gameId, reviewId, updatedReview));
         await dispatch(getGameDetails(gameId));
+
+        updateRevText(review);
 
         closeModal();
     }

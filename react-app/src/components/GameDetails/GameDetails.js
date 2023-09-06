@@ -22,6 +22,9 @@ const GameDetails = () => {
     const [showModal, setShowModal] = useState(false);
     const history = useHistory();
 
+    const [existingRev, setExistingRev] = useState('');
+    const [existingRec, setExistingRec] = useState('');
+
 
     const user = useSelector(state => state?.session?.user)
 
@@ -47,6 +50,21 @@ const GameDetails = () => {
         dispatch(getGameDetails(gameId));
         dispatch(loadReviews(gameId))
     }, [dispatch, gameId])
+
+    const handleEdit = (review) => {
+        setExistingRev(review.review);
+        setExistingRec(review.recommended);
+
+        setModalContent(
+            <EditReviewModal
+                gameId={gameId}
+                reviewId={review.id}
+                existingRev={existingRev}
+                existingRec={existingRec}
+                updateRevText={setExistingRev}
+            />
+        )
+    }
 
 
     const handleDeleteReview = async (reviewId) => {
@@ -199,7 +217,7 @@ const GameDetails = () => {
                                     <div className="has-reviewed-options">
                                 <span className="has-reviewed-span"
                                     id={review?.id}
-                                    onClick={() => setModalContent(<EditReviewModal gameId={gameId} reviewId={review.id} />)}
+                                    onClick={() => handleEdit(review)}
                                     >Edit review
                                 </span>
 
