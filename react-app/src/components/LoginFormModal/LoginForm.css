@@ -1,13 +1,20 @@
 .log-in-container {
     /* margin: 20px; */
-    height: 300px;
+    height: 400px;
     padding: 20px;
-    padding-bottom: 20px;
+    /* padding-bottom: 10px; */
 
 }
 
 #login-modal-content {
     background-color: #181A21;
+}
+
+.login-errors {
+   color: white;
+   list-style-type: none;
+   position: relative;
+   bottom: 20px;
 }
 
 .login-form-modal {

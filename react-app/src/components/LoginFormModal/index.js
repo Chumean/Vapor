@@ -34,12 +34,12 @@ function LoginFormModal() {
     <div className="login-form-modal">
     <div className="log-in-container">
       <div className="login-form-title">
-        <h1>sign in</h1>
+        <h1>Sign in</h1>
       </div>
       <form onSubmit={handleSubmit}>
         <ul>
           {errors.map((error, idx) => (
-            <li key={idx}>{error}</li>
+            <li className="login-errors" key={idx}>{error}</li>
           ))}
         </ul>
 

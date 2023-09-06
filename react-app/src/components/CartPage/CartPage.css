@@ -205,6 +205,5 @@
 .tymsg {
     color: #C6D4DF;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
 }
