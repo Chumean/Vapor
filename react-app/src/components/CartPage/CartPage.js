@@ -34,6 +34,10 @@ const Cart = () => {
         dispatch(emptyUserCart(userId));
     }
 
+    const onBuy = (userId) => {
+        dispatch(emptyUserCart(userId));
+    }
+
     const totalPrice = cartArr.reduce(
         (total, game) => total + (game?.game?.price || 0),
         0
@@ -131,8 +135,15 @@ const Cart = () => {
                     <div className="buy-gift">Is this a purchase for yourself or is it a gift? Select one to continue to checkout.</div>
 
                     <div className="checkout-buttons">
-                        <span className="purchase-myself">Purchase for myself</span>
-                        <span className="purchase-gift">Purchase as a gift</span>
+                        <span className="purchase-myself"
+                            onClick={() => onBuy(user)}
+                            >Purchase for myself
+                        </span>
+
+                        <span className="purchase-gift"
+                            onClick={() => onBuy(user)}
+                            >Purchase as a gift
+                        </span>
                     </div>
 
                 </div>
