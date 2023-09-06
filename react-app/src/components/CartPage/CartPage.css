@@ -46,7 +46,7 @@
     color: white;
     font-size: 34px;
     font-family: "Motiva Sans", sans-serif;
-    margin: -4px 0px 0px;
+    margin: 0px 0px 0px;
     padding: 2px 0px 0px;
     font-weight: 300;
     text-shadow: 1px 1px 0 rgba( 0, 0, 0, 0.4 );
@@ -200,4 +200,11 @@
 .please-log {
     color:#C6D4DF;
     font-family: "Motiva Sans", sans-serif;
+}
+
+.tymsg {
+    color: #C6D4DF;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
 }

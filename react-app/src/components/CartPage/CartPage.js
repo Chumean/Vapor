@@ -9,6 +9,7 @@ const Cart = () => {
     const history = useHistory();
     const dispatch = useDispatch();
     const [save, setSave] = useState("hidden")
+    const [buymsg, setBuymsg] = useState(false);
 
     const user = useSelector(state => state.session?.user?.id)
 
@@ -36,6 +37,11 @@ const Cart = () => {
 
     const onBuy = (userId) => {
         dispatch(emptyUserCart(userId));
+        setBuymsg(true);
+
+        // setTimeout(() => {
+        //     setBuymsg(false);
+        // }, 5000)
     }
 
     const totalPrice = cartArr.reduce(
@@ -123,6 +129,13 @@ const Cart = () => {
                 {sessionUser && user ? (<div className="cart-container-item-list">
                     {cartContent()}
                 </div>) : (<h1 className="please-log">Please Log in to View Your Cart</h1>)}
+
+
+                {buymsg && (
+                    <div className="tymsg">
+                        Thank you for your purchase!
+                    </div>
+                )}
 
                 <div className="checkout-content">
                     <div className="cart-total-area">
