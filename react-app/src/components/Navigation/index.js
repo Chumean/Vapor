@@ -85,7 +85,7 @@ function Navigation({ isLoaded }){
 				<div className="global-action-menu">
 		  	<div className="install-login">
 				<div className="install-div"
-				 onClick={handleSign}> <FaDownload /> Install Steam</div>
+				 onClick={handleSign}> <FaDownload /> Sign Up</div>
 		  	</div>
 			<p className="login-link"
 				onClick={handleLoginClick}
