@@ -86,6 +86,7 @@ background: linear-gradient(90deg, rgba(58,69,81,1) 21%, rgba(73,86,100,1) 48%, 
     color: white;
 }
 
+
 .recommend-options {
     display: flex;
     align-items: center;
@@ -108,21 +109,23 @@ background: linear-gradient(90deg, rgba(58,69,81,1) 21%, rgba(73,86,100,1) 48%, 
     cursor: pointer;
 }
 
-.rec-span-up:hover {
-    background-color: #54a5d4;
-    text-shadow: 1px 1px 2px rbga(0, 0, 0, .6667);
-    color: white;
-}
 
-.rec-span-down:hover {
-    background-color: #54a5d4;
-    text-shadow: 1px 1px 2px rbga(0, 0, 0, .6667);
-    color: white;
-}
 
 .rec-span-down svg {
     vertical-align: middle;
+    padding: 1px;
 }
+
+.rec-span-up svg {
+    padding: 0px 1px;
+}
+
+.rec-span-up:hover,
+.rec-span-down:hover {
+    color: white;
+    background-color: black;
+}
+
 
 .confirm-delete-message {
     margin-bottom: 10px;

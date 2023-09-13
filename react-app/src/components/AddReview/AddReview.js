@@ -13,7 +13,7 @@ const AddReview =({gameId}) => {
     const currentTitle = currentGame?.title
 
     const [review, setReview] = useState('');
-    const [recommended, setRecommended] = useState('');
+    const [recommended, setRecommended] = useState('Yes');
     const [error, setError] = useState('');
 
     const handleSubmit = async(e) => {
