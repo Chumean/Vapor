@@ -15,6 +15,7 @@ const AddReview =({gameId}) => {
     const [review, setReview] = useState('');
     const [recommended, setRecommended] = useState('Yes');
     const [error, setError] = useState('');
+    const [option, setOption] = useState('Yes')
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -60,16 +61,22 @@ const AddReview =({gameId}) => {
 
                     <div className="recommend-options">
                         <span
-                            className='rec-span-up'
-                            onClick={() => setRecommended("Yes")}
+                            className={`rec-span-up ${option === 'Yes' ? 'selected' : ''}`}
+                            onClick={() => {
+                                setRecommended("Yes");
+                                setOption("Yes")
+                            }}
                             >
                             Yes
                             <FaRegThumbsUp  className="rec-icon"/>
                         </span>
 
                         <span
-                            className='rec-span-down'
-                            onClick={() => setRecommended('No')}
+                            className={`rec-span-down ${option === 'No' ? 'selected' : ''}`}
+                            onClick={() => {
+                                setRecommended('No');
+                                setOption("No")
+                            }}
                             >
                             No
                             <FaRegThumbsDown className="rec-icon" />
