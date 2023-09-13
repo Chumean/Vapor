@@ -24,9 +24,6 @@ const Categories = () => {
     useEffect(() =>{
         dispatch(getAllGames())
     }, [dispatch])
-    
-
-
 
 
     useEffect(() => {
@@ -151,7 +148,7 @@ const Categories = () => {
                 <ul className='dropdown-menu'>
                     {filteredGames.map((game) => (
                         <li key={game.id} className='dropdown-item'>
-                            <Link to={`/games/${game.id}`} className="gamez-link">
+                            <Link to={`/games/${game.id}`} className="gamez-link" onClick={() => setFilteredGames([])}>
                                 <div className='gameitem'>
                                     <img src={game && game?.image}
                                         style={{width: "120px", height: "45px"}}
