@@ -24,6 +24,8 @@ const Categories = () => {
     useEffect(() =>{
         dispatch(getAllGames())
     }, [dispatch])
+    
+
 
 
 

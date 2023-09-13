@@ -67,7 +67,7 @@ ul {
     box-sizing: border-box;
     width: 350px;
     padding: 1px;
-
+    z-index: 1000;
 }
 
 .gameimg {
