@@ -14,6 +14,8 @@ const EditReviewModal = ({gameId, reviewId, existingRev, existingRec, updateRevT
     const [recommended, setRecommended] = useState(existingRec);
     const [error, setError] = useState('');
 
+    const [option, setOption] = useState("Yes")
+
     const currentGame = useSelector(state => state?.game?.details)
     const currentTitle = currentGame?.title
 
@@ -64,16 +66,22 @@ const EditReviewModal = ({gameId, reviewId, existingRev, existingRec, updateRevT
 
                     <div className="recommend-options">
                         <span
-                            className='rec-span-up'
-                            onClick={() => setRecommended("Yes")}
+                            className={`rec-span-up ${option === 'Yes' ? 'selected' : ''}`}
+                            onClick={() => {
+                                setRecommended("Yes");
+                                setOption("Yes");
+                            }}
                             >
                             Yes
                             <FaRegThumbsUp  className="rec-icon"/>
                         </span>
 
                         <span
-                            className='rec-span-down'
-                            onClick={() => setRecommended("No")}
+                            className={`rec-span-down ${option === 'No' ? 'selected' : ''}`}
+                            onClick={() => {
+                                setRecommended("No");
+                                setOption("No")
+                            }}
                             >
                             No
                             <FaRegThumbsDown className="rec-icon" />
