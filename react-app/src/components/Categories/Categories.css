@@ -65,13 +65,18 @@ ul {
     right: 500px;
     background: #3D4450;
     box-sizing: border-box;
-    width: 300px;
+    width: 350px;
     padding: 1px;
 
 }
 
+.gameimg {
+    margin-right: 10px;
+}
+
 .gameitem {
     display: flex;
+    padding: 5px;
 }
 
 .dropdown-item:hover .gamez-title,
@@ -84,4 +89,5 @@ ul {
 .gamez-title,
 .gamez-price {
     color: white;
+    font-family: "Motiva Sans", sans-serif;
 }

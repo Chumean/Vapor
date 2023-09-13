@@ -25,6 +25,27 @@ const Categories = () => {
         dispatch(getAllGames())
     }, [dispatch])
 
+
+
+    useEffect(() => {
+        const handleDocumentClick = (e) => {
+          const searchBar = document.querySelector('.cat-search');
+          const dropdownMenu = document.querySelector('.dropdown-menu');
+
+          if (searchBar && dropdownMenu) {
+            if (!searchBar.contains(e.target) && !dropdownMenu.contains(e.target)) {
+              setFilteredGames([]);
+            }
+          }
+        };
+
+        document.addEventListener('click', handleDocumentClick);
+
+        return () => {
+          document.removeEventListener('click', handleDocumentClick);
+        };
+      }, []);
+
     const handleInput = (e) => {
         const term = e.target.value;
         setSearchTerm(term);
