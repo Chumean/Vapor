@@ -25,31 +25,67 @@ const Categories = () => {
         dispatch(getAllGames())
     }, [dispatch])
 
-    useEffect(() => {
-        if(games) {
-            const filtered = Object.values(games).filter(game =>
-                game.title.toLowerCase().includes(searchTerm.toLowerCase()))
-                setFilteredGames(filtered)
-            };
-    }, [games, searchTerm])
+    const handleInput = (e) => {
+        const term = e.target.value;
+        setSearchTerm(term);
 
-    const handleSearchChange = e => {
-        setSearchTerm(e.target.value);
-      };
+        if(term.trim() === '') {
+            setFilteredGames([]);
+            return;
+        }
+
+
+        // Filter games based on search term
+        const filtered = Object.values(games).filter(
+            (game) => game.title.toLowerCase().startsWith(term.toLowerCase())
+        );
+
+        // Show first 5 results
+        setFilteredGames(filtered.slice(0, 5));
+    }
+
 
     const handleSearch = (e) => {
         e.preventDefault();
         if(filteredGames.length > 0) {
-            const gameId = filteredGames[0].id
+            const gameId = filteredGames[0].id;
             history.push(`/games/${gameId}`)
         }
     }
 
-    const handleKeyPress = (e) => {
-        if(e.key === "Enter") {
-            handleSearch(e)
-        }
-    }
+
+
+    // ******************************************** OLD STUFF ***********************************************
+
+    // useEffect(() => {
+    //     if(games) {
+    //         const filtered = Object.values(games).filter(game =>
+    //             game.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    //             setFilteredGames(filtered)
+    //         };
+    // }, [games, searchTerm])
+
+    // const handleSearchChange = e => {
+    //     setSearchTerm(e.target.value);
+    //   };
+
+    // const handleSearch = (e) => {
+    //     e.preventDefault();
+    //     if(filteredGames.length > 0) {
+    //         const gameId = filteredGames[0].id
+    //         history.push(`/games/${gameId}`)
+    //     }
+    // }
+
+    // const handleKeyPress = (e) => {
+    //     if(e.key === "Enter") {
+    //         handleSearch(e)
+    //     }
+    // }
+
+
+    // ******************************************** OLD STUFF ***********************************************
+
 
     return (
         <form onSubmit={handleSearch}>
@@ -84,9 +120,21 @@ const Categories = () => {
                 placeholder='search'
                 className='cat-search'
                 value={searchTerm}
-                onChange={handleSearchChange}
-                onKeyPress={handleKeyPress}
+                onChange={handleInput}
+
             />
+
+            {filteredGames.length > 0 && (
+                <ul className='dropdown-menu'>
+                    {filteredGames.map((game) => (
+                        <li key={game.id} className='dropdown-item'>
+                            <Link to={`/games/${game.id}`} className="cat-li">
+                                {game.title}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            )}
 
         </div>
     </form>

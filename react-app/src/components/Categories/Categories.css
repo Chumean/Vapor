@@ -47,3 +47,9 @@
     background-color: #316282;
     margin-left: auto;
 }
+
+.dropdown-menu {
+    color: red;
+    background-color: green;
+    list-style-type: none;
+}
