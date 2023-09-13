@@ -48,8 +48,40 @@
     margin-left: auto;
 }
 
-.dropdown-menu {
-    color: red;
-    background-color: green;
+.gamez-link {
+    text-decoration: none;
     list-style-type: none;
+
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 156px;
+    right: 500px;
+    background: #3D4450;
+    box-sizing: border-box;
+    width: 300px;
+    padding: 1px;
+
+}
+
+.gameitem {
+    display: flex;
+}
+
+.dropdown-item:hover .gamez-title,
+.dropdown-item:hover .gamez-price,
+.dropdown-item:hover {
+    background-color: #dcdedf;
+    color: black
+}
+
+.gamez-title,
+.gamez-price {
+    color: white;
 }

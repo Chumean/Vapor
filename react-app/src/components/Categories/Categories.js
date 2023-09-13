@@ -128,8 +128,17 @@ const Categories = () => {
                 <ul className='dropdown-menu'>
                     {filteredGames.map((game) => (
                         <li key={game.id} className='dropdown-item'>
-                            <Link to={`/games/${game.id}`} className="cat-li">
-                                {game.title}
+                            <Link to={`/games/${game.id}`} className="gamez-link">
+                                <div className='gameitem'>
+                                    <img src={game && game?.image}
+                                        style={{width: "120px", height: "45px"}}
+                                        className='gameimg' />
+                                    <div className='gamez-info'>
+                                        <div className='gamez-title'>{game.title}</div>
+                                        <div className='gamez-price'>${game.price}</div>
+                                    </div>
+
+                                </div>
                             </Link>
                         </li>
                     ))}
