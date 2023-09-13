@@ -14,7 +14,7 @@ const EditReviewModal = ({gameId, reviewId, existingRev, existingRec, updateRevT
     const [recommended, setRecommended] = useState(existingRec);
     const [error, setError] = useState('');
 
-    const [option, setOption] = useState("Yes")
+    const [option, setOption] = useState(existingRec)
 
     const currentGame = useSelector(state => state?.game?.details)
     const currentTitle = currentGame?.title

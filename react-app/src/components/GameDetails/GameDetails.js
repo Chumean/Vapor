@@ -59,8 +59,8 @@ const GameDetails = () => {
             <EditReviewModal
                 gameId={gameId}
                 reviewId={review.id}
-                existingRev={existingRev}
-                existingRec={existingRec}
+                existingRev={review.review}
+                existingRec={review.recommended}
                 updateRevText={setExistingRev}
             />
         )
