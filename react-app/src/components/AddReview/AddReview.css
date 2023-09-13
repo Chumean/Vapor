@@ -123,7 +123,7 @@ background: linear-gradient(90deg, rgba(58,69,81,1) 21%, rgba(73,86,100,1) 48%, 
 .rec-span-up:hover,
 .rec-span-down:hover {
     color: white;
-    background-color: black;
+    background-color: #54a5d4;
 }
 
 
