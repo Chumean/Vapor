@@ -1,0 +1,21 @@
+.creds a {
+    color: white;
+    /* text-decoration: none; */
+    margin: 10px 0;
+}
+
+.creds {
+    margin: 10px 0;
+}
+
+.creds a:hover {
+    color: #5c7e10;
+}
+
+.pnf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
