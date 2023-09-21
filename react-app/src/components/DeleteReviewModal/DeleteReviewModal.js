@@ -10,11 +10,10 @@ const DeleteReviewModal = ({ id, gameId }) => {
 
   const removeReview = async (e) => {
     e.preventDefault();
-  
+    closeModal();
     await dispatch(deleteReview(id));
     await dispatch(getGameDetails(gameId));
 
-    closeModal();
   };
 
   return (
