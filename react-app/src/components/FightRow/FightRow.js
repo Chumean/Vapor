@@ -28,7 +28,6 @@ const FightRow = () => {
             </div>
     </div>
     )
-
 }
 
 export default FightRow
