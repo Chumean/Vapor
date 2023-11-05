@@ -4,7 +4,6 @@ import { NavLink, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./CartPage.css";
 
-// IF DUPLICATE, JUST HISTORY PUSH TO CART WITHOUT CHANGING QTY
 const Cart = () => {
     const history = useHistory();
     const dispatch = useDispatch();
@@ -24,9 +23,6 @@ const Cart = () => {
 
     const cartArr = Object.values(cart)
 
-
-
-
     const onDelete = (userId, gameId) => {
         dispatch(deleteFromCart(userId, gameId));
     }
@@ -38,10 +34,6 @@ const Cart = () => {
     const onBuy = (userId) => {
         dispatch(emptyUserCart(userId));
         setBuymsg(true);
-
-        // setTimeout(() => {
-        //     setBuymsg(false);
-        // }, 5000)
     }
 
     const totalPrice = cartArr.reduce(
@@ -49,7 +41,7 @@ const Cart = () => {
         0
     );
 
-    // removed isLoaded on return (cartArr && cartArr?.map)
+
     const cartContent = () => {
 
         if (cartArr.length > 0) {
