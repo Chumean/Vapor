@@ -12,7 +12,6 @@ const Categories = () => {
     const dispatch = useDispatch();
     const games = useSelector(state => state.game)
     const [searchTerm, setSearchTerm] = useState('');
-    // const [filteredGames, setFilteredGames] = useState([])
 
     useEffect(() =>{
         dispatch(getAllGames())
@@ -41,11 +40,6 @@ const Categories = () => {
           return regex.test(game.title);
       });
 
-
-
-        // const matchingGames = Object.values(games).filter(game => {
-        //     return game.title.toLowerCase() === searchTerm.toLowerCase();
-        // });
 
         if (matchingGames.length > 0) {
             const gameId = matchingGames[0].id;
