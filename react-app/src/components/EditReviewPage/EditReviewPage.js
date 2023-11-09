@@ -29,8 +29,6 @@ const EditReviewPage = () => {
 
     const filteredReviews = Object.values(reviews).filter((review) => review?.game_id === gameDetails?.id && review.user_id === userId)
 
-
-
     useEffect(() => {
         dispatch(getGameDetails(gameId))
         dispatch(loadReviews(gameId))
