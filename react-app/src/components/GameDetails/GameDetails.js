@@ -287,7 +287,3 @@ const GameDetails = () => {
 }
 
 export default GameDetails;
-
-// Details include splash art of game
-// Show first 10 reviews of the game
-// Must be logged in to see a component to add review
