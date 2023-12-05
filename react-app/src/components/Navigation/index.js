@@ -24,7 +24,6 @@ function Navigation({ isLoaded }){
 		setModalContent(<SignupFormModal />)
 	}
 
-
 	return (
 
 		<header className="header">
@@ -77,7 +76,6 @@ function Navigation({ isLoaded }){
 		  </div>
 		</div>
 		)}
-
 
 
 		{!sessionUser && (
