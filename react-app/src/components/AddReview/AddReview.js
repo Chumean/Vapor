@@ -1,6 +1,7 @@
 import {React , useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createReview } from "../../store/review";
+import { getGameDetails } from "../../store/game";
 import {FaRegThumbsUp, FaRegThumbsDown} from 'react-icons/fa'
 import "./AddReview.css";
 
