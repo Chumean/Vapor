@@ -73,16 +73,10 @@ def edit_review(gameId, reviewId):
     form['csrf_token'].data = request.cookies['csrf_token']
 
     review = Review.query.get(reviewId)
-    # print('************** REVIEW? ************')
-    # print('Review ID:', review.id)
-    # print('Game ID:', review.game_id)
-    # print('User ID:', review.user_id)
 
     if not review:
         return jsonify({'error': 'Review not found'}), 404
 
-    # if review.user_id != current_user.id:
-    #     return jsonify({'error': "unauthorized"}),401
 
     if form.validate_on_submit():
         review.review = form.review.data
