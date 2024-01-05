@@ -2,7 +2,6 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, IntegerField, FloatField, SubmitField, TextAreaField, DateField
 from wtforms.validators import DataRequired
 
-
 class GameForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     genre = StringField('Genre', validators=[DataRequired()])
