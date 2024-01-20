@@ -28,7 +28,6 @@ class Game(db.Model):
     cart = db.relationship("Cart_Item", back_populates="game", cascade="all, delete-orphan")
     review = db.relationship("Review", back_populates="game", cascade="all, delete-orphan")
 
-
     def to_dict(self):
         return {
             'id': self.id,
