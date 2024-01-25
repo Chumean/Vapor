@@ -24,6 +24,7 @@ const Categories = () => {
         handleSearch(e);
       }
     }
+    // new way to search bar
 
 
     const handleSearch = (e) => {
