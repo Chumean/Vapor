@@ -41,7 +41,6 @@ const Categories = () => {
           return regex.test(game.title);
       });
 
-
         if (matchingGames.length > 0) {
             const gameId = matchingGames[0].id;
             history.push(`/games/${gameId}`);
