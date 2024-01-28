@@ -25,7 +25,7 @@ const Categories = () => {
       }
     }
     // new way to search bar
-
+    // const handlenewsearch()
 
     const handleSearch = (e) => {
         e.preventDefault();
