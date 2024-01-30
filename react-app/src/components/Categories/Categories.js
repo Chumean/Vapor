@@ -26,6 +26,7 @@ const Categories = () => {
     }
     // new way to search bar
     // const handlenewsearch()
+    // dropdown menu using ul and li
 
     const handleSearch = (e) => {
         e.preventDefault();
