@@ -27,6 +27,7 @@ const Categories = () => {
     // new way to search bar
     // const handlenewsearch()
     // dropdown menu using ul and li
+    //include image for each dropdown search. 
 
     const handleSearch = (e) => {
         e.preventDefault();
