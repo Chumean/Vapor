@@ -30,6 +30,7 @@ const Categories = () => {
     //include image for each dropdown search.
     //include name and price tag for each game listed
     //include click option to link games to their details page
+    // fix bug for duplicates
     const handleSearch = (e) => {
         e.preventDefault();
 
