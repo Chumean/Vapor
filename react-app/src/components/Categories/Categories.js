@@ -32,7 +32,7 @@ const Categories = () => {
     //include click option to link games to their details page
     // fix bug for duplicates. unknowns
     // add filter
-    // remove old filter
+
     const handleSearch = (e) => {
         e.preventDefault();
 
