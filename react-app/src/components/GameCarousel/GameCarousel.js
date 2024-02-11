@@ -23,7 +23,6 @@ const GameCarousel = ({gameLimit}) => {
     nextArrow: <AiOutlineRight className="slick-next" />,
   };
 
-
   const randomGames = Object.values(games).sort(() => Math.random() - 0.5)
 
   const limitedGames = randomGames.slice(0, gameLimit);
