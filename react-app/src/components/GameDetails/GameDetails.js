@@ -64,7 +64,6 @@ const GameDetails = () => {
         )
     }
 
-
     const handleDeleteReview = async (reviewId) => {
         setModalContent(<DeleteReviewModal id={reviewId} game_id={gameDetails?.id} />)
         openModal();
@@ -81,8 +80,6 @@ const GameDetails = () => {
             history.push('/cart')
         }
     }
-
-
 
     return (
         <div>
