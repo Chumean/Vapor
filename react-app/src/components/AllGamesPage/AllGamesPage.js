@@ -19,7 +19,6 @@ const AllGamesPage = () => {
     const fps = [];
     const fighter = [];
 
-
     const genreFilter = () => {
         for(let gameKey in games) {
 
