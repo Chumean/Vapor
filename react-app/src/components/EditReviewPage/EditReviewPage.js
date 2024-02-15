@@ -82,7 +82,6 @@ const EditReviewPage = () => {
                                     <br />
                                 )}
 
-
                             </div>
 
                             <div className="edit-review-rightcol">
