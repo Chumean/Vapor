@@ -38,7 +38,6 @@ const AddReview =({gameId}) => {
         setError('')
     }
 
-
     return (
         <div className="review-panel">
             <form onSubmit={handleSubmit}>
