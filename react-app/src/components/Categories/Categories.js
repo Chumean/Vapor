@@ -24,10 +24,9 @@ const Categories = () => {
         handleSearch(e);
       }
     }
-    // new way to search bar
-    // const handlenewsearch()
-    //include image for each dropdown search.
     
+    //include image for each dropdown search.
+
 
     const handleSearch = (e) => {
         e.preventDefault();
