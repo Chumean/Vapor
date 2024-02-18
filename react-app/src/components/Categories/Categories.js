@@ -27,7 +27,7 @@ const Categories = () => {
     // new way to search bar
     // const handlenewsearch()
     //include image for each dropdown search.
-    //include name and price tag for each game listed
+    
 
     const handleSearch = (e) => {
         e.preventDefault();
