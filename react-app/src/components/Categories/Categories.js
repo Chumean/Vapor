@@ -24,10 +24,8 @@ const Categories = () => {
         handleSearch(e);
       }
     }
-    
-    //include image for each dropdown search.
 
-
+ 
     const handleSearch = (e) => {
         e.preventDefault();
 

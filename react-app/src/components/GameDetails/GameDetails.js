@@ -85,7 +85,7 @@ const GameDetails = () => {
         <div>
             <Categories />
         <div className="detail-page-container">
-            {/* GAME ART AND SMALL INFO */}
+            {/* GAME ART AN SMALL INFO */}
             {gameDetails && gameDetails?.id ? (
             <div>
             <div className="game-details-title">{gameDetails?.title}</div>
