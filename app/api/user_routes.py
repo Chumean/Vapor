@@ -5,7 +5,7 @@ from app.forms.cart_form import CartForm
 
 user_routes = Blueprint('users', __name__)
 
-
+# User Authentication
 @user_routes.route('/')
 @login_required
 def users():
@@ -25,14 +25,18 @@ def user(id):
     user = User.query.get(id)
     return user.to_dict()
 
+
 @user_routes.route('<int:id>/cart')
 @login_required
 def cart(id):
 
+    # queries database for all Cart_Item based on user ID
     cartRel_query = Cart_Item.query.filter(Cart_Item.user_id == id)
 
+    # Fetches all cart items that match query criteria and stores in cartRels.
     cartRels = cartRel_query.all()
 
+    # return list of dictionaries for nonempty cart
     cartGames = []
     if (len(cartRels) > 0):
         for rel in cartRels:
