@@ -51,6 +51,7 @@ def addToCart(userId, gameId):
 
     form = CartForm()
 
+    # Finds cart item by game id, userid of cart, and quantity
     cartRel = Cart_Item(game_id=gameId, user_id=userId, quantity=form.quantity.data)
 
     db.session.add(cartRel)
