@@ -65,6 +65,7 @@ def updateCart(userId, gameId):
 
     form = CartForm()
 
+    # queries the cart filtering so that userId and the user id of cart item matches, as well as the game in cart.
     cartRel_query = Cart_Item.query.filter(Cart_Item.user_id == userId, Cart_Item.game_id == gameId)
     cartRel = cartRel_query.one()
 
