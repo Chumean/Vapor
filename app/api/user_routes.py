@@ -80,7 +80,7 @@ def deleteFromCart(userId, gameId):
 
     cartRel_query = Cart_Item.query.filter(Cart_Item.user_id == userId, Cart_Item.game_id == gameId).one()
 
-
+    # test1 is to keep a reference point for the cartRel_query so the delete does not bug out.
     test1 = cartRel_query.to_dict()
     db.session.delete(cartRel_query)
 
