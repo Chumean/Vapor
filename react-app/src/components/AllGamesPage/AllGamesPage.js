@@ -200,10 +200,6 @@ const AllGamesPage = () => {
             </div>
                 </div>
 
-
-
-
-
         </div>
     )
 
