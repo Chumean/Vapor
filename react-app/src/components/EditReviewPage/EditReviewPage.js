@@ -57,7 +57,6 @@ const EditReviewPage = () => {
         }
     }
 
-
     return (
         <div className="edit-review-page">
             <div className="edit-profile-header">TEST</div>
