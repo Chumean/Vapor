@@ -16,6 +16,7 @@ def get_all_games():
         game_list.append(game_dict)
     return jsonify({'games': game_list})
 
+# GAMES BY CATEGORY
 @game_routes.route('/category')
 def get_games_by_category(category):
     games = Game.query.filter(Game.genre == category)
@@ -63,6 +64,7 @@ def add_review(id):
 
     return new_review.to_dict();
 
+# EDIT REVIEW
 @game_routes.route('<int:gameId>/reviews/<int:reviewId>', methods=["PUT"])
 @login_required
 def edit_review(gameId, reviewId):
