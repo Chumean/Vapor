@@ -9,7 +9,6 @@ import LoginFormModal from '../LoginFormModal';
 import { useModal } from '../../context/Modal';
 import SignupFormModal from '../SignupFormModal';
 
-
 function Navigation({ isLoaded }){
 	const  { setModalContent } = useModal();
 
@@ -38,6 +37,7 @@ function Navigation({ isLoaded }){
 		</div>
 
 		<nav className="header-nav">
+			
 		  <ul className="nav-list">
 
 			<li className="nav-item">
@@ -77,7 +77,6 @@ function Navigation({ isLoaded }){
 		</div>
 		)}
 
-
 		{!sessionUser && (
 
 				<div className="global-action-menu">
@@ -93,7 +92,6 @@ function Navigation({ isLoaded }){
 		  		</div>
 			</div>
 		)}
-
 
 	  </header>
 
