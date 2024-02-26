@@ -92,15 +92,12 @@ const EditReviewModal = ({gameId, reviewId, existingRev, existingRec, updateRevT
                         Post review
                     </span>
 
-
                 </div>
                 {error && <p className="error-message">{error}</p>}
             </form>
 
         </div>
     )
-
-
 
 }
 

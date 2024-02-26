@@ -45,7 +45,7 @@ function ProfileButton({ user }) {
       <div className="profile-button">
         <i className="fas fa-user-circle"
         onClick={openMenu}
-        style={{width:"50px", height: "11px"}}
+        style={{width:"50px", height: "10px"}}
         />
       </div>
       {/* <button onClick={openMenu}>
