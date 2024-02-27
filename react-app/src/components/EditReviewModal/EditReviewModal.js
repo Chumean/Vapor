@@ -47,7 +47,7 @@ const EditReviewModal = ({gameId, reviewId, existingRev, existingRec, updateRevT
         <div className="review-panel">
             <form onSubmit={handleChange}>
                 <h1 className="review-h1">Write a review for {currentTitle}</h1>
-                <p className="review-describe">Please describe what you liked or disliked about this game and whether you recommend it to others.</p>
+                <p className="review-describe">Please describe and rate your experience with this game.</p>
                 <p className="review-describe">Please remember to be polite and follow the Rules and Guidelines.</p>
 
                 <div className="review-input">
