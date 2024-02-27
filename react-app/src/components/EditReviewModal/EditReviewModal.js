@@ -43,7 +43,6 @@ const EditReviewModal = ({gameId, reviewId, existingRev, existingRec, updateRevT
         closeModal();
     }
 
-
     return (
         <div className="review-panel">
             <form onSubmit={handleChange}>
