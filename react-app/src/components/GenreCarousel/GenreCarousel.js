@@ -9,7 +9,6 @@ import {Link} from 'react-router-dom';
 
 const GenreCarousel = () => {
 
-
     const settings = {
         dots: true,
         infinite: true,
@@ -35,7 +34,6 @@ const GenreCarousel = () => {
         { key: 'FIGHTING', url: `/games/5`, image: 'https://res.cloudinary.com/dsu4khzr3/image/upload/v1685590390/capsule_616x353_nxqqtx.jpg' },
         { key: 'FPS', url: `/games/18`, image: 'https://res.cloudinary.com/dsu4khzr3/image/upload/v1686429471/overwatchmain_vt28ld.webp'},
       ];
-
 
       return (
         <div className='genre-caro-cont'>
