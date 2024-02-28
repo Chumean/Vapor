@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const GameCard = (game) => {
     return (
         <div className="game-card">
+            
             <div className="game-card-img">
 
             </div>
