@@ -22,7 +22,6 @@ const EditReviewModal = ({gameId, reviewId, existingRev, existingRec, updateRevT
     const user = useSelector(state => state?.session?.user)
     const userId = user?.id
 
-
     const handleChange = async (e) => {
         e.preventDefault();
 
@@ -32,8 +31,6 @@ const EditReviewModal = ({gameId, reviewId, existingRev, existingRec, updateRevT
             user_id: userId,
             game_id: gameId,
         };
-
-
 
         await dispatch(updateReview(gameId, reviewId, updatedReview));
         await dispatch(getGameDetails(gameId));
