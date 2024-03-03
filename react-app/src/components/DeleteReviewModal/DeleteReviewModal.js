@@ -25,7 +25,7 @@ const DeleteReviewModal = ({ id, gameId }) => {
       <div className="confirm-delete-section">
 
         <div className="confirm-delete-message">
-            Confirm removing your review. This cannot be undone.
+            Confirm removal. This cannot be undone.
         </div>
 
         <div className="review-button-container">
