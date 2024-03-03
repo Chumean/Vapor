@@ -41,7 +41,7 @@ const AddReview =({gameId}) => {
     return (
         <div className="review-panel">
             <form onSubmit={handleSubmit}>
-                <h1 className="review-h1">Write a review for {currentTitle}</h1>
+                <h1 className="review-h1">Please write a review for {currentTitle}</h1>
                 <p className="review-describe">Please describe what you liked or disliked about this game and whether you recommend it to others.</p>
                 <p className="review-describe">Please remember to be polite and follow the Rules and Guidelines.</p>
 
@@ -85,7 +85,6 @@ const AddReview =({gameId}) => {
                     <span className="post-review-span" onClick={handleSubmit}>
                         Post review
                     </span>
-
 
                 </div>
                 {error && <p className="error-message">{error}</p>}
