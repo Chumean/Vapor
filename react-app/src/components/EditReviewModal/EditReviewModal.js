@@ -58,7 +58,7 @@ const EditReviewModal = ({gameId, reviewId, existingRev, existingRec, updateRevT
                 </div>
 
                 <div className="review-controls">
-                    <p className="recommend-p">Do you recommend this game?</p>
+                    <p className="recommend-p">Would you recommend this game?</p>
 
                     <div className="recommend-options">
                         <span
