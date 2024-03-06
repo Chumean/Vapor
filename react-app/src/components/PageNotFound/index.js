@@ -7,7 +7,7 @@ export default function NotFound() {
             <h2>UNDER CONSTRUCTION</h2>
             <img src={wips}/>
             <h2>Please go back to the homepage</h2>
-            <h2>More on me</h2>
+            <h2>More on myself</h2>
 
             <div className="creds">
                 <a href="https://github.com/Chumean">GitHub</a>
