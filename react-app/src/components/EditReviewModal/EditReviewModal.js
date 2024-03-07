@@ -52,7 +52,7 @@ const EditReviewModal = ({gameId, reviewId, existingRev, existingRec, updateRevT
                     value={review}
                     onChange={(e) => setReview(e.target.value)}
                     className="review-textarea"
-                    style={{width: "764px", height:"132px"}}
+                    style={{width: "760px", height:"132px"}}
                     >
                     </textarea>
                 </div>
