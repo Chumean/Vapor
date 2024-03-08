@@ -6,7 +6,7 @@ export default function NotFound() {
         <div className="pnf">
             <h2>CURRENTLY UNDER CONSTRUCTION</h2>
             <img src={wips}/>
-            <h2>Please go back to the homepage</h2>
+            <h2>Please return to the homepage</h2>
             <h2>More on myself</h2>
 
             <div className="creds">
