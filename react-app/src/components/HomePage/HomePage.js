@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import Categories from "../Categories/Categories";
 import GameCarousel from "../GameCarousel/GameCarousel";
 import "slick-carousel/slick/slick.css";
@@ -10,7 +10,7 @@ import { getAllGames } from "../../store/game";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import CarouselCard from "../CarouselCard/CarouselCard";
+// import CarouselCard from "../CarouselCard/CarouselCard";
 
 const HomePage = () => {
     const dispatch = useDispatch();
