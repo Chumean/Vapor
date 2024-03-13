@@ -106,7 +106,6 @@ const Cart = () => {
             }))
         }
 
-
     }
 
     return (
