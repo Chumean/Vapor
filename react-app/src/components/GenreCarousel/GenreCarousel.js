@@ -16,7 +16,7 @@ const GenreCarousel = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 7000,
         prevArrow: <AiOutlineLeft className="slick-prev" />,
         nextArrow: <AiOutlineRight className="slick-next" />,
         // spacing: 10
