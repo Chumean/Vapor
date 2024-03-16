@@ -26,7 +26,6 @@ const GenreCarousel = () => {
       //   dispatch(getAllGames())
       // }, [dispatch])
 
-
       const genres = [
         { key: 'RPG', url: `/games/1`, image: 'https://res.cloudinary.com/dsu4khzr3/image/upload/v1685589376/656e8c37-8260-4bfc-82d0-e16650dd147c_pz6oed.jpg' },
         { key: 'HACK N SLASH', url: `/games/2`, image: 'https://res.cloudinary.com/dsu4khzr3/image/upload/v1687565350/featured-nier-automata-cover-art_woknln.jpg'},
