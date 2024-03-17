@@ -25,7 +25,7 @@ const Categories = () => {
       }
     }
 
- 
+
     const handleSearch = (e) => {
         e.preventDefault();
 
@@ -86,7 +86,17 @@ const Categories = () => {
 
             />
 
-            {/* {filteredGames.length > 0 && (
+
+
+        </div>
+    </form>
+    )
+}
+
+export default Categories
+
+/*
+  {/* {filteredGames.length > 0 && (
                 <ul className='dropdown-menu'>
                     {filteredGames.map((game) => (
                         <li key={game.id} className='dropdown-item'>
@@ -105,11 +115,5 @@ const Categories = () => {
                         </li>
                     ))}
                 </ul>
-            )} */}
+            )} */
 
-        </div>
-    </form>
-    )
-}
-
-export default Categories
