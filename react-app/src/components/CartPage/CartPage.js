@@ -23,6 +23,8 @@ const Cart = () => {
 
     const cartArr = Object.values(cart)
 
+    //cartArr displays an array of items in cart
+
     const onDelete = (userId, gameId) => {
         dispatch(deleteFromCart(userId, gameId));
     }
