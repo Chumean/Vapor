@@ -33,8 +33,6 @@ const emptyCart = () => ({
     type: EMPTY_CART
 })
 
-
-
 const initialState = {};
 
 export const addGameToCart = (cartRel) => async (dispatch) => {
@@ -71,8 +69,6 @@ export const getCart = (id) => async (dispatch) => {
 
 export const updateQty = (cartRel) => async (dispatch) => {
     const {gameId, user, qty} = cartRel
-
-
 
     const res = await fetch(`/api/users/${user}/cart/${gameId}`, {
         method: 'PUT',
