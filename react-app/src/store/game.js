@@ -57,15 +57,6 @@ const gameReducer = (state = initialState, action) => {
             });
             return newState;
         case LOAD_DETAILS:
-            // const gameDetes = state[action.gameId];
-            // if (gameDetes) {
-            //     return { ...state, details: gameDetes};
-            // }
-            // return state;
-            // const game = state[action.gameId];
-            // if(game) {
-            //     return { ...state, details: game};
-            // }
             return {...state, details: action.gameId };
         default:
             return state;
