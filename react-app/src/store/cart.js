@@ -137,13 +137,10 @@ export default function cartReducer(state = initialState, action) {
 
             return newState
         case DELETE_CART:
-            // newState = Object.values(state).filter(rel => rel.id !== action.id)
 
             newState = { ...state }
 
             delete newState[action.id]
-
-
 
             return newState
 
