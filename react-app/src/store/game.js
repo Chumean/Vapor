@@ -9,12 +9,10 @@ const loadGames = (list) => ({
     list
 })
 
-
 const loadDetails = (gameId) => ({
     type: LOAD_DETAILS,
     gameId
 });
-
 
 // THUNKS
 export const getAllGames = () => async (dispatch) => {
@@ -44,7 +42,6 @@ export const getGamesByCategory = (category) => async (dispatch) => {
       dispatch(loadGames(list.games));
     }
 };
-
 
 const initialState = {};
 
