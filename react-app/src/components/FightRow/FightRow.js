@@ -15,7 +15,7 @@ const FightRow = () => {
 
     return (
         <div className="fighter-row">
-            <p>FIGHTING GAMES</p>
+            <p>FIGHTERS</p>
             <div className="game-cards">
             {fightingGames.map((game) => (
                 <div key={game.id} className="fgame-card">
