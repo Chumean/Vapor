@@ -108,7 +108,6 @@ const AllGamesPage = () => {
             </div>
                 </div>
 
-
             <div className="rpg-row">
                 <p className="rpg-text">Roguelike</p>
                     <div className="rpg-cardz">
