@@ -25,7 +25,7 @@ const Categories = () => {
       }
     }
     // future search engine update
-
+    // <ul drop menu>
 
     const handleSearch = (e) => {
         e.preventDefault();
