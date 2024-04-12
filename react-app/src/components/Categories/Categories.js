@@ -26,7 +26,7 @@ const Categories = () => {
     }
     // future search engine update
     // <ul drop menu>
-
+    // map results to each li for dropdown
     const handleSearch = (e) => {
         e.preventDefault();
 
