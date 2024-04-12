@@ -24,6 +24,7 @@ const Categories = () => {
         handleSearch(e);
       }
     }
+    // future search engine update
 
 
     const handleSearch = (e) => {
@@ -116,4 +117,3 @@ export default Categories
                     ))}
                 </ul>
             )} */
-
