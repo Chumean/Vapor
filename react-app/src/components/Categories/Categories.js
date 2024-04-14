@@ -27,6 +27,7 @@ const Categories = () => {
     // future search engine update
     // <ul drop menu>
     // map results to each li for dropdown
+    // img style={{width: "120px", height: "45px"}}
     const handleSearch = (e) => {
         e.preventDefault();
 
