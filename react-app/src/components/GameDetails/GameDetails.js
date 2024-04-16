@@ -43,7 +43,6 @@ const GameDetails = () => {
         setShowModal(true);
       };
 
-
     useEffect(() => {
         dispatch(getGameDetails(gameId));
         dispatch(loadReviews(gameId))
