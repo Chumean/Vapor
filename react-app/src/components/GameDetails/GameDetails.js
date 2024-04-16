@@ -225,7 +225,6 @@ const GameDetails = () => {
                                     <br />
                                 )}
 
-
                             </div>
 
                             <div className="review-rightcol">
