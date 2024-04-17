@@ -43,7 +43,6 @@ const Cart = () => {
         0
     );
 
-
     const cartContent = () => {
 
         if (cartArr.length > 0) {
