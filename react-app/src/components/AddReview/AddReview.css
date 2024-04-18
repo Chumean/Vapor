@@ -86,7 +86,6 @@ background: linear-gradient(90deg, rgba(58,69,81,1) 21%, rgba(73,86,100,1) 48%, 
     color: white;
 }
 
-
 .recommend-options {
     display: flex;
     align-items: center;
@@ -108,8 +107,6 @@ background: linear-gradient(90deg, rgba(58,69,81,1) 21%, rgba(73,86,100,1) 48%, 
     display: block;
     cursor: pointer;
 }
-
-
 
 .rec-span-down svg {
     vertical-align: middle;
