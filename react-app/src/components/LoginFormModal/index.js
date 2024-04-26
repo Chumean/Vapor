@@ -45,7 +45,7 @@ function LoginFormModal() {
 
         <div className="log-in-inputs">
         <label className="email-and-input">
-          sign in with email
+          Sign in with email
           <input
             type="text"
             value={email}
@@ -56,7 +56,7 @@ function LoginFormModal() {
         </label>
 
         <label className="password-and-input">
-          password
+          Password
           <input
             type="password"
             value={password}
