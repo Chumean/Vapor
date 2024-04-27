@@ -24,10 +24,7 @@ const Categories = () => {
         handleSearch(e);
       }
     }
-    // future search engine update
-    // <ul drop menu>
-    // map results to each li for dropdown
-    // img style={{width: "120px", height: "60px"}}
+
     const handleSearch = (e) => {
         e.preventDefault();
 
@@ -96,25 +93,3 @@ const Categories = () => {
 }
 
 export default Categories
-
-/*
-  {/* {filteredGames.length > 0 && (
-                <ul className='dropdown-menu'>
-                    {filteredGames.map((game) => (
-                        <li key={game.id} className='dropdown-item'>
-                            <Link to={`/games/${game.id}`} className="gamez-link" onClick={() => setFilteredGames([])}>
-                                <div className='gameitem'>
-                                    <img src={game && game?.image}
-                                        style={{width: "120px", height: "45px"}}
-                                        className='gameimg' />
-                                    <div className='gamez-info'>
-                                        <div className='gamez-title'>{game.title}</div>
-                                        <div className='gamez-price'>${game.price}</div>
-                                    </div>
-
-                                </div>
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            )} */
