@@ -23,7 +23,6 @@ export const removeReview = (reviewId) => ({
     reviewId
 })
 
-
 // THUNKS
 
 // load Reviews thunk
@@ -83,7 +82,7 @@ export const updateReview = (gameId, reviewId, editedReview) => async dispatch =
 
 // delete Review thunk
 export const deleteReview = (reviewId) => async dispatch => {
-    const res = await fetch(`/api/reviews/${reviewId}`, { 
+    const res = await fetch(`/api/reviews/${reviewId}`, {
         method: "DELETE"
     });
 
