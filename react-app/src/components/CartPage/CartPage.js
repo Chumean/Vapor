@@ -25,19 +25,23 @@ const Cart = () => {
 
     //cartArr displays an array of items in cart
 
+    // action to remove single items from cart
     const onDelete = (userId, gameId) => {
         dispatch(deleteFromCart(userId, gameId));
     }
 
+    // action to empty cart
     const onEmptyCart = (userId) => {
         dispatch(emptyUserCart(userId));
     }
 
+    // action to empty cart on purchase
     const onBuy = (userId) => {
         dispatch(emptyUserCart(userId));
         setBuymsg(true);
     }
 
+    // calculate total price
     const totalPrice = cartArr.reduce(
         (total, game) => total + (game?.game?.price || 0),
         0
