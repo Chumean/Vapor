@@ -21,9 +21,9 @@ const Cart = () => {
 
     const cart = useSelector(state => state.cart)
 
+    //cartArr displays an array of items in cart
     const cartArr = Object.values(cart)
 
-    //cartArr displays an array of items in cart
 
     // action to remove single items from cart
     const onDelete = (userId, gameId) => {
