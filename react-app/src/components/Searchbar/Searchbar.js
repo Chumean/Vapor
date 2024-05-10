@@ -18,15 +18,7 @@ const Searchbar = () => {
     //     dispatch(getAllGames())
     // }, [dispatch])
 
-    const handleChange = e => {
-        const searchTerm = e.target.value.toLowerCase();
-        setQuery(searchTerm)
 
-        const filtered = games.filter(game =>
-            game.title.toLowerCase().includes(searchTerm)
-        )
-        setResults(filtered)
-    }
     const games_backup = [
         {
             'title': 'Persona 5 Royal',
@@ -135,6 +127,16 @@ const Searchbar = () => {
         }
     ]
 
+    const handleChange = e => {
+        const searchTerm = e.target.value.toLowerCase();
+        setQuery(searchTerm)
+
+        const filtered = games_backup.filter(game =>
+            game.title.toLowerCase().includes(searchTerm)
+        )
+        setResults(filtered)
+    }
+
 
     return (
         <div>
@@ -145,9 +147,9 @@ const Searchbar = () => {
                 onChange={handleChange}
             />
             <ul>
-                {results.map(game => (
-                    <li key={game.id}>
-                        <Link to={`/games/${game.id}`} >
+                {results.map((game, index) => (
+                    <li key={index}>
+                        <Link to={`/games/${index}`}>
                             <img src={game.image} alt={game.title} />
                             <h2>{game.title}</h2>
                             <p>{game.price}</p>
