@@ -139,18 +139,18 @@ const Searchbar = () => {
 
 
     return (
-        <div>
+        <div className='search-container'>
             <input type="search"
                 placeholder='search'
                 className='searchbarinput'
                 value={query}
                 onChange={handleChange}
             />
-            <ul>
+            <ul className='search-results'>
                 {results.map((game, index) => (
                     <li key={index}>
                         <Link to={`/games/${index}`}>
-                            <img src={game.image} alt={game.title} />
+                            <img src={game.image} alt={game.title} style={{width: '231px', height: '87px'}} />
                             <h2>{game.title}</h2>
                             <p>{game.price}</p>
                         </Link>
