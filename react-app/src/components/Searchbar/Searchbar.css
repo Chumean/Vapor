@@ -1,0 +1,13 @@
+/* .search-container {
+    position: relative;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 100%
+} */
