@@ -48,13 +48,16 @@ const initialState = {};
 const gameReducer = (state = initialState, action) => {
     switch(action.type) {
         case LOAD:
-            const newState = {...state};
-            action.list.forEach((game) => {
-                newState[game.id] = game;
-            });
-            return newState;
+            // const newState = {...state};
+            // action.list.forEach((game) => {
+            //     newState[game.id] = game;
+            // });
+            // return newState;
+
+            return {...state, list: action.list,}
         case LOAD_DETAILS:
-            return {...state, details: action.gameId };
+            // return {...state, details: action.gameId };
+            return {...state, details: action.game,}
         default:
             return state;
     }

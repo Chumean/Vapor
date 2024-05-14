@@ -28,7 +28,7 @@ const AllGamesPage = () => {
                     case "RPG":
                         rpg.push(game);
                         break;
-                    case "Hack & Slash":
+                    case "Hack and Slash":
                         hacknslash.push(game);
                         break;
                     case "Roguelike":

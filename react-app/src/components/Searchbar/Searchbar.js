@@ -1,5 +1,5 @@
 // import { useState } from 'react';
-// import { getAllGames } from '../../store/game';
+import { getAllGames } from '../../store/game';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState, useRef } from 'react';
@@ -10,10 +10,11 @@ const Searchbar = () => {
     // const history = useHistory();
     // const dispatch = useDispatch();
     const [query, setQuery] = useState('');
-    // const games = useSelector(state => state.game)
+    const games = useSelector(state => state.game)
     const [results, setResults] = useState([])
     const searchContainerRef = useRef(null);
 
+    console.log(games, "GAMES")
 
     // useEffect(() =>{
     //     dispatch(getAllGames())
@@ -132,9 +133,14 @@ const Searchbar = () => {
         const searchTerm = e.target.value.toLowerCase();
         setQuery(searchTerm)
 
-        const filtered = games_backup.filter(game =>
+        // const filtered = games_backup.filter(game =>
+        //     game.title.toLowerCase().includes(searchTerm)
+        // )
+
+        const gamesArr = Object.values(games);
+        const filtered = gamesArr.filter(game =>
             game.title.toLowerCase().includes(searchTerm)
-        )
+        );
         setResults(filtered)
     }
 
@@ -172,7 +178,7 @@ const Searchbar = () => {
             <ul className='search-results'>
                 {results.slice(0, 5).map((game, index) => (
                     <li key={index}>
-                        <Link to={`/games/${index + 1}`}>
+                        <Link to={`/games/${game.id}`}>
                             <img src={game.image} alt={game.title} style={{width: '231px', height: '87px'}} />
                             <h2>{game.title}</h2>
                             <p>{game.price}</p>
