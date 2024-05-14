@@ -10,8 +10,8 @@ const AllGamesPage = () => {
 
     const dispatch = useDispatch();
 
-    // const games = useSelector(state => state.game) // original
-    const games = useSelector((state) => state.game.list);
+    const games = useSelector(state => state.game) // original
+    // const games = useSelector((state) => state.game.list);
 
     const rpg = [];
     const hacknslash = [];

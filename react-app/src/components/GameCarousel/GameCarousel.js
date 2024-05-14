@@ -9,8 +9,8 @@ import { AiOutlineLeft, AiOutlineRight} from 'react-icons/ai'
 
 const GameCarousel = ({gameLimit}) => {
 
-  // const games = useSelector(state => state?.game) // original
-  const games = useSelector((state) => state?.game?.list);
+  const games = useSelector(state => state?.game) // original
+  // const games = useSelector((state) => state?.game?.list);
 
   const settings = {
     dots: true,
