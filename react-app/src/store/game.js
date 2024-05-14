@@ -43,12 +43,16 @@ export const getGamesByCategory = (category) => async (dispatch) => {
     }
 };
 
-const initialState = {};
+// const initialState = {}; // original
+
+const initialState = {
+    list: [], details: {},
+}
 
 const gameReducer = (state = initialState, action) => {
     switch(action.type) {
         case LOAD:
-            // const newState = {...state};
+            // const newState = {...state}; // original
             // action.list.forEach((game) => {
             //     newState[game.id] = game;
             // });
@@ -56,7 +60,7 @@ const gameReducer = (state = initialState, action) => {
 
             return {...state, list: action.list,}
         case LOAD_DETAILS:
-            // return {...state, details: action.gameId };
+            // return {...state, details: action.gameId }; original
             return {...state, details: action.game,}
         default:
             return state;
