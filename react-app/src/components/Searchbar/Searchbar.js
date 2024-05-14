@@ -145,12 +145,20 @@ const Searchbar = () => {
             }
         };
 
+        const handleKeyPress = (event) => {
+            if(event.key === 'Backspace' && query === '') {
+                setResults([]) // Close search results
+            }
+        }
+
         document.addEventListener('mousedown', handleOutsideClick);
+        document.addEventListener('keydown', handleKeyPress)
 
         return () => {
             document.removeEventListener('mousedown', handleOutsideClick);
+            document.removeEventListener('keydown', handleKeyPress)
         };
-    }, []);
+    }, [query]);
 
 
     return (
@@ -162,9 +170,9 @@ const Searchbar = () => {
                 onChange={handleChange}
             />
             <ul className='search-results'>
-                {results.map((game, index) => (
+                {results.slice(0, 5).map((game, index) => (
                     <li key={index}>
-                        <Link to={`/games/${index}`}>
+                        <Link to={`/games/${index + 1}`}>
                             <img src={game.image} alt={game.title} style={{width: '231px', height: '87px'}} />
                             <h2>{game.title}</h2>
                             <p>{game.price}</p>

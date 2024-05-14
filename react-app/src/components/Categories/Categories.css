@@ -44,9 +44,11 @@
 .cat-search {
     padding-left: 1rem;
     border-radius: 0.2rem;
-    background-color: #316282;
+    /* background-color: #316282; */
+    background-color:green;
     margin-left: auto;
-    z-index: 9999;
+    overflow: scroll;
+    /* z-index: 999999; */
 }
 
 .gamez-link {

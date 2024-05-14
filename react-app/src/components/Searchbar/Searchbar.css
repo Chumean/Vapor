@@ -1,4 +1,4 @@
-/* .search-container {
+.search-container {
     position: relative;
 }
 
@@ -6,8 +6,8 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1000;
-    background-color: white;
+    z-index: 99999999;
+    background-color: green;
     border: 1px solid #ccc;
     width: 100%
-} */
+}
