@@ -1,8 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 // import { getAllGames } from '../../store/game';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
 // import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import './Searchbar.css'
 
@@ -12,7 +12,7 @@ const Searchbar = () => {
     const [query, setQuery] = useState('');
     // const games = useSelector(state => state.game)
     const [results, setResults] = useState([])
-
+    const searchContainerRef = useRef(null);
 
 
     // useEffect(() =>{
@@ -138,9 +138,23 @@ const Searchbar = () => {
         setResults(filtered)
     }
 
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
+                setResults([]); // Close search results
+            }
+        };
+
+        document.addEventListener('mousedown', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, []);
+
 
     return (
-        <div className='search-container'>
+        <div className='search-container' ref={searchContainerRef}>
             <input type="search"
                 placeholder='search'
                 className='cat-search'
