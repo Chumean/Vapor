@@ -46,6 +46,7 @@
     border-radius: 0.2rem;
     background-color: #316282;
     margin-left: auto;
+    z-index: 9999;
 }
 
 .gamez-link {
