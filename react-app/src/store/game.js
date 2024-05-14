@@ -60,8 +60,11 @@ const gameReducer = (state = initialState, action) => {
 
             return {...state, list: action.list,}
         case LOAD_DETAILS:
-            // return {...state, details: action.gameId }; original
-            return {...state, details: action.game,}
+            return {...state, details: action.gameId }; // original
+
+            // const game = state.list.find((game) => game.id === action.gameId);
+            // return { ...state, details: game }; // Set the game object as details
+            // return {...state, details: action.game,}
         default:
             return state;
     }
