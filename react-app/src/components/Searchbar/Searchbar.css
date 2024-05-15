@@ -1,5 +1,6 @@
 .search-container {
     position: relative;
+    /* background-color:red; */
 }
 
 .search-results {
@@ -7,7 +8,48 @@
     top: 100%;
     left: 0;
     z-index: 99999999;
-    background-color: #305d8a;
+    /* background-color: #305d8a; */
+    /* background-color: #c6d4df; */
+    /* background-color: #969696; */
+    background-color: #434953;
     border: 1px solid #ccc;
     width: 100%
+}
+
+.searchbar-dropdown {
+    border-top: unset;
+    color: #DCDEDF;
+    margin: 0;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 45px 75px auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "img img name name"
+        "img img price price";
+    height: unset;
+    transition: background 0.2s ease-in-out;
+}
+
+/* .searchbar-input {
+    padding-left: 1rem;
+    border-radius: 0.2rem;
+    background-color: #316282;
+    background-color:#305d8a;
+    margin-left: auto;
+    overflow: scroll;
+} */
+
+.searchbar-input {
+    background-color: #316282;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
+    color: #fff;
+    margin-bottom: 0px;
+    outline: none;
+    height: 27px;
+    padding: 0px 6px;
+    margin-left: auto;
 }
