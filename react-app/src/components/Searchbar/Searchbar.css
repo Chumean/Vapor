@@ -7,7 +7,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 99999999;
+    /* z-index: 99999999; */
     /* background-color: #305d8a; */
     /* background-color: #c6d4df; */
     /* background-color: #969696; */
@@ -16,7 +16,7 @@
     width: 100%
 }
 
-.searchbar-dropdown {
+/* .searchbar-dropdown {
     border-top: unset;
     color: #DCDEDF;
     margin: 0;
@@ -30,18 +30,18 @@
         "img img price price";
     height: unset;
     transition: background 0.2s ease-in-out;
-}
+} */
 
-/* .searchbar-input {
+.searchbar-input {
     padding-left: 1rem;
     border-radius: 0.2rem;
     background-color: #316282;
     background-color:#305d8a;
     margin-left: auto;
     overflow: scroll;
-} */
+}
 
-.searchbar-input {
+/* .searchbar-input {
     background-color: #316282;
     border-radius: 3px;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -51,5 +51,5 @@
     outline: none;
     height: 27px;
     padding: 0px 6px;
-    margin-left: auto;
-}
+
+} */
