@@ -182,13 +182,6 @@ const Searchbar = () => {
             }
         }
 
-        document.addEventListener('mousedown', handleOutsideClick);
-        document.addEventListener('keydown', handleKeyPress)
-
-        return () => {
-            document.removeEventListener('mousedown', handleOutsideClick);
-            document.removeEventListener('keydown', handleKeyPress)
-        };
     }, [query]);
 
 
