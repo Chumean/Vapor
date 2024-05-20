@@ -169,20 +169,20 @@ const Searchbar = () => {
         setResults(filtered)
     }
 
-    useEffect(() => {
-        const handleOutsideClick = (event) => {
-            if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
-                setResults([]); // Close search results
-            }
-        };
+    // useEffect(() => {
+    //     const handleOutsideClick = (event) => {
+    //         if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
+    //             setResults([]); // Close search results
+    //         }
+    //     };
 
-        const handleKeyPress = (event) => {
-            if(event.key === 'Backspace' && query === '') {
-                setResults([]) // Close search results
-            }
-        }
+    //     const handleKeyPress = (event) => {
+    //         if(event.key === 'Backspace' && query === '') {
+    //             setResults([]) // Close search results
+    //         }
+    //     }
 
-    }, [query]);
+    // }, [query]);
 
 
     return (
