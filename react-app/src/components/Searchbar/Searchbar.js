@@ -2,7 +2,7 @@
 import { getAllGames } from '../../store/game';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 // import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import './Searchbar.css'
 
@@ -12,7 +12,6 @@ const Searchbar = () => {
     const [query, setQuery] = useState('');
     const games = useSelector(state => state.game)
     const [results, setResults] = useState([])
-    const searchContainerRef = useRef(null);
 
     // console.log(games, "GAMES")
 
@@ -164,29 +163,16 @@ const Searchbar = () => {
         // setResults(filtered)
 
         const filtered = games_backup.filter(game =>
-            game.title.toLocaleLowerCase().includes(searchTerm)
+            game.title.toLowerCase().includes(searchTerm)
         )
         setResults(filtered)
     }
 
-    // useEffect(() => {
-    //     const handleOutsideClick = (event) => {
-    //         if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
-    //             setResults([]); // Close search results
-    //         }
-    //     };
 
-    //     const handleKeyPress = (event) => {
-    //         if(event.key === 'Backspace' && query === '') {
-    //             setResults([]) // Close search results
-    //         }
-    //     }
-
-    // }, [query]);
 
 
     return (
-        <div className='search-container' ref={searchContainerRef}>
+        <div className='search-container'>
             <input type="search"
                 placeholder='search'
                 className='searchbar-input'
