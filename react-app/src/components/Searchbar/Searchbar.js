@@ -193,7 +193,7 @@ const Searchbar = () => {
                 value={query}
                 onChange={handleChange}
             />
-            <ul>
+            <ul className='search-ul'>
                 {results.slice(0, 5).map((game, index) => (
                     <li key={index} className='searchbar-dropdown'>
                         <Link to={`/games/${game.id}`}>

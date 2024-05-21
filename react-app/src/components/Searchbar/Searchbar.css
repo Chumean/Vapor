@@ -16,6 +16,10 @@
     width: 100%
 }
 
+.search-ul {
+    background-color: green;
+}
+
 /* .searchbar-dropdown {
     border-top: unset;
     color: #DCDEDF;
