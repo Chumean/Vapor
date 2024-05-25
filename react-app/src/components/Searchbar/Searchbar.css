@@ -59,3 +59,19 @@
     padding: 0px 6px;
 
 } */
+
+.search-item {
+    color: red;
+}
+
+.search-link {
+    color: blue;
+}
+
+.search-title {
+    color: green;
+}
+
+.search-price {
+    color: yellow;
+}
