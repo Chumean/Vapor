@@ -2,7 +2,7 @@
 import { getAllGames } from '../../store/game';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 // import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import './Searchbar.css'
 
@@ -10,9 +10,9 @@ const Searchbar = () => {
     // const history = useHistory();
     // const dispatch = useDispatch();
     const [query, setQuery] = useState('');
-    const games = useSelector(state => state.game)
-    const [results, setResults] = useState([])
-
+    const games = useSelector(state => state.game);
+    const [results, setResults] = useState([]);
+    const searchRef = useRef(null);
     // console.log(games, "GAMES")
 
     // useEffect(() =>{
@@ -152,6 +152,15 @@ const Searchbar = () => {
         const searchTerm = e.target.value.toLowerCase();
         setQuery(searchTerm)
 
+        if(searchTerm === '') {
+            setResults([]);
+        } else {
+            const filtered = games_backup.filter(game =>
+                game.title.toLowerCase().includes(searchTerm)
+            )
+            setResults(filtered)
+        }
+
         // const filtered = games_backup.filter(game =>
         //     game.title.toLowerCase().includes(searchTerm)
         // )
@@ -162,12 +171,24 @@ const Searchbar = () => {
         // );
         // setResults(filtered)
 
-        const filtered = games_backup.filter(game =>
-            game.title.toLowerCase().includes(searchTerm)
-        )
-        setResults(filtered)
+        // const filtered = games_backup.filter(game =>
+        //     game.title.toLowerCase().includes(searchTerm)
+        // )
+        // setResults(filtered)
     }
 
+    const handleClick = event => {
+        if(searchRef.current && !searchRef.current.contains(event.target)) {
+            setResults([])
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('click', handleClick);
+        return () => {
+            document.removeEventListener('click', handleClick)
+        }
+    }, [])
 
 
 
