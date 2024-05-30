@@ -31,9 +31,9 @@ const GameDetails = () => {
 
     // const gameDetails = game?.details // original
 
-    const gameDetails = useSelector(state => state.game.details)
+    const gameDetails = useSelector(state => state.game?.details)
 
-    console.log(gameDetails, 'GAME DETS')
+    // console.log(gameDetails, 'GAME DETS')
 
     const reviews = useSelector(state => state.reviews)
 
