@@ -45,9 +45,6 @@ export const getGamesByCategory = (category) => async (dispatch) => {
 
 const initialState = {}; // original
 
-// const initialState = {
-//     list: [], details: {},
-// }
 
 const gameReducer = (state = initialState, action) => {
     switch(action.type) {
