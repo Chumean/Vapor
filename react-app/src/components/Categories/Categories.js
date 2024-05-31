@@ -78,14 +78,14 @@ const Categories = () => {
                 </li>
             </ul>
 
-            <input type='search'
+            {/* <input type='search'
                 placeholder='search'
                 className='cat-search'
                 value={searchTerm}
                 onChange={handleInput}
 
-            />
-            {/* <Searchbar /> */}
+            /> */}
+            <Searchbar />
 
 
 

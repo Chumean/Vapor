@@ -178,19 +178,19 @@ const Searchbar = () => {
     }
 
     //
-    const handleClick = event => {
-        if(searchRef.current && !searchRef.current.contains(event.target)) {
-            setResults([])
-        }
-    }
+    // const handleClick = event => {
+    //     if(searchRef.current && !searchRef.current.contains(event.target)) {
+    //         setResults([])
+    //     }
+    // }
 
-    // click away to remove dropdown results
-    useEffect(() => {
-        document.addEventListener('click', handleClick);
-        return () => {
-            document.removeEventListener('click', handleClick)
-        }
-    }, [])
+    // // click away to remove dropdown results
+    // useEffect(() => {
+    //     document.addEventListener('click', handleClick);
+    //     return () => {
+    //         document.removeEventListener('click', handleClick)
+    //     }
+    // }, [])
 
 
 
@@ -218,7 +218,10 @@ const Searchbar = () => {
                 {results.slice(0, 5).map((game, index) => (
                     <div key={index} className='search-item'>
                         <a href={`/games/${game.id}`} className='search-link'>
-                            <img src={game.image} alt={game.title} style={{width: '231px', height: '87px'}} />
+                            <div className='search-img'>
+                                <img src={game.image} alt={game.title} style={{width: '100px', height: '37px'}} />
+
+                            </div>
                             <div className='search-details'>
                                 <h2 className='search-title'>{game.title}</h2>
                                 <p className='search-price'>${game.price}</p>
