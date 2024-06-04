@@ -177,20 +177,20 @@ const Searchbar = () => {
         // setResults(filtered)
     }
 
-    //
-    // const handleClick = event => {
-    //     if(searchRef.current && !searchRef.current.contains(event.target)) {
-    //         setResults([])
-    //     }
-    // }
 
-    // // click away to remove dropdown results
-    // useEffect(() => {
-    //     document.addEventListener('click', handleClick);
-    //     return () => {
-    //         document.removeEventListener('click', handleClick)
-    //     }
-    // }, [])
+    const handleClick = event => {
+        if(searchRef.current && !searchRef.current.contains(event.target)) {
+            setResults([])
+        }
+    }
+
+    // click away to remove dropdown results
+    useEffect(() => {
+        document.addEventListener('click', handleClick);
+        return () => {
+            document.removeEventListener('click', handleClick)
+        }
+    }, [])
 
 
 
