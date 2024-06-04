@@ -70,7 +70,7 @@
 
 }
 
-.search-item {
+/* .search-item {
     color: #DCDEDF;
     background-color: #434953;
     display: grid;
@@ -84,7 +84,7 @@
     border: 4px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
 
-}
+} */
 
 .search-img {
     grid-area: img;
