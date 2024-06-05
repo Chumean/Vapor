@@ -86,21 +86,21 @@
 
 } */
 
-.search-img {
+/* .search-img {
     grid-area: img;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .search-link {
-    color: blue;
+    color: #DCDEDF;
 }
 
 .search-title {
-    color: green;
+    color: #DCDEDF;
 }
 
 .search-price {
-    color: yellow;
+    color: #DCDEDF;
 }
