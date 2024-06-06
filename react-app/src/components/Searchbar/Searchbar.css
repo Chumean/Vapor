@@ -93,6 +93,11 @@
     justify-content: center;
 } */
 
+.search-item:hover{
+    background-color: white;
+    color: black;
+}
+
 .search-link {
     color: #DCDEDF;
 }
