@@ -93,7 +93,7 @@
     justify-content: center;
 } */
 
-.search-item, search-link, search-title, search-price:hover{
+.search-item:hover{
     background-color: white;
     color: black;
     cursor:pointer;
