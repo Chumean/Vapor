@@ -99,6 +99,10 @@
     cursor:pointer;
 }
 
+.search-title:hover {
+    color: black;
+}
+
 .search-link {
     color: #DCDEDF;
 }
