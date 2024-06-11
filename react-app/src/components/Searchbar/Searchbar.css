@@ -99,9 +99,7 @@
     cursor:pointer;
 }
 
-.search-title:hover {
-    color: black;
-}
+
 
 .search-link {
     color: #DCDEDF;
@@ -111,6 +109,17 @@
     color: #DCDEDF;
 }
 
+
 .search-price {
     color: #DCDEDF;
+}
+
+.search-title:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.search-price:hover {
+    color: black;
+    cursor: pointer;
 }
