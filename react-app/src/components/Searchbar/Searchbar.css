@@ -27,11 +27,7 @@
     padding: 4px 8px;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 45px 75px auto 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "img img name name"
-        "img img price price";
+
     height: unset;
     transition: background 0.2s ease-in-out;
 } */
