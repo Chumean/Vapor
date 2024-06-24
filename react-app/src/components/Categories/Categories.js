@@ -87,8 +87,6 @@ const Categories = () => {
             /> */}
             <Searchbar />
 
-
-
         </div>
     </form>
     )
