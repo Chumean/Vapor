@@ -94,4 +94,3 @@ const Categories = () => {
 
 export default Categories
 // for dropdown, need scrolling, game img left center, title center-top
-// and price center bottom
