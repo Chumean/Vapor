@@ -23,7 +23,7 @@
     background-color: #316282;
     margin-left: auto;
     overflow-y: scroll;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .search-item:hover{
