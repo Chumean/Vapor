@@ -12,7 +12,7 @@ const AllGamesPage = () => {
 
     const games = useSelector(state => state.game) // original
     // const games = useSelector((state) => state.game.list);
-    // console.log(games, "ALLGAMESPAGE")
+    
 
     const rpg = [];
     const hacknslash = [];
