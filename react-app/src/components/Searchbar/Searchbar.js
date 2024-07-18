@@ -192,8 +192,6 @@ const Searchbar = () => {
         }
     }, [])
 
-
-
     return (
         <div className='search-container'>
             <input type="search"
