@@ -7,8 +7,6 @@ import { useEffect, useState, useRef } from 'react';
 import './Searchbar.css'
 
 const Searchbar = () => {
-    // const history = useHistory();
-    // const dispatch = useDispatch();
     const [query, setQuery] = useState('');
     const games = useSelector(state => state.game);
     const [results, setResults] = useState([]);
