@@ -1,9 +1,9 @@
 // import { useState } from 'react';
 import { getAllGames } from '../../store/game';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useEffect, useState, useRef } from 'react';
-// import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+
 import './Searchbar.css'
 
 const Searchbar = () => {
@@ -11,12 +11,10 @@ const Searchbar = () => {
     const games = useSelector(state => state.game);
     const [results, setResults] = useState([]);
     const searchRef = useRef(null);
-    // console.log(games, "GAMES")
 
     // useEffect(() =>{
     //     dispatch(getAllGames())
     // }, [dispatch])
-
 
     const games_backup = [
         {
