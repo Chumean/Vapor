@@ -12,9 +12,6 @@ const Searchbar = () => {
     const [results, setResults] = useState([]);
     const searchRef = useRef(null);
 
-    // useEffect(() =>{
-    //     dispatch(getAllGames())
-    // }, [dispatch])
 
     const games_backup = [
         {
