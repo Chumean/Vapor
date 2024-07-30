@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import { getAllGames } from '../../store/game';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { useSelector } from 'react-redux';
