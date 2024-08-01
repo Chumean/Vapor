@@ -29,7 +29,7 @@ const GameDetails = () => {
 
     const game = useSelector(state => state?.game)
 
-    const gameDetails = game?.details // original
+    const gameDetails = game?.details
 
     const reviews = useSelector(state => state.reviews)
 
@@ -44,8 +44,8 @@ const GameDetails = () => {
       };
 
     useEffect(() => {
-        dispatch(getGameDetails(gameId)); // original
-        dispatch(loadReviews(gameId)) // original
+        dispatch(getGameDetails(gameId));
+        dispatch(loadReviews(gameId))
     }, [dispatch, gameId])
 
     const handleEdit = (review) => {
