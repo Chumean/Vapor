@@ -141,10 +141,6 @@ const GameDetails = () => {
 
                 <div className="has-reviewed-area">
                 <div className="has-reviewed-msg">You have reviewed this game.</div>
-                {/* <div className="has-reviewed-options">
-                    <span className="has-reviewed-span">Edit review</span>
-                    <span className="has-reviewed-span">Delete review</span>
-                </div> */}
                 <div className="has-reviewed-desc">
                     You can edit this review, change your rating, or delete it if you wish.
                 </div>
