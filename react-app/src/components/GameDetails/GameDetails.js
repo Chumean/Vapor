@@ -271,7 +271,7 @@ const GameDetails = () => {
             {/* REVIEW END */}
 
             </div>
-            ) : ("Page not found")}
+            ) : ("Page Not Found")}
         </div>
     </div>
     )
