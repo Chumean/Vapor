@@ -192,17 +192,7 @@ const Searchbar = () => {
                 value={query}
                 onChange={handleChange}
             />
-            {/* <ul className='search-ul'>
-                {results.slice(0, 5).map((game, index) => (
-                    <li key={index} className='searchbar-dropdown'>
-                        <Link to={`/games/${game.id}`}>
-                            <img src={game.image} alt={game.title} style={{width: '231px', height: '87px'}} />
-                            <h2>{game.title}</h2>
-                            <p>{game.price}</p>
-                        </Link>
-                    </li>
-                ))}
-            </ul> */}
+
 
             <div className='search-results'>
                 {results.slice(0, 5).map((game, index) => (
@@ -229,3 +219,15 @@ const Searchbar = () => {
 }
 
 export default Searchbar;
+
+ /* <ul className='search-ul'>
+                {results.slice(0, 5).map((game, index) => (
+                    <li key={index} className='searchbar-dropdown'>
+                        <Link to={`/games/${game.id}`}>
+                            <img src={game.image} alt={game.title} style={{width: '231px', height: '87px'}} />
+                            <h2>{game.title}</h2>
+                            <p>{game.price}</p>
+                        </Link>
+                    </li>
+                ))}
+            </ul> */
