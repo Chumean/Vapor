@@ -28,7 +28,7 @@
 
 .search-item:hover{
     background-color: #DCDEDF;
-    color: darkgray;
+    color: gray;
     cursor:pointer;
     transition: background 0.2s ease-in-out;
 }
