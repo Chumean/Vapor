@@ -17,10 +17,10 @@
     opacity: 2;
 }
 
-
+/* originally 0.1 rem */
 .searchbar-input {
     padding-left: 1rem;
-    border-radius: 0.1rem;
+    border-radius: 0.3rem;
     background-color: #316282;
     margin-left: auto;
     overflow-y: scroll;
