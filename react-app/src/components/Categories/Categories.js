@@ -42,7 +42,7 @@ const Categories = () => {
         if (matchingGames.length > 0) {
             const gameId = matchingGames[0].id;
             history.push(`/games/${gameId}`);
-            setSearchTerm(''); // Reset search term after navigation
+            setSearchTerm(''); // Reset search term after navigati
 
             return;
         }
