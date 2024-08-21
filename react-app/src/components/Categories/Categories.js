@@ -92,3 +92,4 @@ const Categories = () => {
 }
 
 export default Categories
+// css notes
