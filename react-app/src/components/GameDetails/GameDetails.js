@@ -172,7 +172,7 @@ const GameDetails = () => {
                     <div className="game-price">$ {gameDetails?.price}</div>
                     <span className="add-to-cart"
                         onClick={handleAddToCart}>
-                        Add to Cart
+                        Add To Cart
                     </span>
                 </div>
             </div>
