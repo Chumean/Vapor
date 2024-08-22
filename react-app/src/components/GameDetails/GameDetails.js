@@ -186,7 +186,6 @@ const GameDetails = () => {
 
                 <div className="Review-count-block"></div>
 
-
                 <div className="all-reviews">
                 {filteredReviews &&
                 filteredReviews.map((review) => (
