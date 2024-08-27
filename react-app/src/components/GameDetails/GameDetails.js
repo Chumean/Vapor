@@ -207,13 +207,13 @@ const GameDetails = () => {
                                 <span className="has-reviewed-span"
                                     id={review?.id}
                                     onClick={() => handleEdit(review)}
-                                    >Edit review
+                                    >Edit Review
                                 </span>
 
                                 <span className="has-reviewed-span"
                                     id={review?.id}
                                     onClick={() => handleDeleteReview(review?.id, gameDetails?.id)}
-                                    >Delete review
+                                    >Delete Review
                                 </span>
                                 </div>
                                 ) : (
