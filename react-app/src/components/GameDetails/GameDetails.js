@@ -182,7 +182,7 @@ const GameDetails = () => {
             {/* REVIEWS START */}
 
             <div className="customer-reviews-area">
-                <h2>CUSTOMER REVIEWS</h2>
+                <h2>Customer Reviews</h2>
 
                 <div className="Review-count-block"></div>
 
