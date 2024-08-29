@@ -92,6 +92,5 @@ const Categories = () => {
 }
 
 export default Categories
-// css notes
 // each search item list must transition bg color at hover
 // item pic must be left, title must be top, price at bottom
