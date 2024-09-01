@@ -93,4 +93,4 @@ const Categories = () => {
 
 export default Categories
 
-// item pic must be left, title must be top, price at bottom
+// item p
