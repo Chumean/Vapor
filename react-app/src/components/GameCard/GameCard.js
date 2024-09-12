@@ -8,9 +8,9 @@ const GameCard = (game) => {
     //         <div className="game-card-img"></div>
 
     //         <div className="game-card-info">
-    //             <div className="game-card-title"></div>
-    //             <div className="game-card-tags"></div>
-    //             <div className="game-card-reviewprice">
+    //             <div className="game-cards-title"></div>
+    //             <div className="game-cards-tags"></div>
+    //             <div className="game-cards-reviewprice">
     //                 <div className="game-card-reviews"></div>
     //                 <div className="game-card-price"></div>
     //             </div>
