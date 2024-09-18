@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-const GameCard = (game) => {
+// const GameCard = (game) => {
     // return (
     //     <div className="game-card">
 
@@ -18,6 +18,6 @@ const GameCard = (game) => {
 
     //     </div>
     // )
-}
+// }
 
-export default GameCard
+// export default GameCard
