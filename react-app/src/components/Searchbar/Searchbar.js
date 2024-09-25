@@ -153,20 +153,6 @@ const Searchbar = () => {
             setResults(filtered)
         }
 
-        // const filtered = games_backup.filter(game =>
-        //     game.title.toLowerCase().includes(searchTerm)
-        // )
-
-        // const gamesArr = Object.values(games);
-        // const filtered = gamesArr.filter(game =>
-        //     game.title.toLowerCase().includes(searchTerm)
-        // );
-        // setResults(filtered)
-
-        // const filtered = games_backup.filter(game =>
-        //     game.title.toLowerCase().includes(searchTerm)
-        // )
-        // setResults(filtered)
     }
 
 
