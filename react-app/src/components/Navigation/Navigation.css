@@ -38,7 +38,8 @@
 
 .vapor-text {
   font-family: 'Motiva Sans', sans-serif;
-  color: #B8B6B4
+  color: #B8B6B4;
+
 }
 
 .logo {
@@ -109,7 +110,9 @@ align-items: center;
   cursor: pointer;
 }
 
-
+.logo-link {
+  text-decoration: none;
+}
 
 .language-text {
   color: #a6a9ad;
