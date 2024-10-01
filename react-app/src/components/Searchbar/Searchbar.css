@@ -18,12 +18,12 @@
 }
 
 .searchbar-input {
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
     border-radius: 0.1rem;
     background-color: #316282;
-    margin-left: auto;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    /* margin-left: auto; */
+    overflow: scroll;
+    /* overflow-x: hidden; */
 }
 
 .search-item:hover{
