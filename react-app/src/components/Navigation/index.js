@@ -31,13 +31,13 @@ function Navigation({ isLoaded }){
 			<NavLink exact to="/" className="logo-link">
 
 		  		<img src={logo} alt="Vaporlogo" className="logo-img" />
-		  		<p className='vapor-text'>VAPOR</p>
+		  		<p className='vapor-text'>Vapor</p>
 			</NavLink>
 
 		</div>
 
 		<nav className="header-nav">
-			
+
 		  <ul className="nav-list">
 
 			<li className="nav-item">
