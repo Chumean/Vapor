@@ -30,7 +30,6 @@ const Categories = () => {
         e.preventDefault();
 
         if (searchTerm.length < 3) {
-          // Require at least 3 characters for a valid search
           return;
       }
 
