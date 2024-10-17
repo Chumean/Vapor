@@ -34,7 +34,7 @@ const Categories = () => {
       }
 
         const matchingGames = Object.values(games).filter(game => {
-          const regex = new RegExp(searchTerm, 'i'); // 'i' flag makes the search case-insensitive
+          const regex = new RegExp(searchTerm, 'i'); 
           return regex.test(game.title);
       });
 
