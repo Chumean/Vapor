@@ -34,7 +34,7 @@ const Categories = () => {
       }
 
         const matchingGames = Object.values(games).filter(game => {
-          const regex = new RegExp(searchTerm, 'i'); 
+          const regex = new RegExp(searchTerm, 'i');
           return regex.test(game.title);
       });
 
@@ -91,3 +91,4 @@ const Categories = () => {
 }
 
 export default Categories
+// reminder for tomorrow, css search results
