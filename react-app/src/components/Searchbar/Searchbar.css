@@ -1,5 +1,6 @@
 .search-container {
     position: relative;
+    margin-left: auto;
 }
 
 .search-results {
