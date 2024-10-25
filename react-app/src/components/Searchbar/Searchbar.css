@@ -19,10 +19,9 @@
 }
 
 .searchbar-input {
-    
+
     border-radius: 0.1rem;
     background-color: #316282;
-    /* margin-left: auto; */
     overflow: scroll;
     height: 35px;
     /* overflow-x: hidden; */
