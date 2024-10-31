@@ -204,3 +204,4 @@ const Searchbar = () => {
 }
 
 export default Searchbar;
+// notes for search res
