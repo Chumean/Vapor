@@ -30,7 +30,12 @@
 .searchbar-input::placeholder {
     text-indent: 10px;
     font-family: "Motiva Sans", Sans-serif;
-    
+    color: #0e1c25;
+    font-weight: 300;
+}
+
+.searchbar-input:focus::placeholder {
+    color: transparent;
 }
 
 .search-item:hover{
