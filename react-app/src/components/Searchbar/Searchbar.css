@@ -23,6 +23,7 @@
     background-color: #316282;
     overflow: scroll;
     height: 35px;
+    right: 10px;
 }
 
 .search-item:hover{
