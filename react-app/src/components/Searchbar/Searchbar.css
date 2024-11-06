@@ -23,10 +23,14 @@
     background-color: #316282;
     overflow: scroll;
     height: 35px;
+
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
 }
 
 .searchbar-input::placeholder {
     text-indent: 10px;
+    font-family: "Motiva Sans", Sans-serif;
+    
 }
 
 .search-item:hover{
