@@ -23,7 +23,10 @@
     background-color: #316282;
     overflow: scroll;
     height: 35px;
-    right: 10px;
+}
+
+.searchbar-input::placeholder {
+    text-indent: 10px;
 }
 
 .search-item:hover{
