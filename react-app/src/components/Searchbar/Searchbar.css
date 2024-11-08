@@ -23,8 +23,6 @@
     background-color: #316282;
     overflow: scroll;
     height: 35px;
-
-    /* border: 1px solid rgba(0, 0, 0, 0.3); */
 }
 
 .searchbar-input::placeholder {
@@ -43,4 +41,9 @@
     color: gray;
     cursor:pointer;
     transition: background 0.2s ease-in-out;
+}
+
+.search-price {
+    /* color: red; */
+    text-decoration: none;
 }

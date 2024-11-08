@@ -188,7 +188,7 @@ const Searchbar = () => {
 
                             </div>
                             <div className='search-details'>
-                                <h2 className='search-title'>{game.title}</h2>
+                                <p className='search-title'>{game.title}</p>
                                 <p className='search-price'>${game.price}</p>
 
                             </div>
