@@ -15,25 +15,7 @@
     background-clip: padding-box;
 }
 
-/* .search-results {
-    background-color: #3D4450;
-    position: absolute;
-    z-index: 9999;
-    border-top: unset;
-    color: #DCDEAF;
-    margin: 0;
-    padding: 4px 8px 4px 8px;
-    box-sizing: border-box;
-    display: grid;
-    width: 100%;
-    grid-template-columns: 45px 75px auto 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "game.image game.image game.title game.title"
-    "game.image game.image game.price game.price";
-    height: unset;
-    transition: background 0.2s ease-in-out;
-} */
+
 
 /* .search-results {
     display: flex;
