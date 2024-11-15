@@ -21,7 +21,7 @@ const AddReview =({gameId}) => {
         e.preventDefault();
 
         if (review.trim().length === 0) {
-            setError("Please provide at least 1 character to review.");
+            setError("Please input at least 1 character to review.");
             return;
         }
 
