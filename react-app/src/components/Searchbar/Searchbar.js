@@ -203,3 +203,4 @@ const Searchbar = () => {
 }
 
 export default Searchbar;
+// reminder to adjust dropdown sbar positioning
