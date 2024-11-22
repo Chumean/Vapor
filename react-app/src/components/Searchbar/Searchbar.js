@@ -178,7 +178,7 @@ const Searchbar = () => {
                 onChange={handleChange}
             />
 
-            <div className='search-results'>
+            <div ref={searchRef} className='search-results'>
                 {results.slice(0, 5).map((game, index) => (
                     <div key={index} className='search-item'>
                         <a href={`/games/${game.id}`} className='search-link'>
