@@ -11,6 +11,8 @@ const Searchbar = () => {
     const [results, setResults] = useState([]);
     const searchRef = useRef(null);
 
+    const [isDropdownVisible, setDropdownVisible] = useState(false);
+
 
     const games_backup = [
         {
@@ -203,4 +205,3 @@ const Searchbar = () => {
 }
 
 export default Searchbar;
-
