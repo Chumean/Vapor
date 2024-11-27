@@ -148,6 +148,7 @@ const Searchbar = () => {
 
         if(searchTerm === '') {
             setResults([]);
+            setDropdownVisible(false); // add new 11/26/2024
         } else {
             const filtered = games_backup.filter(game =>
                 game.title.toLowerCase().includes(searchTerm)
