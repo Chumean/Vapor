@@ -179,6 +179,11 @@ const Searchbar = () => {
                 className='searchbar-input'
                 value={query}
                 onChange={handleChange}
+                onFocus={() => {
+                    if(query && results.length > 0) {
+                        setDropdownVisible(true)
+                    }
+                }}
             />
 
             <div ref={searchRef} className='search-results'>
