@@ -83,7 +83,7 @@ const AddReview =({gameId}) => {
                     </div>
 
                     <span className="post-review-span" onClick={handleSubmit}>
-                        Post review
+                        Post Review
                     </span>
 
                 </div>
