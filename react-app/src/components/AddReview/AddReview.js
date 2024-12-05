@@ -66,7 +66,7 @@ const AddReview =({gameId}) => {
                                 setOption("Yes")
                             }}
                             >
-                            Yes
+                            YES
                             <FaRegThumbsUp  className="rec-icon"/>
                         </span>
 
