@@ -66,7 +66,7 @@ const AddReview =({gameId}) => {
                                 setOption("Yes")
                             }}
                             >
-                            YES
+                            Yes
                             <FaRegThumbsUp  className="rec-icon"/>
                         </span>
 
@@ -77,7 +77,7 @@ const AddReview =({gameId}) => {
                                 setOption("No")
                             }}
                             >
-                            NO
+                            No
                             <FaRegThumbsDown className="rec-icon" />
                         </span>
                     </div>
