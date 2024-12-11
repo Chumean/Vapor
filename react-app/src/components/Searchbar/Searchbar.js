@@ -160,7 +160,7 @@ const Searchbar = () => {
 
     const handleClick = event => {
         if(searchRef.current && !searchRef.current.contains(event.target)) {
-            // setResults([])
+            
             setDropdownVisible(false);
         }
     }
