@@ -25,7 +25,7 @@ const GameDetails = () => {
     const [existingRev, setExistingRev] = useState('');
     const [existingRec, setExistingRec] = useState('');
 
-    const user = useSelector(state => state?.session?.user) // grab user 
+    const user = useSelector(state => state?.session?.user) // grab user
 
     const game = useSelector(state => state?.game)
 
@@ -33,7 +33,7 @@ const GameDetails = () => {
 
     const reviews = useSelector(state => state.reviews)
 
-    const filteredReviews = Object.values(reviews).filter((review) => review?.game_id === gameDetails?.id)
+    const filteredReviews = Object.values(reviews).filter((review) => review?.game_id === gameDetails?.id) // grab reviews on id
 
     const userId = useSelector(state => state.session.user?.id)
 
