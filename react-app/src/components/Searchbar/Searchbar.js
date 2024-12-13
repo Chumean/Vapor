@@ -158,9 +158,10 @@ const Searchbar = () => {
 
     }
 
+    // remove dropdown when clicked away
     const handleClick = event => {
         if(searchRef.current && !searchRef.current.contains(event.target)) {
-            
+
             setDropdownVisible(false);
         }
     }
