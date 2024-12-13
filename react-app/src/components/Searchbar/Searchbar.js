@@ -142,6 +142,7 @@ const Searchbar = () => {
         }
     ]
 
+    // search changes
     const handleChange = e => {
         const searchTerm = e.target.value.toLowerCase();
         setQuery(searchTerm)
