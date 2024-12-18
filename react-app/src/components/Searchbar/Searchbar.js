@@ -167,7 +167,7 @@ const Searchbar = () => {
         }
     }
 
-
+    // click to remove 
     useEffect(() => {
         document.addEventListener('click', handleClick);
         return () => {
