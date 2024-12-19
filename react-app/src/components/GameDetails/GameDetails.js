@@ -29,7 +29,7 @@ const GameDetails = () => {
 
     const game = useSelector(state => state?.game) // grab game
 
-    const gameDetails = game?.details
+    const gameDetails = game?.details // grab details
 
     const reviews = useSelector(state => state.reviews)
 
