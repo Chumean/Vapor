@@ -27,7 +27,7 @@ const GameDetails = () => {
 
     const user = useSelector(state => state?.session?.user) // grab user
 
-    const game = useSelector(state => state?.game)
+    const game = useSelector(state => state?.game) // grab game
 
     const gameDetails = game?.details
 
