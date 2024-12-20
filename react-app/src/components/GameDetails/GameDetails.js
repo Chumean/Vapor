@@ -31,7 +31,7 @@ const GameDetails = () => {
 
     const gameDetails = game?.details // grab details
 
-    const reviews = useSelector(state => state.reviews)
+    const reviews = useSelector(state => state.reviews) // grab reviews
 
     const filteredReviews = Object.values(reviews).filter((review) => review?.game_id === gameDetails?.id) // grab reviews on id
 
