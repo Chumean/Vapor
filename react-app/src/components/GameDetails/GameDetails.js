@@ -37,7 +37,7 @@ const GameDetails = () => {
 
     const userId = useSelector(state => state.session.user?.id) // grab user
 
-    const hasReviewed = filteredReviews.some((review) => review.user_id === userId)
+    const hasReviewed = filteredReviews.some((review) => review.user_id === userId) // grab review if it has user
 
     const openModal = () => {
         setShowModal(true);
