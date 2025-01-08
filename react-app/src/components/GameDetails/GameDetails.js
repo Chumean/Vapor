@@ -25,9 +25,9 @@ const GameDetails = () => {
     const [existingRev, setExistingRev] = useState('');
     const [existingRec, setExistingRec] = useState('');
 
-    const user = useSelector(state => state?.session?.user) // grab user
+    const user = useSelector(state => state?.session?.user)
 
-    const game = useSelector(state => state?.game) 
+    const game = useSelector(state => state?.game)
 
     const gameDetails = game?.details
 
