@@ -167,7 +167,7 @@ const Searchbar = () => {
         }
     }
 
-    // click to remove 
+    // click to remove
     useEffect(() => {
         document.addEventListener('click', handleClick);
         return () => {
@@ -214,3 +214,4 @@ const Searchbar = () => {
 }
 
 export default Searchbar;
+// reminder of n ew job inocming
